@@ -25,8 +25,15 @@ public class test {
     public static void main(String[] args) {
         JdkDataSource.jdkmysql();
         MysqlDao mysqlDao=  JdkDataSource.mysqldb;
-        String sql="select * from student";
-        List<ConverMap> query = mysqlDao.query(sql);
-        System.out.println(query);
+        for (int i = 0;; i++) {
+            System.out.println("i = " + i);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            }).start();
+        }
+
     }
 }

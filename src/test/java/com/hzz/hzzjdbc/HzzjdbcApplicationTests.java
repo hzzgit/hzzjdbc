@@ -1,13 +1,31 @@
 package com.hzz.hzzjdbc;
 
+import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
+import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-@SpringBootTest
-class HzzjdbcApplicationTests {
+import java.util.Iterator;
+import java.util.List;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = HzzjdbcApplication.class)
+public class HzzjdbcApplicationTests {
+
+    @Autowired
+    private MysqlDao mysqlDao;
 
     @Test
-    void contextLoads() {
+    public void contextLoads1() {
+        String sql="select * from student";
+        List<ConverMap> query = mysqlDao.query(sql);
+        Iterator<ConverMap> iterator = query.iterator();
+        ConverMap next = iterator.next();
+        System.out.println(1);
+
     }
 
 }
