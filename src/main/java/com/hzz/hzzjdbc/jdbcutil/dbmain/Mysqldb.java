@@ -54,6 +54,26 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
         }
     }
 
+    /**
+     * 检查表是否存在，不存在重新缓存
+     *
+     * @param ob
+     * @return
+     */
+    private Boolean checktablecache(Object ob) {
+        Boolean arg = false;
+        String tablename = gettablename(ob.getClass());
+        if (!tablecolMap.containsKey(tablename)) {
+            log.debug("表名:"+tablename+"不存在，进行重新缓存表的各字段");
+            searchtablecolMap();
+        }
+
+        if (tablecolMap.containsKey(tablename)) {
+            arg = true;
+        }
+        return arg;
+    }
+
 
     //查询处理之后一条一条进行处理
     @Override
@@ -152,8 +172,8 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
      * @return
      */
     @Override
-    public <T>List<T> queryFirstOne(String sql, Object... wdata){
-        return searchfirstcol(sql,wdata);
+    public <T> List<T> queryFirstOne(String sql, Object... wdata) {
+        return searchfirstcol(sql, wdata);
     }
 
     @Override
@@ -200,10 +220,11 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
 
     /**
      * 批量执行,带事务
+     *
      * @param vos
      */
     @Override
-    public void excutesqlList(List<FieldVo> vos){
+    public void excutesqlList(List<FieldVo> vos) {
         SearchExecuter searchExecuter = new SearchExecuter(connSource, null, null);
         searchExecuter.begintransaction();
         for (FieldVo vo : vos) {
@@ -286,12 +307,14 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
 
     @Override
     public FieldVo getinsertsql(Object object) {
-      return   super.getinsertsql(object);
+        checktablecache(object);
+        return super.getinsertsql(object);
     }
 
     @Override
     public FieldVo getupdatesql(Object object) {
-        return   super.getupdatesql(object);
+        checktablecache(object);
+        return super.getupdatesql(object);
     }
 
 

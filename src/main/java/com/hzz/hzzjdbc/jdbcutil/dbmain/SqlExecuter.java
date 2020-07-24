@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import javax.sql.DataSource;
 import java.lang.reflect.Field;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -31,7 +32,10 @@ public abstract class SqlExecuter {
     protected String table_schema = "";//记录当前jdbc连接的数据库
 
     //存放表和字段内容
-    protected Map<String, Map<String, Boolean>> tablecolMap = new HashMap<>();
+    protected Map<String, Map<String, Boolean>> tablecolMap = new ConcurrentHashMap<>();
+
+
+
 
     public SqlExecuter(DataSource dataSource, ConnectionhzzSource connSource) {
         this.dataSource = dataSource;
@@ -178,7 +182,7 @@ public abstract class SqlExecuter {
      * @return
      */
     protected <T> T searchFirstVal(String sql, Object... wdata) {
-        T  result = null;
+        T result = null;
         SearchExecuter searchExecuter = new SearchExecuter(connSource, sql, wdata);
         result = (T) searchExecuter.searchfirstval();
         searchExecuter.close();
@@ -215,12 +219,10 @@ public abstract class SqlExecuter {
                                 vals.add("0");
                             } else if (type == Date.class) {
                                 vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
-                            }
-                            else if (type == boolean.class||type==Boolean.class) {
-                                boolean arg= (boolean) declaredField.get(object);
-                                vals.add(arg==true?"1":"0");
-                            }
-                            else {
+                            } else if (type == boolean.class || type == Boolean.class) {
+                                boolean arg = (boolean) declaredField.get(object);
+                                vals.add(arg == true ? "1" : "0");
+                            } else {
                                 vals.add(String.valueOf(declaredField.get(object)));
                             }
                         }
@@ -272,12 +274,10 @@ public abstract class SqlExecuter {
                                 fielNames += fieldName + "=?,";
                                 if (type == Date.class) {
                                     vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
-                                }
-                                else if (type == boolean.class||type==Boolean.class) {
-                                    boolean arg= (boolean) declaredField.get(object);
-                                    vals.add(arg==true?"1":"0");
-                                }
-                                else {
+                                } else if (type == boolean.class || type == Boolean.class) {
+                                    boolean arg = (boolean) declaredField.get(object);
+                                    vals.add(arg == true ? "1" : "0");
+                                } else {
                                     vals.add(String.valueOf(declaredField.get(object)));
                                 }
                             }
@@ -298,7 +298,7 @@ public abstract class SqlExecuter {
     }
 
 
-    private String gettablename(Class<? extends Object> c) {
+    protected String gettablename(Class<? extends Object> c) {
         DbTableName annotation = c.getAnnotation(DbTableName.class);
         String tableName = annotation.value();
         if (tableName.indexOf(".") == -1) {
