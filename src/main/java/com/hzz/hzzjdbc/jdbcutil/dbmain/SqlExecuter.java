@@ -15,8 +15,10 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
 import java.lang.reflect.Field;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.lang.reflect.Modifier;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -31,10 +33,8 @@ public abstract class SqlExecuter {
 
     protected String table_schema = "";//记录当前jdbc连接的数据库
 
-    //存放表和字段内容
-    protected Map<String, Map<String, Boolean>> tablecolMap = new ConcurrentHashMap<>();
-
-
+//    //存放表和字段内容
+//    protected Map<String, Map<String, Boolean>> tablecolMap = new ConcurrentHashMap<>();
 
 
     public SqlExecuter(DataSource dataSource, ConnectionhzzSource connSource) {
@@ -199,34 +199,36 @@ public abstract class SqlExecuter {
         try {
             Class<? extends Object> c = object.getClass();
             String tableName = gettablename(c);
-            Map colMap = tablecolMap.get(tableName);
             Field[] declaredFields = FieldUtil.getFieldbycla(c);
             if (declaredFields.length > 0) {
                 sql = "insert into " + tableName + " ( ";
                 String fielNames = "";
                 String valueNames = "";
                 for (Field declaredField : declaredFields) {
+                    if (Modifier.isFinal(declaredField.getModifiers())) {
+                        continue;
+                    }
                     String fieldName = declaredField.getName().toLowerCase();
-                    if (colMap != null && colMap.containsKey(fieldName)) {
-                        DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
-                        if (dbColNUll == null) {
-                            Class<?> type = declaredField.getType();
-                            declaredField.setAccessible(true);
-                            fielNames += fieldName + ",";
-                            DbTableId annotation1 = declaredField.getAnnotation(DbTableId.class);
-                            valueNames += "?,";
-                            if (annotation1 != null && (type == Integer.class || type == int.class)) {//如果是主键
-                                vals.add("0");
-                            } else if (type == Date.class) {
-                                vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
-                            } else if (type == boolean.class || type == Boolean.class) {
-                                boolean arg = (boolean) declaredField.get(object);
-                                vals.add(arg == true ? "1" : "0");
-                            } else {
-                                vals.add(String.valueOf(declaredField.get(object)));
-                            }
+
+                    DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
+                    if (dbColNUll == null) {
+                        Class<?> type = declaredField.getType();
+                        declaredField.setAccessible(true);
+                        fielNames += fieldName + ",";
+                        DbTableId annotation1 = declaredField.getAnnotation(DbTableId.class);
+                        valueNames += "?,";
+                        if (annotation1 != null && (type == Integer.class || type == int.class)) {//如果是主键
+                            vals.add("0");
+                        } else if (type == Date.class) {
+                            vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
+                        } else if (type == boolean.class || type == Boolean.class) {
+                            boolean arg = (boolean) declaredField.get(object);
+                            vals.add(arg == true ? "1" : "0");
+                        } else {
+                            vals.add(String.valueOf(declaredField.get(object)));
                         }
                     }
+
 
                 }
                 fielNames = fielNames.substring(0, fielNames.length() - 1);
@@ -253,35 +255,38 @@ public abstract class SqlExecuter {
         try {
             Class<? extends Object> c = object.getClass();
             String tableName = gettablename(c);
-            Map colMap = tablecolMap.get(tableName);
+            // Map colMap = tablecolMap.get(tableName);
             Field[] declaredFields = FieldUtil.getFieldbycla(c);
             if (declaredFields.length > 0) {
                 sql = "update " + tableName + " set ";
                 String fielNames = "";
                 String whereNames = "";
                 for (Field declaredField : declaredFields) {
+                    if (Modifier.isFinal(declaredField.getModifiers())) {
+                        continue;
+                    }
                     String fieldName = declaredField.getName().toLowerCase();
-                    if (colMap != null && colMap.containsKey(fieldName)) {
-                        DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
-                        if (dbColNUll == null) {
-                            declaredField.setAccessible(true);
-                            Class<?> type = declaredField.getType();
-                            DbTableId annotation1 = declaredField.getAnnotation(DbTableId.class);
-                            if (annotation1 != null) {//如果是主键
-                                whereNames += " where  " + fieldName + "=? ";
-                                whereId = String.valueOf(declaredField.get(object));
+                    // if (colMap != null && colMap.containsKey(fieldName)) {
+                    DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
+                    if (dbColNUll == null) {
+                        declaredField.setAccessible(true);
+                        Class<?> type = declaredField.getType();
+                        DbTableId annotation1 = declaredField.getAnnotation(DbTableId.class);
+                        if (annotation1 != null) {//如果是主键
+                            whereNames += " where  " + fieldName + "=? ";
+                            whereId = String.valueOf(declaredField.get(object));
+                        } else {
+                            fielNames += fieldName + "=?,";
+                            if (type == Date.class) {
+                                vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
+                            } else if (type == boolean.class || type == Boolean.class) {
+                                boolean arg = (boolean) declaredField.get(object);
+                                vals.add(arg == true ? "1" : "0");
                             } else {
-                                fielNames += fieldName + "=?,";
-                                if (type == Date.class) {
-                                    vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
-                                } else if (type == boolean.class || type == Boolean.class) {
-                                    boolean arg = (boolean) declaredField.get(object);
-                                    vals.add(arg == true ? "1" : "0");
-                                } else {
-                                    vals.add(String.valueOf(declaredField.get(object)));
-                                }
+                                vals.add(String.valueOf(declaredField.get(object)));
                             }
                         }
+                        // }
                     }
                 }
                 vals.add(whereId);

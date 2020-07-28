@@ -8,15 +8,12 @@ import com.hzz.hzzjdbc.jdbcutil.util.FieldUtil;
 import com.hzz.hzzjdbc.jdbcutil.util.SplitUtil;
 import com.hzz.hzzjdbc.jdbcutil.vo.FieldVo;
 import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
-import com.hzz.hzzjdbc.jdbcutil.vo.TableCol;
 import com.mysql.jdbc.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Consumer;
 
@@ -32,27 +29,27 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
     public Mysqldb(DataSource dataSource, ConnectionhzzSource connSource, String url) {
         super(dataSource, connSource);
         table_schema = SplitUtil.gettableschme(url);
-        searchtablecolMap();//缓存库表及字段
+      //  searchtablecolMap();//缓存库表及字段
     }
 
     //获取表和字段的缓存
-    private void searchtablecolMap() {
-        List<TableCol> query = query("select table_schema,table_name,column_name from information_schema.COLUMNS where table_schema not in ('mysql','information_schema','performance_schema','sys') ", TableCol.class);
-        if (query != null && query.size() > 0) {
-            for (TableCol tableCol : query) {
-                String column_name = tableCol.getColumn_name().toLowerCase();
-                String table_name = tableCol.getTable_name().toLowerCase();
-                String table_schema = tableCol.getTable_schema().toLowerCase();
-                String key = table_schema + "." + table_name;
-                Map<String, Boolean> colMap = new HashMap<>();
-                if (tablecolMap.containsKey(key)) {
-                    colMap = tablecolMap.get(key);
-                }
-                colMap.put(column_name, true);
-                tablecolMap.put(key, colMap);
-            }
-        }
-    }
+//    private void searchtablecolMap() {
+//        List<TableCol> query = query("select table_schema,table_name,column_name from information_schema.COLUMNS where table_schema not in ('mysql','information_schema','performance_schema','sys') ", TableCol.class);
+//        if (query != null && query.size() > 0) {
+//            for (TableCol tableCol : query) {
+//                String column_name = tableCol.getColumn_name().toLowerCase();
+//                String table_name = tableCol.getTable_name().toLowerCase();
+//                String table_schema = tableCol.getTable_schema().toLowerCase();
+//                String key = table_schema + "." + table_name;
+//                Map<String, Boolean> colMap = new HashMap<>();
+//                if (tablecolMap.containsKey(key)) {
+//                    colMap = tablecolMap.get(key);
+//                }
+//                colMap.put(column_name, true);
+//                tablecolMap.put(key, colMap);
+//            }
+//        }
+//    }
 
     /**
      * 检查表是否存在，不存在重新缓存
@@ -60,19 +57,19 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
      * @param ob
      * @return
      */
-    private Boolean checktablecache(Object ob) {
-        Boolean arg = false;
-        String tablename = gettablename(ob.getClass());
-        if (!tablecolMap.containsKey(tablename)) {
-            log.debug("表名:"+tablename+"不存在，进行重新缓存表的各字段");
-            searchtablecolMap();
-        }
-
-        if (tablecolMap.containsKey(tablename)) {
-            arg = true;
-        }
-        return arg;
-    }
+//    private Boolean checktablecache(Object ob) {
+//        Boolean arg = false;
+//        String tablename = gettablename(ob.getClass());
+//        if (!tablecolMap.containsKey(tablename)) {
+//            log.debug("表名:"+tablename+"不存在，进行重新缓存表的各字段");
+//            searchtablecolMap();
+//        }
+//
+//        if (tablecolMap.containsKey(tablename)) {
+//            arg = true;
+//        }
+//        return arg;
+//    }
 
 
     //查询处理之后一条一条进行处理
@@ -307,13 +304,11 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
 
     @Override
     public FieldVo getinsertsql(Object object) {
-        checktablecache(object);
         return super.getinsertsql(object);
     }
 
     @Override
     public FieldVo getupdatesql(Object object) {
-        checktablecache(object);
         return super.getupdatesql(object);
     }
 
