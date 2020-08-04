@@ -21,12 +21,19 @@ public class JdkDataSource {
     private static final String MYSQL = "DataSource.properties";
 
 
-    public static  void jdkmysql(){
-        if(mysqldb==null) {
-            new JdkDataSource().createdateSource();
+
+    public static void jdkmysql() {
+        if (mysqldb == null) {
+            creasource();
         }
     }
 
+
+    private static synchronized void creasource() {
+        if (mysqldb == null) {
+            new JdkDataSource().createdateSource();
+        }
+    }
     // 创建连接池
     private  void createdateSource() {
 
