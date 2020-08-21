@@ -12,6 +12,7 @@ import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Consumer;
@@ -207,7 +208,11 @@ public class SearchExecuter extends ConnectExecuter {
         for (int i = 1; i <= colnum; i++) {
             String colname = rsmd.getColumnName(i);
             Object colval = rs.getObject(i);
-            jObject.put(colname, TimeUtils.parseDate(String.valueOf(colval)));
+            if(colval instanceof Date) {
+                jObject.put(colname, TimeUtils.parseDate(String.valueOf(colval)));
+            }else{
+                jObject.put(colname, colval);
+            }
         }
         return jObject;
     }

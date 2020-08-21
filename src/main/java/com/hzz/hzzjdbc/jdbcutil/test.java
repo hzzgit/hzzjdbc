@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -25,15 +26,12 @@ public class test {
     public static void main(String[] args) {
         JdkDataSource.jdkmysql();
         MysqlDao mysqlDao=  JdkDataSource.mysqldb;
-        for (int i = 0;; i++) {
-            System.out.println("i = " + i);
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                }
-            }).start();
-        }
+        String sql="select * from gps_hisdata.alarm_summary limit 0,10";
+        List<ConverMap> query = mysqlDao.query(sql);
+        BigDecimal realSpeed = (BigDecimal) query.get(0).get("realSpeed");
+        double v = realSpeed.doubleValue();
+        String vstr= String.valueOf(v);
+        System.out.println(1);
 
     }
 }
