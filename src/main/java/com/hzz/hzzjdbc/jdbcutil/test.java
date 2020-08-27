@@ -3,6 +3,7 @@ package com.hzz.hzzjdbc.jdbcutil;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.jdkjdbc.JdkDataSource;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
+import net.fxft.ascssubmeter.util.JdbcSearchSqlUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +27,10 @@ public class test {
     public static void main(String[] args) {
         JdkDataSource.jdkmysql();
         MysqlDao mysqlDao=  JdkDataSource.mysqldb;
-        String sql="select * from gps_hisdata.alarm_summary limit 0,10";
-        List<ConverMap> query = mysqlDao.query(sql);
+        String sql="select * from gps_hisdata.alarm_summary";
+        JdbcSearchSqlUtil jdbcSearchSqlUtil=new JdbcSearchSqlUtil(sql);
+        List<ConverMap> query = mysqlDao.query(jdbcSearchSqlUtil.getSqlByPage(145000,10));
+        Long o = mysqlDao.queryFirstVal(jdbcSearchSqlUtil.getSqlByCount());
         BigDecimal realSpeed = (BigDecimal) query.get(0).get("realSpeed");
         double v = realSpeed.doubleValue();
         String vstr= String.valueOf(v);
