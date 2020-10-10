@@ -177,7 +177,22 @@ public class SearchExecuter extends ConnectExecuter {
             //获取到这个属性的值
             Object colval = null;
             try {
-                colval = rs.getObject(filename);
+                if(field.getType()==String.class){
+                    colval = rs.getString(filename);
+                }else  if(field.getType()==Date.class){
+                    colval = rs.getDate(filename);
+                }else if(field.getType()==Integer.class){
+                    colval = rs.getInt(filename);
+                }else if(field.getType()==Long.class){
+                    colval = rs.getLong(filename);
+                }else if(field.getType()==Double.class){
+                    colval = rs.getDouble(filename);
+                }else if(field.getType()==Float.class){
+                    colval = rs.getFloat(filename);
+                }else{
+                    colval=rs.getObject(filename);
+                }
+
             } catch (SQLException e) {
                 continue;
             }

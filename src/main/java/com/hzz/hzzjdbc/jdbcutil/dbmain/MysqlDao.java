@@ -69,7 +69,7 @@ public interface MysqlDao {
 
     /**
      * 根据传入的类型,封装成集合返回
-     *
+     *  返回每一行第一列的数据
      * @param sql
      * @param wdata
      * @return
