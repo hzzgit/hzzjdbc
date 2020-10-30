@@ -10,8 +10,8 @@
     </parent>
     <groupId>com.hzz</groupId>
     <artifactId>hzzjdbc</artifactId>
-<!--    <version>0.0.1-SNAPSHOT</version>-->
-    <version>0.0.2-RELEASE</version>
+    <version>0.0.1-SNAPSHOT</version>
+<!--    <version>0.0.2-RELEASE</version>-->
     <name>hzzjdbc</name>
     <description>Demo project for Spring Boot</description>
 

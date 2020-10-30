@@ -46,7 +46,6 @@ public class JdkDataSource {
                 properties.load(new FileInputStream(realPath));// 这个是web项目用的
             } catch (IOException e) {
                 properties.load(new FileInputStream(MYSQL));// 这是直接读取项目下面的
-
             }
             DataSource dataSource = DruidDataSourceFactory.createDataSource(properties);
             String rawJdbcUrl = ((DruidDataSource) dataSource).getRawJdbcUrl();

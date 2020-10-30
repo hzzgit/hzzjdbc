@@ -4,6 +4,7 @@ package com.hzz.hzzjdbc.jdbcutil.dbmain;
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter;
+import com.hzz.hzzjdbc.jdbcutil.searchmain.SearchMostConnect;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.util.FieldUtil;
 import com.hzz.hzzjdbc.jdbcutil.util.SplitUtil;
@@ -32,6 +33,15 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
         super(dataSource, connSource);
         table_schema = SplitUtil.gettableschme(url);
         //  searchtablecolMap();//缓存库表及字段
+    }
+
+
+    /**
+     * 当要进行多数据源处理的时候，可能要用到事务，所以用这种方式
+     * @return
+     */
+    public SearchMostConnect getMostConnect(){
+            return  new SearchMostConnect(connSource);
     }
 
     //获取表和字段的缓存
@@ -72,6 +82,7 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
 //        }
 //        return arg;
 //    }
+
 
 
     //查询处理之后一条一条进行处理

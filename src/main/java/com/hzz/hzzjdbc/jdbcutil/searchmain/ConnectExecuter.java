@@ -21,6 +21,17 @@ public abstract class ConnectExecuter {
     protected String sql = "";
     protected Object[] wdata = null;
 
+//    是否开启事务
+    protected boolean istransaction=false;
+
+
+    /*将一些必须需要的数据传入*/
+    public void createData( String sql, Class rowCls, Object... wdata){
+        this.sql = sql;
+        this.wdata = wdata;
+        this.rowCls = rowCls;
+    }
+
 
     //创建初始化运作类
     public ConnectExecuter(ConnectionhzzSource connSource, String sql, Class rowCls, Object... wdata) {
@@ -86,7 +97,9 @@ public abstract class ConnectExecuter {
 
 
     public void close() {
+        if(istransaction==false){//如果没有开启事务才直接进行关闭
             connectionhzzSource.close(ps,con);
+        }
     }
 
     protected void errsql(Exception e) {

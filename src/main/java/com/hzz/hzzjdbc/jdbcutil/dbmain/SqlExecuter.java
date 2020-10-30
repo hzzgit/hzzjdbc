@@ -32,6 +32,10 @@ public abstract class SqlExecuter {
 
     protected ConnectionhzzSource connSource;
 
+
+
+
+
     protected String table_schema = "";//记录当前jdbc连接的数据库
 
 //    //存放表和字段内容

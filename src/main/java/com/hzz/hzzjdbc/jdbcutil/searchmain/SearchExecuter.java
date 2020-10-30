@@ -24,6 +24,10 @@ import java.util.function.Consumer;
 @Slf4j
 public class SearchExecuter extends ConnectExecuter {
 
+    public SearchExecuter(ConnectionhzzSource connSource ) {
+        super(connSource, null, null);
+    }
+
     public SearchExecuter(ConnectionhzzSource connSource, String sql, Object... wdata) {
         super(connSource, sql, ConverMap.class, wdata);
     }

@@ -19,6 +19,11 @@ public class start事务 {
     @Autowired
     private MysqlDao mysqlDao;
 
+    @Autowired(required = false)
+    private MysqlDao mydatadao;
+
+    @Autowired(required = false)
+    private MysqlDao mydatadao2;
 
     @Transactional(rollbackFor = Exception.class)
     public void insettert() throws Exception {
@@ -79,11 +84,15 @@ public class start事务 {
         }
     }
 
+    /*这边还不能支持多数据源的事务*/
     @Transactional(rollbackFor = Exception.class)
     public void testrollback() throws Exception {
 
         update();
+        mydatadao.excutesql("update vehicle set owner =1 where vehicleId =12019");
         for (int i = 0; i < 100; i++) {
+            String s = mydatadao.queryFirstValToString("select owner from vehicle where vehicleid =12019");
+            System.out.println(s);
             List<Student> query = mysqlDao.query("select * from student", Student.class);
             for (Student student1 : query) {
                 System.out.println("测试回滚：" + student1);
