@@ -31,7 +31,7 @@ public class DaoAutoConfiguration {
     @ConditionalOnMissingBean({MysqlDao.class})
     public MysqlDao createhzzSpringJdbcUtil(@Qualifier("dataSource") DataSource dataSource) {
         String jdbcUrl = ((HikariDataSource) dataSource).getJdbcUrl();
-        MysqlDao ju = new Mysqldb(dataSource,new SpringConnectionSource(dataSource,true),jdbcUrl);
+        MysqlDao ju = new Mysqldb(dataSource,new SpringConnectionhzzSource(dataSource,"springjdbc"),jdbcUrl);
         log.info("连接数据库成功");
         return  ju;
     }

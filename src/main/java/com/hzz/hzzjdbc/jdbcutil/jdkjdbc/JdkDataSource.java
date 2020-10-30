@@ -3,7 +3,7 @@ package com.hzz.hzzjdbc.jdbcutil.jdkjdbc;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionSource;
+import com.hzz.hzzjdbc.jdbcutil.config.DefaultConntionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb;
 
@@ -50,7 +50,7 @@ public class JdkDataSource {
             }
             DataSource dataSource = DruidDataSourceFactory.createDataSource(properties);
             String rawJdbcUrl = ((DruidDataSource) dataSource).getRawJdbcUrl();
-            mysqldb= new Mysqldb(dataSource,new SpringConnectionSource(dataSource,false),rawJdbcUrl);
+            mysqldb= new Mysqldb(dataSource,new DefaultConntionhzzSource(dataSource,"jdkjdbc"),rawJdbcUrl);
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block

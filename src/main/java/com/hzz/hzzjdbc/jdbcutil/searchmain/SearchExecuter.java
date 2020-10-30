@@ -2,6 +2,7 @@ package com.hzz.hzzjdbc.jdbcutil.searchmain;
 
 
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.util.FieldUtil;
 import com.hzz.hzzjdbc.jdbcutil.util.TimeUtils;
@@ -49,13 +50,30 @@ public class SearchExecuter extends ConnectExecuter {
     }
 
     //查询第一行第一列的数据
-    public Object searchfirstval() {
+    public Object searchfirstval(DataTypeEmum dataTypeEmum) {
         excuteSql();
         Object result = null;
         try {
             rs = ps.executeQuery();
             if (rs.next()) {
-                result = rs.getObject(1);
+                if(dataTypeEmum==DataTypeEmum.INT){
+                    result = rs.getInt(1);
+                }else  if(dataTypeEmum==DataTypeEmum.DOUBLE){
+                    result = rs.getDouble(1);
+                }else  if(dataTypeEmum==DataTypeEmum.LONG){
+                    result = rs.getLong(1);
+                }else  if(dataTypeEmum==DataTypeEmum.STRING){
+                    result = rs.getString(1);
+                }else  if(dataTypeEmum==DataTypeEmum.DATE){
+                    result = rs.getDate(1);
+                }else  if(dataTypeEmum==DataTypeEmum.SHORT){
+                    result = rs.getShort(1);
+                }else  if(dataTypeEmum==DataTypeEmum.BYTE){
+                    result = rs.getByte(1);
+                }else{
+                    result = rs.getObject(1);
+                }
+
             }
         } catch (SQLException e) {
             errsql(e);

@@ -14,6 +14,7 @@ public abstract class ConnectExecuter {
     protected PreparedStatement ps = null;
     protected ResultSet rs = null;
     protected Connection con = null;
+    protected  ConnectionhzzSource connectionhzzSource;
     protected ResultSetMetaData rsmd = null;
     protected Class rowCls = null;
     protected int colnum = 0;
@@ -26,6 +27,7 @@ public abstract class ConnectExecuter {
         this.sql = sql;
         this.wdata = wdata;
         this.rowCls = rowCls;
+        this.connectionhzzSource=connSource;
         try {
             con = connSource.getConnection();
         } catch (SQLException e) {
@@ -84,22 +86,7 @@ public abstract class ConnectExecuter {
 
 
     public void close() {
-        try {
-            if (rs != null) {
-                rs.close();
-                rs = null;
-            }
-            if (ps != null) {
-                ps.close();
-                ps = null;
-            }
-            if (con != null) {
-                con.close();
-                con = null;
-            }
-        } catch (SQLException e) {
-            log.error("关闭数据库连接失败", e);
-        }
+            connectionhzzSource.close(ps,con);
     }
 
     protected void errsql(Exception e) {

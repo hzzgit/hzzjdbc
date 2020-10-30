@@ -6,6 +6,7 @@ import com.hzz.hzzjdbc.jdbcutil.vo.FieldVo;
 import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -105,6 +106,26 @@ public interface MysqlDao {
     public <T> T queryFirstVal(String sql, Object... wdata);
 
 
+    public Integer queryFirstValToInt(String sql, Object... wdata) ;
+
+
+    public Long queryFirstValToLong(String sql, Object... wdata) ;
+
+
+    public Double queryFirstValToDouble(String sql, Object... wdata) ;
+
+
+    public short queryFirstValToShort(String sql, Object... wdata);
+
+
+    public Date queryFirstValToDate(String sql, Object... wdata) ;
+
+
+
+    public Byte queryFirstValToByte(String sql, Object... wdata);
+
+
+    public String queryFirstValToString(String sql, Object... wdata);
     /**
      * 单条插入,单次提交
      *

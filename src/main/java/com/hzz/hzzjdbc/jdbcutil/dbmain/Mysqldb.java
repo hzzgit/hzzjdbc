@@ -2,6 +2,7 @@ package com.hzz.hzzjdbc.jdbcutil.dbmain;
 
 
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.util.FieldUtil;
@@ -13,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Consumer;
@@ -29,7 +31,7 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
     public Mysqldb(DataSource dataSource, ConnectionhzzSource connSource, String url) {
         super(dataSource, connSource);
         table_schema = SplitUtil.gettableschme(url);
-      //  searchtablecolMap();//缓存库表及字段
+        //  searchtablecolMap();//缓存库表及字段
     }
 
     //获取表和字段的缓存
@@ -173,9 +175,53 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
         return searchfirstcol(sql, wdata);
     }
 
+
     @Override
-    public <T> T queryFirstVal(String sql, Object... wdata) {
-        return super.searchFirstVal(sql, wdata);
+    public <T> T queryFirstVal(String sql, Object... wdata){
+        return  super.searchFirstVal(sql, DataTypeEmum.OTHER, wdata);
+    }
+
+    @Override
+    public Integer queryFirstValToInt(String sql, Object... wdata) {
+        Integer integer = super.searchFirstVal(sql, DataTypeEmum.INT, wdata);
+        return integer;
+    }
+
+    @Override
+    public Long queryFirstValToLong(String sql, Object... wdata) {
+        Long aLong = super.searchFirstVal(sql, DataTypeEmum.LONG, wdata);
+        return aLong;
+    }
+
+    @Override
+    public Double queryFirstValToDouble(String sql, Object... wdata) {
+        Double aDouble = super.searchFirstVal(sql, DataTypeEmum.DOUBLE, wdata);
+        return aDouble;
+    }
+
+    @Override
+    public short queryFirstValToShort(String sql, Object... wdata) {
+        Short aShort = super.searchFirstVal(sql, DataTypeEmum.SHORT, wdata);
+        return aShort;
+    }
+
+    @Override
+    public Date queryFirstValToDate(String sql, Object... wdata) {
+        Date date = super.searchFirstVal(sql, DataTypeEmum.DATE, wdata);
+        return date;
+    }
+
+
+    @Override
+    public Byte queryFirstValToByte(String sql, Object... wdata) {
+        Byte aByte = super.searchFirstVal(sql, DataTypeEmum.BYTE, wdata);
+        return aByte;
+    }
+
+    @Override
+    public String queryFirstValToString(String sql, Object... wdata) {
+        String s = super.searchFirstVal(sql, DataTypeEmum.STRING, wdata);
+        return s;
     }
 
     /**

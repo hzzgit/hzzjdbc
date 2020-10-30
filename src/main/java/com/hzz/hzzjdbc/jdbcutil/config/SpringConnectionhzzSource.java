@@ -10,26 +10,21 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class SpringConnectionSource implements ConnectionhzzSource {
-    private static final Logger log = LoggerFactory.getLogger(SpringConnectionSource.class);
+public class SpringConnectionhzzSource implements ConnectionhzzSource {
+    private static final Logger log = LoggerFactory.getLogger(SpringConnectionhzzSource.class);
     private DataSource dataSource;
+    private String name;
 
-    //是否是spring启动
-    private boolean isspringarg=true;
 
-    public SpringConnectionSource(DataSource dataSource, boolean isspringarg) {
+    public SpringConnectionhzzSource(DataSource dataSource, String name) {
         this.dataSource = dataSource;
-        this.isspringarg=isspringarg;
+        this.name = name;
     }
 
 
     @Override
     public Connection getConnection() throws SQLException {
-        if(isspringarg) {
-            return DataSourceUtils.getConnection(this.dataSource);
-        }else{
-            return  dataSource.getConnection();
-        }
+        return DataSourceUtils.getConnection(this.dataSource);
     }
 
     @Override

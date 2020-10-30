@@ -5,6 +5,7 @@ import com.hzz.hzzjdbc.jdbcutil.annotation.DbColNUll;
 import com.hzz.hzzjdbc.jdbcutil.annotation.DbTableId;
 import com.hzz.hzzjdbc.jdbcutil.annotation.DbTableName;
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverterUtils;
@@ -117,7 +118,7 @@ public abstract class SqlExecuter {
      * @return
      */
     protected int queryByCount(String sql, Object... wdata) {
-        int co = ConverterUtils.toInt(searchFirstVal(sql, wdata), 0);
+        int co = ConverterUtils.toInt(searchFirstVal(sql, DataTypeEmum.INT,wdata), 0);
         return co;
     }
 
@@ -178,13 +179,12 @@ public abstract class SqlExecuter {
      * 查询第一行第一列数据
      *
      * @param sql
-     * @param wdata
      * @return
      */
-    protected <T> T searchFirstVal(String sql, Object... wdata) {
+    protected <T> T searchFirstVal(String sql, DataTypeEmum emum,Object... wdata) {
         T result = null;
         SearchExecuter searchExecuter = new SearchExecuter(connSource, sql, wdata);
-        result = (T) searchExecuter.searchfirstval();
+        result = (T) searchExecuter.searchfirstval(emum);
         searchExecuter.close();
         return result;
     }
@@ -217,9 +217,10 @@ public abstract class SqlExecuter {
                         fielNames += fieldName + ",";
                         DbTableId annotation1 = declaredField.getAnnotation(DbTableId.class);
                         valueNames += "?,";
-                        if (annotation1 != null && (type == Integer.class || type == int.class)) {//如果是主键
-                            vals.add("0");
-                        } else if (type == Date.class) {
+//                        if (annotation1 != null && (type == Integer.class || type == int.class)) {//如果是主键
+//                            vals.add("0");
+//                        } else
+                            if (type == Date.class) {
                             vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
                         } else if (type == boolean.class || type == Boolean.class) {
                             boolean arg = (boolean) declaredField.get(object);
