@@ -21,7 +21,7 @@ public class HzzjdbcApplicationTests {
     @Test
     public void contextLoads1() {
         String sql="select * from student";
-        List<ConverMap> query = mysqlDao.query(sql);
+        List<ConverMap> query = mysqlDao.getMysqlUtil().query(sql);
         Iterator<ConverMap> iterator = query.iterator();
         ConverMap next = iterator.next();
         System.out.println(1);

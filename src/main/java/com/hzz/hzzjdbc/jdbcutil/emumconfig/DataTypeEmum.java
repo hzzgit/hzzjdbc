@@ -6,14 +6,14 @@ package com.hzz.hzzjdbc.jdbcutil.emumconfig;
  * @date ：2020/10/29 17:32
  */
 public enum DataTypeEmum {
-     INT,
-     LONG,
-     STRING,
-     DATE,
+    INT,
+    LONG,
+    STRING,
+    DATE,
     SHORT,
     FLOAT,
     BYTE,
-     DOUBLE,
+    DOUBLE,
     OTHER;
 
 

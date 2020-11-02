@@ -22,16 +22,19 @@ public class DataSourceConfig {
 
 
     @Primary
-    @Bean
+    @Bean(name = "mydata1")
     public DataSource getOtherDataSource(DataSourceVo dataSourceDefaultVo) {
+        if (dataSourceDefaultVo==null||dataSourceDefaultVo.getUrl() == null) {
+            return null;
+        }
         DataSource build = DataSourceBuilder.create().url(dataSourceDefaultVo.getUrl()).driverClassName(dataSourceDefaultVo.getDriverClassName())
                 .password(dataSourceDefaultVo.getPassword()).username(dataSourceDefaultVo.getUsername()).build();
         return build;
     }
 
-    @Bean(name = "mydata")
+    @Bean(name = "mydata2")
     public DataSource getMyDataDataSource(@Autowired(required = false) @Qualifier("mydataconfig2") DataSourceVo dataSourceVo) {
-        if (dataSourceVo.getUrl() == null) {
+        if (dataSourceVo==null||dataSourceVo.getUrl() == null) {
             return null;
         }
         DataSource build = DataSourceBuilder.create().url(dataSourceVo.getUrl()).driverClassName(dataSourceVo.getDriverClassName())
@@ -40,7 +43,7 @@ public class DataSourceConfig {
     }
 
 
-    @Bean(name = "mydata2")
+    @Bean(name = "mydata3")
     public DataSource getMyDataData2Source( DataSoure2Vo dataSoure2Vo) {
         if (dataSoure2Vo==null||dataSoure2Vo.getUrl() == null) {
             return null;
@@ -61,7 +64,7 @@ public class DataSourceConfig {
 
     @Bean
     @Qualifier("mydataconfig2")
-    @ConfigurationProperties(prefix = "spring.mydata")
+    @ConfigurationProperties(prefix = "spring.datasource2")
     public DataSourceVo getDataSource2() {
         return new DataSourceVo();
     }

@@ -4,6 +4,7 @@ package com.hzz.hzzjdbc.jdbcutil.searchmain;
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
+import com.hzz.hzzjdbc.jdbcutil.util.ConverterUtils;
 import com.hzz.hzzjdbc.jdbcutil.util.FieldUtil;
 import com.hzz.hzzjdbc.jdbcutil.util.TimeUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -34,6 +35,49 @@ public class SearchExecuter extends ConnectExecuter {
 
     public SearchExecuter(ConnectionhzzSource connSource, String sql, Class rowcls, Object... wdata) {
         super(connSource, sql, rowcls, wdata);
+    }
+
+
+
+    /**
+     * 查询总数
+     *
+     * @param sql
+     * @param wdata
+     * @return
+     */
+    protected int queryByCount(String sql, Object... wdata) {
+        int co = ConverterUtils.toInt(searchFirstVal(sql, DataTypeEmum.INT,wdata), 0);
+        return co;
+    }
+
+
+    /**
+     * 执行一个插入修改语句
+     *
+     * @param sql
+     * @param returnAutoId
+     * @param wdata
+     * @return
+     */
+    protected void executesql(String sql, AtomicLong returnAutoId, Object... wdata) {
+        createData(sql,ConverMap.class,wdata);
+        executeUpdate();
+        searchinsertId(returnAutoId);
+        close();
+    }
+
+    /**
+     * 查询第一行第一列数据
+     *
+     * @param sql
+     * @return
+     */
+    protected <T> T searchFirstVal(String sql, DataTypeEmum emum,Object... wdata) {
+        T result = null;
+        createData(sql,ConverMap.class,wdata);
+        result = (T) searchfirstval(emum);
+        return result;
     }
 
     //查询每一行第一列的数据
@@ -132,11 +176,43 @@ public class SearchExecuter extends ConnectExecuter {
         }
     }
 
+
+    /**
+     * 修改事务控制级别
+     * @param level one of the following <code>Connection</code> constants:
+     *        <code>Connection.TRANSACTION_READ_UNCOMMITTED</code>,
+     *        <code>Connection.TRANSACTION_READ_COMMITTED</code>,
+     *        <code>Connection.TRANSACTION_REPEATABLE_READ</code>, or
+     *        <code>Connection.TRANSACTION_SERIALIZABLE</code>.
+     *        (Note that <code>Connection.TRANSACTION_NONE</code> cannot be used
+     *        because it specifies that transactions are not supported.)
+     */
+    public void begintransaction(int level){
+        begintransaction();
+        try {
+            con.setTransactionIsolation(level);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void begintransaction(){
         try {
+            istransaction=true;
             con.setAutoCommit(false);
         } catch (SQLException e) {
             log.error("事务开启失败",e);
+        }
+    }
+
+    public void rollback(){
+        try {
+            con.rollback();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            istransaction=false;
+            close();
         }
     }
 
@@ -151,9 +227,9 @@ public class SearchExecuter extends ConnectExecuter {
                 log.error("回滚失败",ex);
             }
         }finally {
+            istransaction=false;
             close();
         }
-
     }
 
     //执行查询sql之后的操作

@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @description：TODO
  * @date ：2020/10/30 15:57
  */
-@ConfigurationProperties("spring.mydata2")
+@ConfigurationProperties("spring.datasource3")
 public class DataSoure2Vo {
     private String driverClassName;
     private String url;

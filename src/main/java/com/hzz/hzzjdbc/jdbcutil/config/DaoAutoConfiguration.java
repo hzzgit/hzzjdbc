@@ -33,40 +33,45 @@ public class DaoAutoConfiguration {
 //    @ConditionalOnClass        //	当给定的类名在类路径上存在，则实例化当前Bean
 //    @ConditionalOnMissingClass //	当给定的类名在类路径上不存在，则实例化当前Bean
     @Primary
-    @Bean
+    @Bean("mysqldata1")
+    @Qualifier("mysqldata1")
     @ConditionalOnBean(value = DataSource.class)
   //  @ConditionalOnBean //这个是只有当dataSource不为null的情况下，才会生成这个bean
     //@ConditionalOnMissingBean  //这个代表着如果已经有注入了，就不会注入了。就算命名不一样也是
-    public MysqlDao createhzzSpringJdbcUtil( DataSource dataSource) {
+    public MysqlDao createhzzSpringJdbcUtil(@Autowired(required = false) @Qualifier("mydata1") DataSource dataSource) {
+        if(dataSource==null){
+            return null;
+        }
         String jdbcUrl = ((HikariDataSource) dataSource).getJdbcUrl();
-        MysqlDao ju = new Mysqldb(dataSource,new SpringConnectionhzzSource(dataSource,"springjdbc"),jdbcUrl);
+        MysqlDao ju = new Mysqldb(dataSource,new SpringConnectionhzzSource(dataSource,"springjdbc1"),jdbcUrl);
         log.info("连接数据库成功,url="+jdbcUrl);
         return  ju;
     }
 
 
-    @Bean("mydatadao")
-    @Qualifier("mydatadao")
-    public MysqlDao createmydataSpringJdbcUtil(@Autowired(required = false) @Qualifier("mydata") DataSource mydata) {
+    @Bean("mysqldata2")
+    @Qualifier("mysqldata2")
+    @ConditionalOnBean(name = "mydata2")
+    public MysqlDao createmydataSpringJdbcUtil(@Autowired(required = false) @Qualifier("mydata2") DataSource mydata) {
         if(mydata==null){
             return null;
         }
         String jdbcUrl = ((HikariDataSource) mydata).getJdbcUrl();
-        MysqlDao ju = new Mysqldb(mydata,new SpringConnectionhzzSource(mydata,"springjdbc"),jdbcUrl);
+        MysqlDao ju = new Mysqldb(mydata,new SpringConnectionhzzSource(mydata,"springjdbc2"),jdbcUrl);
         log.info("连接数据库成功,url="+jdbcUrl);
         return  ju;
     }
 
 
-    @Bean("mydatadao2")
-    @Qualifier("mydatadao2")
-    @ConditionalOnBean(name = "mydata2")
-    public MysqlDao createmydata2SpringJdbcUtil(@Autowired(required = false) @Qualifier("mydata2") DataSource mydata) {
-//        if(mydata==null){
-//            return null;
-//        }
+    @Bean("mysqldata3")
+    @Qualifier("mysqldata3")
+    @ConditionalOnBean(name = "mydata3")
+    public MysqlDao createmydata2SpringJdbcUtil(@Autowired(required = false) @Qualifier("mydata3") DataSource mydata) {
+        if(mydata==null){
+            return null;
+        }
         String jdbcUrl = ((HikariDataSource) mydata).getJdbcUrl();
-        MysqlDao ju = new Mysqldb(mydata,new SpringConnectionhzzSource(mydata,"springjdbc"),jdbcUrl);
+        MysqlDao ju = new Mysqldb(mydata,new SpringConnectionhzzSource(mydata,"springjdbc3"),jdbcUrl);
         log.info("连接数据库成功,url="+jdbcUrl);
         return  ju;
     }

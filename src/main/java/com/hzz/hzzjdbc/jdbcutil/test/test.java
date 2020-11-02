@@ -16,28 +16,28 @@ public class test {
     private MysqlDao mysqlDao;
 
     @Autowired(required = false)//这个地方代表允许这个为空
-    @Qualifier("mydatadao")
-    private MysqlDao mydatadao;
+    @Qualifier("mysqldata2")
+    private MysqlDao mysqldata2;
 
     @Autowired(required = false)//这个地方代表允许这个为空
-    @Qualifier("mydatadao2")
-    private MysqlDao mydatadao2;
+    @Qualifier("mysqldata3")
+    private MysqlDao mysqldata3;
 
     @PostConstruct
     private void init() {
         String sql = "select * from student";
-        List<ConverMap> query = mysqlDao.query(sql);
+        List<ConverMap> query = mysqlDao.getMysqlUtil().query(sql);
         System.out.println("初始连接库:内容" + query);
 
         String sql2 = "select * from vehicle limit 10";
-        if (mydatadao != null) {
-            List<ConverMap> query2 = mydatadao.query(sql2);
+        if (mysqldata2 != null) {
+            List<ConverMap> query2 = mysqldata2.getMysqlUtil().query(sql2);
             System.out.println("第二链接库:内容" + query2);
         }
 
 
-        if (mydatadao2 != null) {
-            List<ConverMap> query2 = mydatadao2.query(sql2);
+        if (mysqldata3 != null) {
+            List<ConverMap> query2 = mysqldata3.getMysqlUtil().query(sql2);
             System.out.println("第三链接库:内容" + query2);
         }
 

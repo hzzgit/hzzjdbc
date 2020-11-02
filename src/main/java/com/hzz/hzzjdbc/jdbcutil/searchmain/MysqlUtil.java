@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.function.Consumer;
 
-public interface SearchMostConnectDao {
+public interface MysqlUtil {
     /**
      * 根据类进行不分页查询
      *
@@ -170,6 +170,12 @@ public interface SearchMostConnectDao {
      */
     public void excutesqlList(List<FieldVo> vos);
 
+
+    public void begintransaction();
+
+    public void endtransaction();
+
+    public void rollback();
     /**
      * 集合转in查询的字符串
      *

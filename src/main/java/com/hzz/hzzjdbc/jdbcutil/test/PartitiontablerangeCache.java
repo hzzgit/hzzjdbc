@@ -20,7 +20,7 @@ public class PartitiontablerangeCache {
         MysqlDao mysqlDao=  JdkDataSource.mysqldb;
         String sql = "select 10 id, tableSchema,tableName,baseTableName,dataEndDate,dataBeginDate" +
                 " from partitiontablerange_copy1  order by dataBeginDate";
-        List<PartitiontableVo> query = mysqlDao.query(sql,PartitiontableVo.class);
+        List<PartitiontableVo> query = mysqlDao.getMysqlUtil().query(sql,PartitiontableVo.class);
         System.out.println(query.size());
 
     }

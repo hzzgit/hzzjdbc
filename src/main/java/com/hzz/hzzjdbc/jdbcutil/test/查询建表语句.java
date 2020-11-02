@@ -15,7 +15,7 @@ public class 查询建表语句 {
         JdkDataSource.jdkmysql();
         MysqlDao mysqlDao=  JdkDataSource.mysqldb;
         String sql="show create table gps_hisdata.alarm_summary ";
-        ConverMap converMap = mysqlDao.queryFirst(sql);
+        ConverMap converMap = mysqlDao.getMysqlUtil().queryFirst(sql);
         String createSql=converMap.getString("Create Table");
         System.out.println(createSql);
 

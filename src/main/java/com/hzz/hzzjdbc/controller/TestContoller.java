@@ -42,14 +42,7 @@ public class TestContoller {
             e.printStackTrace();
         }
     }
-    @RequestMapping("/update1")
-    public void update1(){
-        try {
-            start事务.update();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 
 
     @RequestMapping("/update2")
