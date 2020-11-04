@@ -18,7 +18,7 @@ import java.util.List;
  * @date ：2020/11/2 10:31
  */
 @Slf4j
-public class MysqlUtil {
+public class SqlCreateUtil {
 
     /**
      * 拼装分页sql
@@ -50,9 +50,88 @@ public class MysqlUtil {
     }
 
 
+    //根据实体类集合获取到插入的sql语句
+    public static FieldVo getinsertsqlList(List<Object> objects, String table_schema) {
+        if (objects == null && objects.size() == 0) {
+            throw new NullPointerException();
+        }
+        Object object = objects.get(0);
+        String sql = "";
+        String fielNames = "";
+        List<String> vals = new ArrayList<>();
+        try {
+            Class<? extends Object> c = object.getClass();
+            String tableName = gettablename(c, table_schema);
+            Field[] declaredFields = FieldUtil.getFieldbycla(c);
+            if (declaredFields.length > 0) {
+                sql = "insert into " + tableName + " ( ";
+                for (Field declaredField : declaredFields) {
+                    if (Modifier.isFinal(declaredField.getModifiers())) {
+                        continue;
+                    }
+                    String fieldName = declaredField.getName().toLowerCase();
+                    DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
+                    if (dbColNUll == null) {
+                        Class<?> type = declaredField.getType();
+                        declaredField.setAccessible(true);
+                        fielNames += fieldName + ",";
+                    }
+
+                }
+                fielNames = fielNames.substring(0, fielNames.length() - 1);
+                sql=sql+fielNames+" ) values ";
+            } else {
+                throw new NullPointerException();
+            }
+
+            for (int i = 0; i < objects.size(); i++) {
+                Object o=objects.get(i);
+                String valueNames = "";
+                Class<? extends Object> c1 = o.getClass();
+                Field[] declaredFields1 = FieldUtil.getFieldbycla(c1);
+                if (declaredFields1.length > 0) {
+                    valueNames = "(";
+                    for (Field declaredField : declaredFields1) {
+                        if (Modifier.isFinal(declaredField.getModifiers())) {
+                            continue;
+                        }
+                        DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
+                        if (dbColNUll == null) {
+                            Class<?> type = declaredField.getType();
+                            declaredField.setAccessible(true);
+                            valueNames += "?,";
+                            if (type == Date.class) {
+                                vals.add(TimeUtils.dateTodetailStr((Date) declaredField.get(object)));
+                            } else if (type == boolean.class || type == Boolean.class) {
+                                boolean arg = (boolean) declaredField.get(object);
+                                vals.add(arg == true ? "1" : "0");
+                            } else {
+                                vals.add(String.valueOf(declaredField.get(object)));
+                            }
+                        }
+                    }
+                    valueNames = valueNames.substring(0, valueNames.length() - 1);
+                    if(i==(objects.size()-1)){
+                        valueNames+=");";
+                    }else{
+                        valueNames+="),";
+                    }
+                } else {
+                    throw new NullPointerException();
+                }
+                sql+=valueNames;
+            }
+
+
+        } catch (Exception e) {
+            log.error("插入错误," + sql, e);
+        }
+        return new FieldVo(sql, vals.toArray(new String[]{}));
+    }
+
 
     //根据实体类进行保存
-    public static FieldVo getinsertsql(Object object,String table_schema) {
+    public static FieldVo getinsertsql(Object object, String table_schema) {
         if (object == null) {
             throw new NullPointerException();
         }
@@ -60,7 +139,7 @@ public class MysqlUtil {
         List<String> vals = new ArrayList<>();
         try {
             Class<? extends Object> c = object.getClass();
-            String tableName = gettablename(c,table_schema);
+            String tableName = gettablename(c, table_schema);
             Field[] declaredFields = FieldUtil.getFieldbycla(c);
             if (declaredFields.length > 0) {
                 sql = "insert into " + tableName + " ( ";
@@ -108,7 +187,7 @@ public class MysqlUtil {
 
 
     //根据实体类进行修改,这个只能根据主键
-    public static FieldVo getupdatesql(Object object,String table_schema) {
+    public static FieldVo getupdatesql(Object object, String table_schema) {
         if (object == null) {
             throw new NullPointerException();
         }
@@ -117,7 +196,7 @@ public class MysqlUtil {
         String whereId = "";
         try {
             Class<? extends Object> c = object.getClass();
-            String tableName = gettablename(c,table_schema);
+            String tableName = gettablename(c, table_schema);
             // Map colMap = tablecolMap.get(tableName);
             Field[] declaredFields = FieldUtil.getFieldbycla(c);
             if (declaredFields.length > 0) {
@@ -166,7 +245,7 @@ public class MysqlUtil {
     }
 
 
-    public static String gettablename(Class<? extends Object> c,String table_schema) {
+    public static String gettablename(Class<? extends Object> c, String table_schema) {
         DbTableName annotation = c.getAnnotation(DbTableName.class);
         String tableName = annotation.value();
         if (tableName.indexOf(".") == -1) {

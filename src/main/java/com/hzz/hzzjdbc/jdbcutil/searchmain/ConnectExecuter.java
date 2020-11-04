@@ -70,28 +70,31 @@ public abstract class ConnectExecuter {
 
     //执行sql,这种是单条执行
     public void excuteSql(String sql, Object... wdata) {
-        try {
-            ps = con.prepareStatement(sql);
-        } catch (SQLException e) {
-            errsql(e);
-        }
         String wdataString = "";
-        for (int i = 0; i < wdata.length; i++) {
-            try {
-                ps.setObject(i + 1, wdata[i]);
-            } catch (SQLException e) {
-                log.error("sql注入参数失败", e);
-            }
-            wdataString += wdata[i] + ",";
-        }
-
         try {
-            ps.execute();
+            try {
+                ps = con.prepareStatement(sql);
+            } catch (SQLException e) {
+                errsql(e);
+            }
+
+            if (wdata != null) {
+                for (int i = 0; i < wdata.length; i++) {
+                    try {
+                        ps.setObject(i + 1, wdata[i]);
+                    } catch (SQLException e) {
+                        log.error("sql注入参数失败", e);
+                    }
+                    wdataString += wdata[i] + ",";
+                }
+            }
+            ps.executeUpdate();
         } catch (SQLException e) {
             errsql(e);
             close();
         }
-        log.debug("当前执行的sql:" + sql + ";参数为:" + wdataString + "]");
+
+     //   log.debug("当前执行的sql:" + sql + ";参数为:" + wdataString + "]");
     }
 
 

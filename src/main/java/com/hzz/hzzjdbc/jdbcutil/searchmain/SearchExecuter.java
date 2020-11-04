@@ -199,6 +199,7 @@ public class SearchExecuter extends ConnectExecuter {
     public void begintransaction(){
         try {
             istransaction=true;
+
             con.setAutoCommit(false);
         } catch (SQLException e) {
             log.error("事务开启失败",e);

@@ -1,5 +1,6 @@
 package com.hzz.hzzjdbc.service.事务测试;
 
+import com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalMostConnect;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
 /**
@@ -15,7 +17,7 @@ import java.util.List;
  * @date ：2020/10/29 17:11
  */
 @Service
-public class start事务 {
+public class MostConnectTransactionalTest {
 
 
     @Autowired(required = false)
@@ -78,8 +80,14 @@ public class start事务 {
         }
     }
 
+    @TransactionalMostConnect(DataSourcesNames ={"mysqldata2","mysqldata1"})
+    public void testtrans(){
+        System.out.println("测试注解");
+    }
+
     /*注释这边还不能支持多数据源的事务，仅能用封装的方法进行*/
     @Transactional(rollbackFor = Exception.class)
+    @TransactionalMostConnect(DataSourcesNames ={"mysqldata2","mysqldata1"},rollbackFor = Exception.class)
     public void testrollback() throws Exception {
 
 
@@ -123,5 +131,16 @@ public class start事务 {
             throw new Exception();
         }
 
+    }
+
+    public static void main(String[] args) {
+        Class<MostConnectTransactionalTest> class1 = MostConnectTransactionalTest.class;
+        Method[] methods = class1.getMethods();
+        for (Method method : methods) {
+            TransactionalMostConnect annotation = method.getAnnotation(TransactionalMostConnect.class);
+            if(annotation!=null){
+                System.out.println(1);
+            }
+        }
     }
 }

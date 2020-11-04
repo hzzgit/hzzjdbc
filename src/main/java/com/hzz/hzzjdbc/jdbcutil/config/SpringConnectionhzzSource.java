@@ -25,6 +25,7 @@ public class SpringConnectionhzzSource implements ConnectionhzzSource {
     @Override
     public Connection getConnection() throws SQLException {
         return DataSourceUtils.getConnection(this.dataSource);
+//        return DataSoureMostConnectUtils.getConnection(this.dataSource);
     }
 
     @Override
@@ -42,6 +43,7 @@ public class SpringConnectionhzzSource implements ConnectionhzzSource {
     @Override
     public void close(Connection conn) {
         DataSourceUtils.releaseConnection(conn, this.dataSource);
+//        DataSoureMostConnectUtils.releaseConnection();
     }
 
     @Override

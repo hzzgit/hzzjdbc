@@ -1,4 +1,4 @@
-package com.hzz.hzzjdbc.jdbcutil.test;
+package com.hzz.hzzjdbc.service.事务测试;
 
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
@@ -24,7 +24,7 @@ public class test {
     private MysqlDao mysqldata3;
 
     @PostConstruct
-    private void init() {
+    public void init() {
         String sql = "select * from student";
         List<ConverMap> query = mysqlDao.getMysqlUtil().query(sql);
         System.out.println("初始连接库:内容" + query);
@@ -44,16 +44,7 @@ public class test {
     }
 
     public static void main(String[] args) {
-//        JdkDataSource.jdkmysql();
-//        MysqlDao mysqlDao=  JdkDataSource.mysqldb;
-//        String sql="select * from gps_hisdata.alarm_summary";
-//        JdbcSearchSqlUtil jdbcSearchSqlUtil=new JdbcSearchSqlUtil(sql);
-//        List<ConverMap> query = mysqlDao.query(jdbcSearchSqlUtil.getSqlByPage(145000,10));
-//        Long o = mysqlDao.queryFirstVal(jdbcSearchSqlUtil.getSqlByCount());
-//        BigDecimal realSpeed = (BigDecimal) query.get(0).get("realSpeed");
-//        double v = realSpeed.doubleValue();
-//        String vstr= String.valueOf(v);
-//        System.out.println(1);
+
 
     }
 }

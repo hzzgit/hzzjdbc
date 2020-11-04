@@ -4,6 +4,7 @@ import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.util.FieldUtil;
+import com.hzz.hzzjdbc.jdbcutil.util.SqlCreateUtil;
 import com.hzz.hzzjdbc.jdbcutil.vo.FieldVo;
 import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
 import com.mysql.jdbc.StringUtils;
@@ -106,9 +107,9 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
     @Override
     public <T> PaginateResult queryPage(String sql, Class<T> object2, int page, int pagesize,
                                         Object... wdata) {
-        String pageSql = com.hzz.hzzjdbc.jdbcutil.util.MysqlUtil.getPageSql(sql, page, pagesize);
+        String pageSql = SqlCreateUtil.getPageSql(sql, page, pagesize);
         List<T> pages = query(pageSql, object2, page, pagesize, wdata);
-        int co = queryByCount(com.hzz.hzzjdbc.jdbcutil.util.MysqlUtil.getpagesqlCount(sql), wdata);
+        int co = queryByCount(SqlCreateUtil.getpagesqlCount(sql), wdata);
         PaginateResult paginateResult = new PaginateResult(co, pages);
         return paginateResult;
     }
@@ -204,9 +205,9 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
     @Override
     public PaginateResult queryPage(String sql, int page, int pagesize,
                                     Object... wdata) {
-        String pageSql = com.hzz.hzzjdbc.jdbcutil.util.MysqlUtil.getPageSql(sql, page, pagesize);
+        String pageSql = SqlCreateUtil.getPageSql(sql, page, pagesize);
         List<ConverMap> pages = query(pageSql, page, pagesize, wdata);
-        int co = queryByCount(com.hzz.hzzjdbc.jdbcutil.util.MysqlUtil.getpagesqlCount(sql), wdata);
+        int co = queryByCount(SqlCreateUtil.getpagesqlCount(sql), wdata);
         PaginateResult paginateResult = new PaginateResult(co, pages);
         return paginateResult;
     }
@@ -216,15 +217,17 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
      * 批量插入
      *
      * @param objects
-     * @param <T>
      */
     @Override
     public <T> void insertList(List<T> objects) throws Exception {
         begintransaction();
-        for (Object object : objects) {
-            FieldVo getinsertsql = getinsertsql(object);
-            excuteSql(getinsertsql.getSql(), getinsertsql.getVal());
-        }
+//        for (Object object : objects) {
+////            FieldVo getinsertsql = getinsertsql(object);
+////            excuteSql(getinsertsql.getSql(), getinsertsql.getVal());
+////        }
+        FieldVo fieldVo = SqlCreateUtil.getinsertsqlList((List<java.lang.Object>) objects, table_schema);
+        excuteSql(fieldVo.getSql(), fieldVo.getVal());
+
         endtransaction();
 
     }
@@ -237,7 +240,8 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
     @Override
     public void excutesqlList(List<FieldVo> vos) {
         begintransaction();
-        for (FieldVo vo : vos) {
+        for (int i = 0; i < vos.size(); i++) {
+            FieldVo vo=vos.get(i);
             excuteSql(vo.getSql(), vo.getVal());
         }
         endtransaction();
@@ -317,12 +321,12 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
 
     @Override
     public FieldVo getinsertsql(Object object) {
-        return com.hzz.hzzjdbc.jdbcutil.util.MysqlUtil.getinsertsql(object,table_schema);
+        return SqlCreateUtil.getinsertsql(object,table_schema);
     }
 
     @Override
     public FieldVo getupdatesql(Object object) {
-        return com.hzz.hzzjdbc.jdbcutil.util.MysqlUtil.getupdatesql(object,table_schema);
+        return SqlCreateUtil.getupdatesql(object,table_schema);
     }
 
 }
