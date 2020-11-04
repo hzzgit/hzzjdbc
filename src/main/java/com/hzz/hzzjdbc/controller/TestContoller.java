@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestContoller {
 
     @Autowired
-    private com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest start事务;
+    private com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest starttest;
 
     @Autowired
     private TransactionalProcesser transactionalProcesser;
@@ -23,7 +23,7 @@ public class TestContoller {
     @RequestMapping("/test")
     public void test() {
         try {
-            start事务.insettert();
+            starttest.insettert();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -32,7 +32,7 @@ public class TestContoller {
     @RequestMapping("/test2")
     public void test2() {
         try {
-            start事务.search();
+            starttest.search();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -42,7 +42,7 @@ public class TestContoller {
     @RequestMapping("/delete")
     public void delete() {
         try {
-            start事务.delete();
+            starttest.delete();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,7 +52,7 @@ public class TestContoller {
     @RequestMapping("/update2")
     public void update2() {
         try {
-            start事务.update2();
+            starttest.update2();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -72,6 +72,14 @@ public class TestContoller {
         try {
             MostConnectTransactionalTest start事务 = (MostConnectTransactionalTest) transactionalProcesser.getBean(MostConnectTransactionalTest.class);
             start事务.testtrans();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @RequestMapping("/testtrans2")
+    public void testtrans2() {
+        try {
+            starttest.testtrans();
         } catch (Exception e) {
             e.printStackTrace();
         }
