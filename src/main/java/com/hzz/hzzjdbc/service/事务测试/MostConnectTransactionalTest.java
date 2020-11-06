@@ -61,6 +61,11 @@ public class MostConnectTransactionalTest {
 
     }
 
+    public Student searchStudent(){
+        Student student = mysqlDao.getMysqlUtil().queryFirst("select * from student limit 1", Student.class);
+        return  student;
+    }
+
     @Transactional(rollbackFor = Exception.class)
     public void search() throws Exception {
 

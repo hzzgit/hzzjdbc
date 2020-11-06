@@ -70,11 +70,6 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
                     if (arg) {
                         //如果是有事务管理的注解的话，那么就执行反向代理,这边是另一种带有注解的动态代理方式
 //                        //根据对象的类获取类加载器
-//                        ClassLoader classLoader = aClass.getClassLoader();
-//                        //获取被代理对象说实现的所有接口
-//                        Class<?>[] interfaces = aClass.getInterfaces();
-//                        //新建代理对象,里面参数需要(类加载器,一个对象所实现的接口,InvocationHandler接口类的对象)
-//                        Proxy.newProxyInstance(classLoader, interfaces, new TransactionalHandler(bean));
                         Enhancer en = new Enhancer();
                         en.setSuperclass(aClass);
                         //这边定义回调
@@ -87,19 +82,20 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
             }
         }
 
-
         /*将匹配到的类进行注入*/
-        String[] beanNamesForAnnotation2 = applicationContext.getBeanNamesForAnnotation(Controller.class);
-        String[] beanNamesForAnnotation3 = applicationContext.getBeanNamesForAnnotation(RestController.class);
-        dongtaizhuru(beanNamesForAnnotation2);
-        dongtaizhuru(beanNamesForAnnotation3);
-
-
-        log.debug("动态代理自定义多数据源事务成功,涉及到的类有"+beansFactory);
+        inject(Controller.class);
+        inject(RestController.class);
+        inject(Service.class);
+        log.debug("动态代理自定义多数据源事务成功");
 
 
     }
 
+
+    private void inject(Class c){
+        String[] beanNamesForAnnotation2 = applicationContext.getBeanNamesForAnnotation(c);
+        dongtaizhuru(beanNamesForAnnotation2);
+    }
     /**
      * 对已有的注释的接口类进行注入带有动态代理改造之后的类
      */

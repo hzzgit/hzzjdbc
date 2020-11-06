@@ -2,6 +2,7 @@ package com.hzz.hzzjdbc.controller;
 
 import com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser;
 import com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest;
+import com.hzz.hzzjdbc.service.事务测试.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -67,6 +68,7 @@ public class TestContoller {
             e.printStackTrace();
         }
     }
+
     @RequestMapping("/testtrans")
     public void testtrans() {
         try {
@@ -76,6 +78,7 @@ public class TestContoller {
             e.printStackTrace();
         }
     }
+
     @RequestMapping("/testtrans2")
     public void testtrans2() {
         try {
@@ -83,5 +86,13 @@ public class TestContoller {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @RequestMapping("/searchStudent")
+    public Student searchStudent() {
+
+        Student student = starttest.searchStudent();
+        return student;
+
     }
 }

@@ -1,14 +1,12 @@
 package com.hzz.hzzjdbc.jdbcutil.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 /**
  * @author ：hzz
  * @description：TODO
  * @date ：2020/10/30 15:57
  */
-@Component
 @ConfigurationProperties("spring.datasource3")
 public class DataSoure2Vo {
     private String driverClassName;

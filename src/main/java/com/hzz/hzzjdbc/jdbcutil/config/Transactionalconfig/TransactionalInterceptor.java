@@ -31,7 +31,7 @@ public class TransactionalInterceptor implements MethodInterceptor {
             System.out.println("动态代理前");
 
             try {
-                Object o1 = method.invoke( finalBean, objects);
+                Object o1 = method.invoke(finalBean, objects);
                 System.out.println("动态代理后");
                 return o1;
             } catch (Exception e) {
@@ -39,6 +39,7 @@ public class TransactionalInterceptor implements MethodInterceptor {
             }
 
         }
-        return o;
+        Object o1 = method.invoke(finalBean, objects);
+        return o1;
     }
 }

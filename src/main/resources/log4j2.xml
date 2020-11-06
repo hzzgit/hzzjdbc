@@ -12,13 +12,13 @@
 	        <PatternLayout pattern="${console_pattern}" />
 	    </Console>
 		<RollingRandomAccessFile name="debugFile"
-			fileName="logs/debug.log" filePattern="logs/debug.log.%i" immediateFlush="false">
+			fileName="logs/debug.log" filePattern="/logs/debug.log.%i" immediateFlush="false">
 			<PatternLayout pattern="${file_pattern}" />
 			<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
 			<DefaultRolloverStrategy max="${FILE_MAXCOUNT}" />
 		</RollingRandomAccessFile>
 		<RollingRandomAccessFile name="infoFile"
-			fileName="logs/info.log" filePattern="logs/info.log.%i" immediateFlush="false">
+			fileName="logs/info.log" filePattern="/logs/info.log.%i" immediateFlush="false">
 			<PatternLayout pattern="${file_pattern}" />
 			<ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
 			<SizeBasedTriggeringPolicy size="${FILE_SIZE}" />
@@ -32,7 +32,7 @@
 			<AppenderRef ref="debugFile" />
 			<AppenderRef ref="infoFile" />
 		</Root>
-		<AsyncLogger name="net.fxft" level="debug" additivity="false" includeLocation="true">
+		<AsyncLogger name="com.hzz" level="debug" additivity="false" includeLocation="true">
 			<AppenderRef ref="console" />
 			<AppenderRef ref="debugFile" />
 			<AppenderRef ref="infoFile" />

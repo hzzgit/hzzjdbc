@@ -3,6 +3,7 @@ package com.hzz.hzzjdbc.jdbcutil.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +17,7 @@ import javax.sql.DataSource;
  * @date ：2020/10/30 14:33
  */
 @Configuration
-//@EnableConfigurationProperties(DataSoure2Vo.class)
+@EnableConfigurationProperties(DataSoure2Vo.class)
 public class DataSourceConfig {
 
 
