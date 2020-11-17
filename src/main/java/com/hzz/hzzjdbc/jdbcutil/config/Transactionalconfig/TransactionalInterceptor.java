@@ -29,7 +29,14 @@ public class TransactionalInterceptor implements MethodInterceptor {
         System.out.println("方法名:" + name1);
         if (methodName.containsKey(name1)) {
             System.out.println("动态代理前");
-
+            TransactionalMostConnect annotation = method.getAnnotation(TransactionalMostConnect.class);
+        if(annotation!=null){
+            System.out.println("动态代理注解上面的内容为:");
+            String[] strings = annotation.DataSourcesNames();
+            for (String string : strings) {
+                System.out.println(string);
+            }
+        }
             try {
                 Object o1 = method.invoke(finalBean, objects);
                 System.out.println("动态代理后");
