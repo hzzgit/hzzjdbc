@@ -3,11 +3,13 @@ package com.hzz.hzzjdbc.service.事务测试;
 import com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalMostConnect;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
+import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.PostConstruct;
 import java.lang.reflect.Method;
 import java.util.List;
 
@@ -23,6 +25,7 @@ public class MostConnectTransactionalTest {
     @Autowired(required = false)
     private MysqlDao mysqlDao;
 
+
     @Autowired(required = false)
     @Qualifier("mysqldata2")
     private MysqlDao mysqldata2;
@@ -30,6 +33,15 @@ public class MostConnectTransactionalTest {
     @Autowired(required = false)
     @Qualifier("mysqldata3")
     private MysqlDao mysqldata3;
+
+    @PostConstruct
+    public void mostdataSourcetest(){
+        List<ConverMap> query = mysqlDao.query("select sysdate() from dual");
+        List<ConverMap> query2 = mysqldata2.query("select sysdate() from dual");
+        List<ConverMap> query3 = mysqldata3.query("select sysdate() from dual");
+        System.out.println(1);
+
+    }
 
     @Transactional(rollbackFor = Exception.class)
     public void insettert() throws Exception {

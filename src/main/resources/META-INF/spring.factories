@@ -1,4 +1,4 @@
-# Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration,\
-  com.hzz.hzzjdbc.jdbcutil.config.DataSourceConfig
+## Auto Configure
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#  com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcess,\
+#  com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration

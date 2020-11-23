@@ -3,6 +3,7 @@ package com.hzz.hzzjdbc.controller;
 import com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser;
 import com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest;
 import com.hzz.hzzjdbc.service.事务测试.Student;
+import com.hzz.hzzjdbc.service.事务测试.test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,9 @@ public class TestContoller {
 
     @Autowired
     private com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest starttest;
+
+    @Autowired
+    private test test;
 
     @Autowired
     private TransactionalProcesser transactionalProcesser;
@@ -64,6 +68,17 @@ public class TestContoller {
         try {
             MostConnectTransactionalTest start事务 = (MostConnectTransactionalTest) transactionalProcesser.getBean(MostConnectTransactionalTest.class);
             start事务.testrollback();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @RequestMapping("/testmost")
+    public void testmost() {
+        test.testmost();
+        starttest.mostdataSourcetest();
+        try {
         } catch (Exception e) {
             e.printStackTrace();
         }

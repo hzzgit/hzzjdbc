@@ -43,6 +43,11 @@ public class test {
 
     }
 
+    public void testmost(){
+        System.out.println(1);
+    }
+
+
     public static void main(String[] args) {
 
 
