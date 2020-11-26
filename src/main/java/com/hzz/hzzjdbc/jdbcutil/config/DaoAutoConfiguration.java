@@ -22,7 +22,7 @@ import javax.sql.DataSource;
 @Configuration
 @ConditionalOnClass({DataSource.class, EmbeddedDatabaseType.class})
 @AutoConfigureAfter({DataSourceAutoConfiguration.class})
-public class DaoAutoConfiguration  {
+public class DaoAutoConfiguration {
     private static final Logger log = LoggerFactory.getLogger(DaoAutoConfiguration.class);
 
 
@@ -32,16 +32,16 @@ public class DaoAutoConfiguration  {
 //    @ConditionalOnMissingClass //	当给定的类名在类路径上不存在，则实例化当前Bean
     @Primary
     @Bean
-     // @ConditionalOnBean(DataSourceVo.class) //这个是只有当dataSource不为null的情况下，才会生成这个bean
+    // @ConditionalOnBean(DataSourceVo.class) //这个是只有当dataSource不为null的情况下，才会生成这个bean
     //@ConditionalOnMissingBean  //这个代表着如果已经有注入了，就不会注入了。就算命名不一样也是
     /*这边直接加载主数据源*/
     public MysqlDao createhzzSpringJdbcUtil(
 //            @Qualifier("mysqlDao") @Autowired(required = false) DataSource dataSource
             DataSourceVo dataSourceDefaultVo
     ) {
-        if(dataSourceDefaultVo.getUrl()==null||dataSourceDefaultVo.getDriverClassName()==null||
-                dataSourceDefaultVo.getUsername()==null||
-                dataSourceDefaultVo.getPassword()==null){
+        if (dataSourceDefaultVo.getUrl() == null || dataSourceDefaultVo.getPassword() == null ||
+                dataSourceDefaultVo.getDriverClassName() == null ||
+                dataSourceDefaultVo.getUsername() == null) {
             return null;
         }
         DataSource build = DataSourceBuilder.create().url(dataSourceDefaultVo.getUrl()).driverClassName(dataSourceDefaultVo.getDriverClassName())
@@ -55,11 +55,11 @@ public class DaoAutoConfiguration  {
     @Bean("mysqldata2")
     public MysqlDao createhzzSpringJdbcUtil2(
 //            @Qualifier("mysqlDao") @Autowired(required = false) DataSource dataSource
-            @Qualifier("datasource2") @Autowired(required = false)      DataSourceVo dataSourceDefaultVo
+            @Qualifier("datasource2") @Autowired(required = false) DataSourceVo dataSourceDefaultVo
     ) {
-        if(dataSourceDefaultVo.getUrl()==null||dataSourceDefaultVo.getDriverClassName()==null||
-                dataSourceDefaultVo.getUsername()==null||
-                dataSourceDefaultVo.getPassword()==null){
+        if (dataSourceDefaultVo.getUrl() == null || dataSourceDefaultVo.getPassword() == null ||
+                dataSourceDefaultVo.getDriverClassName() == null ||
+                dataSourceDefaultVo.getUsername() == null) {
             return null;
         }
         DataSource build = DataSourceBuilder.create().url(dataSourceDefaultVo.getUrl()).driverClassName(dataSourceDefaultVo.getDriverClassName())
@@ -73,12 +73,12 @@ public class DaoAutoConfiguration  {
     @Bean("mysqldata3")
     public MysqlDao createhzzSpringJdbcUtil3(
 //            @Qualifier("mysqlDao") @Autowired(required = false) DataSource dataSource
-            @Qualifier("datasource3") @Autowired(required = false)      DataSourceVo dataSourceDefaultVo
+            @Qualifier("datasource3") @Autowired(required = false) DataSourceVo dataSourceDefaultVo
     ) {
-        if(dataSourceDefaultVo.getUrl()==null||dataSourceDefaultVo.getDriverClassName()==null||
-                dataSourceDefaultVo.getUsername()==null||
-                dataSourceDefaultVo.getPassword()==null){
-        return null;
+        if (dataSourceDefaultVo.getUrl() == null || dataSourceDefaultVo.getPassword() == null ||
+                dataSourceDefaultVo.getDriverClassName() == null ||
+                dataSourceDefaultVo.getUsername() == null) {
+            return null;
         }
         DataSource build = DataSourceBuilder.create().url(dataSourceDefaultVo.getUrl()).driverClassName(dataSourceDefaultVo.getDriverClassName())
                 .password(dataSourceDefaultVo.getPassword()).username(dataSourceDefaultVo.getUsername()).build();

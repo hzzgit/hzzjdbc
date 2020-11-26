@@ -144,7 +144,8 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
                         continue;
                     }
                     // if(  dataSourceVoMap.containsKey(value)){
-                    Object o = dataSourceVoMap.get("datasource2");
+                    //Object o = dataSourceVoMap.get("datasource2");
+                   // log.debug("注入多数据源:" + bean + ",参数名:" + fieldName + "注入了" + o.getClass());
 //                    try {
 //                        ReflectionUtil.setValue(bean, fieldName, o);
 //                        log.debug("注入多数据源:" + bean + ",参数名:" + fieldName + "注入了" + o.getClass());
