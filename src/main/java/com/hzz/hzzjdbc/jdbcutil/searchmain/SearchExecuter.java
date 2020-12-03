@@ -320,7 +320,7 @@ public class SearchExecuter extends ConnectExecuter {
         colnum = rsmd.getColumnCount();
         ConverMap jObject = new ConverMap();
         for (int i = 1; i <= colnum; i++) {
-            String colname = rsmd.getColumnName(i);
+            String colname = rsmd.getColumnLabel(i);
             Object colval = rs.getObject(i);
             if(colval instanceof Date) {
                 jObject.put(colname, TimeUtils.parseDate(String.valueOf(colval)));
