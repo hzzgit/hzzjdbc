@@ -107,8 +107,10 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
     @Override
     public <T> PaginateResult queryPage(String sql, Class<T> object2, int page, int pagesize,
                                         Object... wdata) {
+        istransaction=true;
         String pageSql = SqlCreateUtil.getPageSql(sql, page, pagesize);
-        List<T> pages = query(pageSql, object2, page, pagesize, wdata);
+        List<T> pages = query(pageSql, object2,  wdata);
+        istransaction=false;
         int co = queryByCount(SqlCreateUtil.getpagesqlCount(sql), wdata);
         PaginateResult paginateResult = new PaginateResult(co, pages);
         return paginateResult;
@@ -205,8 +207,10 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
     @Override
     public PaginateResult queryPage(String sql, int page, int pagesize,
                                     Object... wdata) {
+        istransaction=true;
         String pageSql = SqlCreateUtil.getPageSql(sql, page, pagesize);
-        List<ConverMap> pages = query(pageSql, page, pagesize, wdata);
+        List<ConverMap> pages = query(pageSql, wdata);
+        istransaction=false;
         int co = queryByCount(SqlCreateUtil.getpagesqlCount(sql), wdata);
         PaginateResult paginateResult = new PaginateResult(co, pages);
         return paginateResult;
