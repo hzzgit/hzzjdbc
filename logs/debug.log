@@ -524,3 +524,157 @@
 2020-11-23 15:38:08,865 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:116) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@6003ad65,参数名:starttest注入了class com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest$$EnhancerByCGLIB$$16eea134
 2020-11-23 15:38:08,868 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:116) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@6003ad65,参数名:starttest注入了class com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest$$EnhancerByCGLIB$$16eea134
 2020-11-23 15:38:08,870 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:89) - 动态代理自定义多数据源事务成功
+2021-01-06 09:54:59,329  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 2212 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-01-06 09:54:59,335 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-01-06 09:54:59,336  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-01-06 09:55:00,542  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-01-06 09:55:00,563  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-01-06 09:55:00,573  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-01-06 09:55:00,574  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-01-06 09:55:00,678  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-01-06 09:55:00,679  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1306 ms
+2021-01-06 09:55:00,802  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-01-06 09:55:00,814  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-01-06 09:55:00,820  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-01-06 09:55:00,828  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-01-06 09:55:01,018  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-01-06 09:55:01,149 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select sysdate() from dual;参数为:[]
+2021-01-06 09:55:01,162  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-01-06 09:55:01,305  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-01-06 09:55:01,306 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select sysdate() from dual;参数为:[]
+2021-01-06 09:55:01,308  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-01-06 09:55:01,348  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-01-06 09:55:01,348 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select sysdate() from dual;参数为:[]
+2021-01-06 09:55:01,379 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 09:55:01,390 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-01-06 09:55:01,410 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-01-06 09:55:01,678  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-06 09:55:01,922  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-01-06 09:55:01,947  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-01-06 09:55:01,950  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 2.99 seconds (JVM running for 6.579)
+2021-01-06 09:59:30,876  WARN [HikariPool-3 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=4m29s426ms673µs).
+2021-01-06 09:59:30,877  WARN [HikariPool-2 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=4m29s469ms277µs500ns).
+2021-01-06 09:59:30,880  WARN [HikariPool-1 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m29s739ms450µs600ns).
+2021-01-06 10:22:43,350  WARN [HikariPool-3 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=23m12s473ms204µs100ns).
+2021-01-06 10:22:43,349  WARN [HikariPool-2 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=23m12s473ms268µs800ns).
+2021-01-06 10:22:43,349  WARN [HikariPool-1 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m12s469ms463µs500ns).
+2021-01-06 10:25:55,702  WARN [HikariPool-1 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m12s353ms375µs).
+2021-01-06 10:25:55,702  WARN [HikariPool-2 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=3m12s353ms884µs800ns).
+2021-01-06 10:25:55,703  WARN [HikariPool-3 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=3m12s352ms846µs).
+2021-01-06 10:28:16,824  WARN [HikariPool-1 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m21s122ms410µs).
+2021-01-06 10:28:16,825  WARN [HikariPool-2 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m21s122ms523µs200ns).
+2021-01-06 10:28:16,826  WARN [HikariPool-3 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2m21s124ms868µs400ns).
+2021-01-06 10:29:59,211  WARN [HikariPool-3 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m42s385ms660µs200ns).
+2021-01-06 10:29:59,212  WARN [HikariPool-2 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1m42s386ms983µs).
+2021-01-06 10:29:59,212  WARN [HikariPool-1 housekeeper] (com.zaxxer.hikari.pool.HikariPool::) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s387ms581µs600ns).
+2021-01-06 10:30:11,468 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:116) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@73fbdf68,参数名:starttest注入了class com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest$$EnhancerByCGLIB$$16eea134
+2021-01-06 10:30:13,721 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:116) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@73fbdf68,参数名:starttest注入了class com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest$$EnhancerByCGLIB$$16eea134
+2021-01-06 10:30:14,533 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:89) - 动态代理自定义多数据源事务成功
+2021-01-06 10:30:38,587  INFO [http-nio-8924-exec-2] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-06 10:30:38,588  INFO [http-nio-8924-exec-2] (org.springframework.web.servlet.DispatcherServlet::) - Initializing Servlet 'dispatcherServlet'
+2021-01-06 10:30:38,598  INFO [http-nio-8924-exec-2] (org.springframework.web.servlet.DispatcherServlet::) - Completed initialization in 10 ms
+2021-01-06 10:30:38,636  WARN [http-nio-8924-exec-2] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2021-01-06 10:30:38,637  WARN [http-nio-8924-exec-2] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - idleTimeout is less than 10000ms, setting to default 600000ms.
+2021-01-06 10:30:38,637  INFO [http-nio-8924-exec-2] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Starting...
+2021-01-06 10:30:38,646  INFO [http-nio-8924-exec-2] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Start completed.
+2021-01-06 10:30:38,656 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:insert into hzzdata.student ( id,name,age ) values(?,?,?) ;参数为:[111,测试111,1111,]
+2021-01-06 10:30:38,662 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:38,763 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:38,865 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:38,966 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,068 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,169 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,270 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,373 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,478 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,580 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,681 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,783 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,884 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:39,986 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,088 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,190 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,295 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,397 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,498 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,599 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,700 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,801 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:40,903 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,004 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,105 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,206 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,308 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,409 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,511 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,612 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,714 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,815 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:41,916 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,018 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,119 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,220 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,325 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,427 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,528 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,630 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,732 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,834 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:42,936 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,037 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,139 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,240 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,341 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,443 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,544 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,646 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,747 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,849 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:43,950 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,051 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,153 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,254 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,356 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,457 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,559 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,661 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,764 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,865 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:44,967 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,068 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,174 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,276 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,377 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,478 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,580 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,681 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,783 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,884 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:45,985 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,088 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,190 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,291 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,392 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,494 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,595 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,697 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,800 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:46,901 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,002 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,105 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,207 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,309 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,410 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,511 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,613 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,714 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,815 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:47,917 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,018 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,119 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,220 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,321 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,424 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,525 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,626 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
+2021-01-06 10:30:48,727 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from student;参数为:[]
