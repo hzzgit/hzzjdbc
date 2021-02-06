@@ -3,6 +3,7 @@ package com.hzz.hzzjdbc.jdbcutil.jdkjdbc;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.hzz.hzzjdbc.jdbcutil.config.DefaultConnectionsqlliteSourve;
 import com.hzz.hzzjdbc.jdbcutil.config.DefaultConntionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb;
@@ -21,6 +22,11 @@ public class JdkDataSource {
     private static final String MYSQL = "DataSource.properties";
 
 
+    public static void jdksqllite() {
+        if (mysqldb == null) {
+            new JdkDataSource().createdateSourcebysqllite();
+        }
+    }
 
     public static void jdkmysql() {
         if (mysqldb == null) {
@@ -34,6 +40,19 @@ public class JdkDataSource {
             new JdkDataSource().createdateSource();
         }
     }
+
+
+
+
+    // 创建连接池,连接sqllite
+    private  void createdateSourcebysqllite() {
+            mysqldb= new Mysqldb(null,new DefaultConnectionsqlliteSourve("testHelper.db"),"sqllite连接");
+    }
+
+
+
+
+
     // 创建连接池
     private  void createdateSource() {
 

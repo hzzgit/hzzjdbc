@@ -40,8 +40,7 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
     private Map<String, MysqlDao> dataSourceVoMap;
 
 
-
-    public void init(){
+    public void init() {
         MostDataSourceVo mostDataSourceVo = getMostDataSourceVo();
         dataSourceVoMap = mostDataSourceVo.getDataSourceVoMap();
         inject(Service.class);
@@ -50,6 +49,7 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
 
     /**
      * 获取到所有数据源
+     *
      * @return
      */
     public MostDataSourceVo getMostDataSourceVo() {
@@ -118,7 +118,6 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
     }
 
 
-
     private void inject(Class c) {
         String[] beanNamesForAnnotation2 = applicationContext.getBeanNamesForAnnotation(c);
         try {
@@ -143,18 +142,18 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
                     if (!"mysqldata2".equalsIgnoreCase(fieldName)) {
                         continue;
                     }
-                    // if(  dataSourceVoMap.containsKey(value)){
-                    //Object o = dataSourceVoMap.get("datasource2");
-                   // log.debug("注入多数据源:" + bean + ",参数名:" + fieldName + "注入了" + o.getClass());
-//                    try {
-//                        ReflectionUtil.setValue(bean, fieldName, o);
+//                    if (dataSourceVoMap.containsKey(value)) {
+//                        Object o = dataSourceVoMap.get("datasource2");
 //                        log.debug("注入多数据源:" + bean + ",参数名:" + fieldName + "注入了" + o.getClass());
-//                    } catch (NoSuchFieldException e) {
-//                        e.printStackTrace();
-//                    } catch (IllegalAccessException e) {
-//                        e.printStackTrace();
+//                        try {
+//                            ReflectionUtil.setValue(bean, fieldName, o);
+//                            log.debug("注入多数据源:" + bean + ",参数名:" + fieldName + "注入了" + o.getClass());
+//                        } catch (NoSuchFieldException e) {
+//                            e.printStackTrace();
+//                        } catch (IllegalAccessException e) {
+//                            e.printStackTrace();
+//                        }
 //                    }
-                    //  }
 
                 }
             }
