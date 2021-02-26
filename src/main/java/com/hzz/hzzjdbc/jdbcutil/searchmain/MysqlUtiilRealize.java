@@ -38,7 +38,7 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
     public <T> void ConsumeQuery(String sql, Class<T> object2, Consumer<T> consumer, Object... wdata) {
         createData(sql, object2, wdata);
         ConsumeQuery(consumer);
-        close();
+        //close();
     }
 
     /**
@@ -224,15 +224,8 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
      */
     @Override
     public <T> void insertList(List<T> objects) throws Exception {
-        begintransaction();
-//        for (Object object : objects) {
-////            FieldVo getinsertsql = getinsertsql(object);
-////            excuteSql(getinsertsql.getSql(), getinsertsql.getVal());
-////        }
         FieldVo fieldVo = SqlCreateUtil.getinsertsqlList((List<java.lang.Object>) objects, table_schema);
         excuteSql(fieldVo.getSql(), fieldVo.getVal());
-
-        endtransaction();
 
     }
 
@@ -243,12 +236,10 @@ public class MysqlUtiilRealize extends SearchExecuter implements MysqlUtil {
      */
     @Override
     public void excutesqlList(List<FieldVo> vos) {
-        begintransaction();
         for (int i = 0; i < vos.size(); i++) {
             FieldVo vo=vos.get(i);
             excuteSql(vo.getSql(), vo.getVal());
         }
-        endtransaction();
     }
 
     /**

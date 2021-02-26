@@ -2,6 +2,7 @@ package com.hzz.hzzjdbc.jdbcutil.config;
 
 import lombok.extern.slf4j.Slf4j;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -80,6 +81,11 @@ public class DefaultConnectionsqlliteSourve implements  ConnectionhzzSource {
             log.error("conn.commit出错！autoCommit=" + autoCommit, var4);
         }
 
+    }
+
+    @Override
+    public DataSource getDataSource() {
+        return null;
     }
 
     @Override

@@ -80,6 +80,11 @@ public class DefaultConntionhzzSource implements ConnectionhzzSource {
     }
 
     @Override
+    public DataSource getDataSource() {
+        return null;
+    }
+
+    @Override
     public void close(Statement stmt) {
         try {
             if (stmt != null) {

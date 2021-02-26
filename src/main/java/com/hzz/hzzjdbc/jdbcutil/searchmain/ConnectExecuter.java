@@ -1,6 +1,7 @@
 package com.hzz.hzzjdbc.jdbcutil.searchmain;
 
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.*;
@@ -91,16 +92,16 @@ public abstract class ConnectExecuter {
             ps.executeUpdate();
         } catch (SQLException e) {
             errsql(e);
-            close();
+            //close();
         }
 
-     //   log.debug("当前执行的sql:" + sql + ";参数为:" + wdataString + "]");
+        //   log.debug("当前执行的sql:" + sql + ";参数为:" + wdataString + "]");
     }
 
 
     public void close() {
-        if (istransaction == false) {//如果没有开启事务才直接进行关闭
-            connectionhzzSource.close(ps, con);
+        if(DataSoureMostConnectUtils.istransactional(connectionhzzSource.getDataSource())){
+        connectionhzzSource.close(ps, con);
         }
         if (rs != null) {
             try {

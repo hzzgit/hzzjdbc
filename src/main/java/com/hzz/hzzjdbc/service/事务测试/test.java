@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.lang.reflect.Method;
 import java.util.List;
 
 @Service
@@ -50,6 +51,10 @@ public class test {
 
     public static void main(String[] args) {
 
-
+        Class<Student> studentClass = Student.class;
+        Method[] methods = studentClass.getMethods();
+        for (Method method : methods) {
+            
+        }
     }
 }

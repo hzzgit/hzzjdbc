@@ -74,8 +74,9 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
                         en.setSuperclass(aClass);
                         //这边定义回调
                         Object finalBean = bean;
-                        en.setCallback(new TransactionalInterceptor(finalBean,methodName));
+                        en.setCallback(new TransactionalInterceptor(finalBean,methodName,applicationContext));
                         Object o = en.create();
+                        //这边是动态代理之后的类的存放，这时候已经可以对这个类进行动态代理了，
                         beansFactory.put(aClass, o);
                     }
                 }

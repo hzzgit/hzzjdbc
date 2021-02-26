@@ -35,7 +35,7 @@ public class DaoAutoConfiguration {
     // @ConditionalOnBean(DataSourceVo.class) //这个是只有当dataSource不为null的情况下，才会生成这个bean
     //@ConditionalOnMissingBean  //这个代表着如果已经有注入了，就不会注入了。就算命名不一样也是
     /*这边直接加载主数据源*/
-    public MysqlDao createhzzSpringJdbcUtil(
+    public MysqlDao mysqldata(
 //            @Qualifier("mysqlDao") @Autowired(required = false) DataSource dataSource
             DataSourceVo dataSourceDefaultVo
     ) {

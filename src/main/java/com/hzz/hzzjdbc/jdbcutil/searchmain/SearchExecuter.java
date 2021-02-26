@@ -25,7 +25,7 @@ import java.util.function.Consumer;
 @Slf4j
 public class SearchExecuter extends ConnectExecuter {
 
-    public SearchExecuter(ConnectionhzzSource connSource ) {
+    public SearchExecuter(ConnectionhzzSource connSource) {
         super(connSource, null, null);
     }
 
@@ -38,7 +38,6 @@ public class SearchExecuter extends ConnectExecuter {
     }
 
 
-
     /**
      * 查询总数
      *
@@ -47,7 +46,7 @@ public class SearchExecuter extends ConnectExecuter {
      * @return
      */
     protected int queryByCount(String sql, Object... wdata) {
-        int co = ConverterUtils.toInt(searchFirstVal(sql, DataTypeEmum.INT,wdata), 0);
+        int co = ConverterUtils.toInt(searchFirstVal(sql, DataTypeEmum.INT, wdata), 0);
         return co;
     }
 
@@ -61,7 +60,7 @@ public class SearchExecuter extends ConnectExecuter {
      * @return
      */
     protected void executesql(String sql, AtomicLong returnAutoId, Object... wdata) {
-        createData(sql,ConverMap.class,wdata);
+        createData(sql, ConverMap.class, wdata);
         executeUpdate();
         searchinsertId(returnAutoId);
         close();
@@ -73,17 +72,17 @@ public class SearchExecuter extends ConnectExecuter {
      * @param sql
      * @return
      */
-    protected <T> T searchFirstVal(String sql, DataTypeEmum emum,Object... wdata) {
+    protected <T> T searchFirstVal(String sql, DataTypeEmum emum, Object... wdata) {
         T result = null;
-        createData(sql,ConverMap.class,wdata);
+        createData(sql, ConverMap.class, wdata);
         result = (T) searchfirstval(emum);
         return result;
     }
 
     //查询每一行第一列的数据
-    public <T>List<T> searchfirstcol() {
+    public <T> List<T> searchfirstcol() {
         excuteSql();
-       List<T> result = new ArrayList<>();
+        List<T> result = new ArrayList<>();
         try {
             rs = ps.executeQuery();
             while (rs.next()) {
@@ -104,21 +103,21 @@ public class SearchExecuter extends ConnectExecuter {
         try {
             rs = ps.executeQuery();
             if (rs.next()) {
-                if(dataTypeEmum==DataTypeEmum.INT){
+                if (dataTypeEmum == DataTypeEmum.INT) {
                     result = rs.getInt(1);
-                }else  if(dataTypeEmum==DataTypeEmum.DOUBLE){
+                } else if (dataTypeEmum == DataTypeEmum.DOUBLE) {
                     result = rs.getDouble(1);
-                }else  if(dataTypeEmum==DataTypeEmum.LONG){
+                } else if (dataTypeEmum == DataTypeEmum.LONG) {
                     result = rs.getLong(1);
-                }else  if(dataTypeEmum==DataTypeEmum.STRING){
+                } else if (dataTypeEmum == DataTypeEmum.STRING) {
                     result = rs.getString(1);
-                }else  if(dataTypeEmum==DataTypeEmum.DATE){
+                } else if (dataTypeEmum == DataTypeEmum.DATE) {
                     result = rs.getDate(1);
-                }else  if(dataTypeEmum==DataTypeEmum.SHORT){
+                } else if (dataTypeEmum == DataTypeEmum.SHORT) {
                     result = rs.getShort(1);
-                }else  if(dataTypeEmum==DataTypeEmum.BYTE){
+                } else if (dataTypeEmum == DataTypeEmum.BYTE) {
                     result = rs.getByte(1);
-                }else{
+                } else {
                     result = rs.getObject(1);
                 }
 
@@ -179,16 +178,17 @@ public class SearchExecuter extends ConnectExecuter {
 
     /**
      * 修改事务控制级别
+     *
      * @param level one of the following <code>Connection</code> constants:
-     *        <code>Connection.TRANSACTION_READ_UNCOMMITTED</code>,
-     *        <code>Connection.TRANSACTION_READ_COMMITTED</code>,
-     *        <code>Connection.TRANSACTION_REPEATABLE_READ</code>, or
-     *        <code>Connection.TRANSACTION_SERIALIZABLE</code>.
-     *        (Note that <code>Connection.TRANSACTION_NONE</code> cannot be used
-     *        because it specifies that transactions are not supported.)
+     *              <code>Connection.TRANSACTION_READ_UNCOMMITTED</code>,
+     *              <code>Connection.TRANSACTION_READ_COMMITTED</code>,
+     *              <code>Connection.TRANSACTION_REPEATABLE_READ</code>, or
+     *              <code>Connection.TRANSACTION_SERIALIZABLE</code>.
+     *              (Note that <code>Connection.TRANSACTION_NONE</code> cannot be used
+     *              because it specifies that transactions are not supported.)
      */
-    public void begintransaction(int level){
-        begintransaction();
+    public void begintransaction(int level, boolean autocommit) {
+        begintransaction(autocommit);
         try {
             con.setTransactionIsolation(level);
         } catch (SQLException e) {
@@ -196,41 +196,24 @@ public class SearchExecuter extends ConnectExecuter {
         }
     }
 
-    public void begintransaction(){
+    public void begintransaction(boolean autocommit) {
         try {
-            istransaction=true;
-
-            con.setAutoCommit(false);
-        } catch (SQLException e) {
-            log.error("事务开启失败",e);
+            istransaction = true;
+            connectionhzzSource.setAutoCommit(con, autocommit);
+        } catch (Exception e) {
+            log.error("事务开启失败", e);
         }
     }
 
-    public void rollback(){
-        try {
-            con.rollback();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            istransaction=false;
-            close();
-        }
+    public void rollback() {
+        connectionhzzSource.rollback(con);
     }
 
-    public void endtransaction(){
-        try {
-            con.commit();
-        } catch (SQLException e) {
-            log.error("事务提交失败",e);
-            try {
-                con.rollback();
-            } catch (SQLException ex) {
-                log.error("回滚失败",ex);
-            }
-        }finally {
-            istransaction=false;
-            close();
-        }
+    public void endtransaction() {
+
+        connectionhzzSource.commit(con);
+        istransaction = false;
+
     }
 
     //执行查询sql之后的操作
@@ -264,7 +247,6 @@ public class SearchExecuter extends ConnectExecuter {
     }
 
 
-
     //结果集转对象
     private Object rstoObj() throws Exception {
         Object object = null;// 创建新的对象
@@ -276,20 +258,20 @@ public class SearchExecuter extends ConnectExecuter {
             //获取到这个属性的值
             Object colval = null;
             try {
-                if(field.getType()==String.class){
+                if (field.getType() == String.class) {
                     colval = rs.getString(filename);
-                }else  if(field.getType()==Date.class){
+                } else if (field.getType() == Date.class) {
                     colval = rs.getDate(filename);
-                }else if(field.getType()==Integer.class){
+                } else if (field.getType() == Integer.class) {
                     colval = rs.getInt(filename);
-                }else if(field.getType()==Long.class){
+                } else if (field.getType() == Long.class) {
                     colval = rs.getLong(filename);
-                }else if(field.getType()==Double.class){
+                } else if (field.getType() == Double.class) {
                     colval = rs.getDouble(filename);
-                }else if(field.getType()==Float.class){
+                } else if (field.getType() == Float.class) {
                     colval = rs.getFloat(filename);
-                }else{
-                    colval=rs.getObject(filename);
+                } else {
+                    colval = rs.getObject(filename);
                 }
 
             } catch (SQLException e) {
@@ -298,15 +280,15 @@ public class SearchExecuter extends ConnectExecuter {
             filename = filename.substring(0, 1).toUpperCase() + filename.substring(1);
             Method methods2;
             methods2 = rowCls.getMethod("set" + filename, field.getType());// 注意参数不是String,是string
-            if(field.getType()==boolean.class||field.getType()==Boolean.class){
-                    boolean arg=false;
+            if (field.getType() == boolean.class || field.getType() == Boolean.class) {
+                boolean arg = false;
                 try {
-                    int val= (int) colval;
-                    arg=val>=1?true:false;
+                    int val = (int) colval;
+                    arg = val >= 1 ? true : false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                colval=arg;
+                colval = arg;
             }
             methods2.invoke(object, colval);// 通过对象，调用有参数的方法
             // 如果这个地方需要持久保存，那么就是object类放进去。不然就是加上c.newInstance()
@@ -322,15 +304,14 @@ public class SearchExecuter extends ConnectExecuter {
         for (int i = 1; i <= colnum; i++) {
             String colname = rsmd.getColumnLabel(i);
             Object colval = rs.getObject(i);
-            if(colval instanceof Date) {
+            if (colval instanceof Date) {
                 jObject.put(colname, TimeUtils.parseDate(String.valueOf(colval)));
-            }else{
+            } else {
                 jObject.put(colname, colval);
             }
         }
         return jObject;
     }
-
 
 
 }

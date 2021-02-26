@@ -171,7 +171,7 @@ public interface MysqlUtil {
     public void excutesqlList(List<FieldVo> vos);
 
 
-    public void begintransaction();
+    public void begintransaction(boolean autocommit);
 
     public void endtransaction();
 

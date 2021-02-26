@@ -17,7 +17,7 @@ public class MostConAction {
     @Autowired
     private MostConService mostConService;
 
-    @RequestMapping("/test")
+    @RequestMapping("/testmostCon")
     public void 测试多数据源能否生效() {
         try {
 

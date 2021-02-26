@@ -1,9 +1,9 @@
 package com.hzz.hzzjdbc.jdbcutil.config;
 
 
+import com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.jdbc.datasource.DataSourceUtils;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -16,6 +16,11 @@ public class SpringConnectionhzzSource implements ConnectionhzzSource {
     private String name;
 
 
+    @Override
+    public DataSource getDataSource() {
+        return dataSource;
+    }
+
     public SpringConnectionhzzSource(DataSource dataSource, String name) {
         this.dataSource = dataSource;
         this.name = name;
@@ -24,26 +29,29 @@ public class SpringConnectionhzzSource implements ConnectionhzzSource {
 
     @Override
     public Connection getConnection() throws SQLException {
-        return DataSourceUtils.getConnection(this.dataSource);
-//        return DataSoureMostConnectUtils.getConnection(this.dataSource);
+      //  return DataSourceUtils.getConnection(this.dataSource);
+        return DataSoureMostConnectUtils.getConnection(this.dataSource);
     }
 
     @Override
     public void setAutoCommit(Connection conn, boolean autoCommit) {
+        DataSoureMostConnectUtils.begintransaction(dataSource,autoCommit);
     }
 
     @Override
-    public void rollback(Connection conn) {
+    public void rollback(Connection connection) {
+        DataSoureMostConnectUtils.rollback(dataSource);
     }
 
     @Override
-    public void commit(Connection conn) {
+    public void commit(Connection connection) {
+        DataSoureMostConnectUtils.endtransaction(dataSource);
     }
 
     @Override
     public void close(Connection conn) {
-        DataSourceUtils.releaseConnection(conn, this.dataSource);
-//        DataSoureMostConnectUtils.releaseConnection();
+      //  DataSourceUtils.releaseConnection(conn, this.dataSource);
+        DataSoureMostConnectUtils.releaseConnection(this.dataSource);
     }
 
     @Override
