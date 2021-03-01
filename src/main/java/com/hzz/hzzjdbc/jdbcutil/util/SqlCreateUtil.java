@@ -205,7 +205,7 @@ public class SqlCreateUtil {
                 String fielNames = "";
                 String whereNames = "";
                 for (Field declaredField : declaredFields) {
-                    if (Modifier.isFinal(declaredField.getModifiers())) {
+                    if (Modifier.isFinal(declaredField.getModifiers())||Modifier.isStatic(declaredField.getModifiers())) {
                         continue;
                     }
                     String fieldName = declaredField.getName().toLowerCase();

@@ -32,7 +32,11 @@ public class InsertTest {
             vehicle.setMonitor("monitor");
             vehicle.setMonitormobile("123321");
             vehicle.setMotorid("12332");
-            mysqlUtil.insert(vehicle);
+            mysqlUtil.insert(vehicle,true);
+
+
+            vehicle.setSimno("22222");
+            mysqlUtil.update(vehicle);
         }
 
 

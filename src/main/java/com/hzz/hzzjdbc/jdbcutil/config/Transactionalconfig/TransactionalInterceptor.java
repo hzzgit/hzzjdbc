@@ -53,7 +53,9 @@ public class TransactionalInterceptor implements MethodInterceptor {
                     }
                 } else {
                     for (String MysqlDaoName : beanNamesForAnnotation) {
-                        mysqlDaoList.add((MysqlDao) applicationContext.getBean(MysqlDaoName));
+                        if(applicationContext.containsBean(MysqlDaoName)){
+                            mysqlDaoList.add((MysqlDao) applicationContext.getBean(MysqlDaoName));
+                        }
                     }
                 }
                 try {

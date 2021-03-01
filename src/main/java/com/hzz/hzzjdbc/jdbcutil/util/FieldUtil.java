@@ -8,6 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -54,9 +55,24 @@ public class FieldUtil {
         Method methods2;
         try {
             Class<? extends Object> c = object.getClass();
+            if (field.getType() == String.class) {
+                val=ConverterUtils.toString(val);
+            } else if (field.getType() == Date.class) {
+                val=  ConverterUtils.toDate(val);
+            } else if (field.getType() == Integer.class) {
+                val=ConverterUtils.toInt(val);
+            } else if (field.getType() == Long.class) {
+                val=ConverterUtils.toLong(val);
+            } else if (field.getType() == Double.class) {
+                val=ConverterUtils.toDouble(val);
+            } else if (field.getType() == Float.class) {
+                val=ConverterUtils.toFloat(val);
+            } else {
+                val=val;
+            }
             methods2 = c.getMethod("set" + filename, field.getType());// 注意参数不是String,是string
-            Long vallong = (Long) val;
-            methods2.invoke(object, vallong.intValue());// 通过对象，调用有参数的方法
+
+            methods2.invoke(object,val );// 通过对象，调用有参数的方法
             // 如果这个地方需要持久保存，那么就是object类放进去。不然就是加上c.newInstance()
         } catch (Exception e) {
             log.error("赋值到某个属性中报错", e);
