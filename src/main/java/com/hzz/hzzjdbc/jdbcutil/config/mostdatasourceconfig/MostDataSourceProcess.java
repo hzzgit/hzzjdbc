@@ -44,7 +44,6 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
         MostDataSourceVo mostDataSourceVo = getMostDataSourceVo();
         dataSourceVoMap = mostDataSourceVo.getDataSourceVoMap();
         inject(Service.class);
-        System.out.println(1);
     }
 
     /**

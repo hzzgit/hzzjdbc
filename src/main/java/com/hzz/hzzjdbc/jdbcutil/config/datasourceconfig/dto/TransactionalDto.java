@@ -13,6 +13,6 @@ import java.sql.Connection;
 public class TransactionalDto {
     private Connection connection;
 
-    //    是否开启事务
+    //    是否未开启事务
     private Boolean istransaction = false;
 }

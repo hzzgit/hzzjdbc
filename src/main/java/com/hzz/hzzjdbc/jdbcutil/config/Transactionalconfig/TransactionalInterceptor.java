@@ -68,7 +68,11 @@ public class TransactionalInterceptor implements MethodInterceptor {
                     if(e.equals(classes)){
                         System.out.println("事务捕获到的异常相同");
                     }
-                    rollback(mysqlDaoList);
+                    try {
+                        rollback(mysqlDaoList);
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
 
                 }
             }

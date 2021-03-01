@@ -22,16 +22,17 @@ public class DataSoureMostConnectUtils {
 
 
     /**
-     * 是否开启了事务,false是
+     * 是否未开启事务
+     *
      * @return
      */
-    public static boolean istransactional(DataSource    dataSource){
-        boolean arg=false;
+    public static boolean istransactional(DataSource dataSource) {
+        boolean arg = false;
         Map<DataSource, TransactionalDto> dataSourceConnectionMap = connectionThreadLocal.get();
-        if(dataSourceConnectionMap!=null){
+        if (dataSourceConnectionMap != null) {
             TransactionalDto transactionalDto = dataSourceConnectionMap.get(dataSource);
-            if(transactionalDto!=null){
-                arg= transactionalDto.getIstransaction();
+            if (transactionalDto != null) {
+                arg = transactionalDto.getIstransaction();
             }
         }
         return arg;
@@ -45,20 +46,24 @@ public class DataSoureMostConnectUtils {
      */
     public static Connection getConnection(DataSource dataSource) {
         Map<DataSource, TransactionalDto> dataSourceConnectionMap = connectionThreadLocal.get();
-        Connection connection=null;
-        if(dataSourceConnectionMap!=null){
+        Connection connection = null;
+        if (dataSourceConnectionMap != null) {
             TransactionalDto connection1 = dataSourceConnectionMap.get(dataSource);
-            connection= connection1.getConnection();
+            if (connection1 != null) {
+                connection = connection1.getConnection();
+            }
+        }else{
+            dataSourceConnectionMap=new HashMap<>();
         }
         if (connection == null) {
             try {
                 connection = dataSource.getConnection();
-                Map<DataSource, TransactionalDto> dataSourceConnectionMap1 =new HashMap<>();
-                TransactionalDto transactionalDto=new TransactionalDto();
+
+                TransactionalDto transactionalDto = new TransactionalDto();
                 transactionalDto.setConnection(connection);
-                transactionalDto.setIstransaction(false);
-                dataSourceConnectionMap1.put(dataSource,transactionalDto);
-                connectionThreadLocal.set(dataSourceConnectionMap1);
+                transactionalDto.setIstransaction(true);
+                dataSourceConnectionMap.put(dataSource, transactionalDto);
+                connectionThreadLocal.set(dataSourceConnectionMap);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -72,74 +77,94 @@ public class DataSoureMostConnectUtils {
     public static void releaseConnection(DataSource dataSource) {
         Map<DataSource, TransactionalDto> dataSourceConnectionMap = connectionThreadLocal.get();
         TransactionalDto transactionalDto = dataSourceConnectionMap.get(dataSource);
-        Connection connection = transactionalDto.getConnection();
+        Connection connection = null;
+        if (transactionalDto != null) {
+            connection = transactionalDto.getConnection();
+        }
+
         if (connection != null) {
             try {
                 connection.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-            }finally {
-                connectionThreadLocal.remove();
-            }
-        }
-    }
-
-    public static void begintransaction(DataSource dataSource,boolean autoCommit){
-        Map<DataSource, TransactionalDto> dataSourceTransactionalDtoMap = connectionThreadLocal.get();
-        if (dataSourceTransactionalDtoMap!=null) {
-            TransactionalDto transactionalDto = dataSourceTransactionalDtoMap.get(dataSource);
-            Connection connection =  transactionalDto.getConnection();
-            try {
-                connection.setAutoCommit(autoCommit);
-                transactionalDto.setConnection(connection);
-                transactionalDto.setIstransaction(autoCommit);
-                connectionThreadLocal.set(dataSourceTransactionalDtoMap);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-
-    public static void endtransaction(DataSource dataSource){
-        Map<DataSource, TransactionalDto> dataSourceConnectionMap = connectionThreadLocal.get();
-        if (dataSourceConnectionMap!=null) {
-            TransactionalDto transactionalDto = dataSourceConnectionMap.get(dataSource);
-            Connection connection = transactionalDto.getConnection();
-            try {
-                try {
-                    connection.commit();
-                } catch (SQLException e) {
-                    log.error("事务提交失败",e);
-                    try {
-                        connection.rollback();
-                    } catch (SQLException ex) {
-                        log.error("回滚失败",ex);
-                    }
+            } finally {
+                dataSourceConnectionMap.remove(dataSource);
+                if(dataSourceConnectionMap==null||dataSourceConnectionMap.size()==0){
+                    connectionThreadLocal.remove();
                 }
-                connectionThreadLocal.set(dataSourceConnectionMap);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }finally {
-                releaseConnection(dataSource);
             }
         }
     }
 
-    public static void rollback(DataSource dataSource){
-        Map<DataSource, TransactionalDto> dataSourceConnectionMap = connectionThreadLocal.get();
-        if (dataSourceConnectionMap!=null) {
-            TransactionalDto transactionalDto = dataSourceConnectionMap.get(dataSource);
-            Connection connection =  transactionalDto.getConnection();
-            if (connection!=null) {
+    public static void begintransaction(DataSource dataSource, boolean autoCommit) {
+        Map<DataSource, TransactionalDto> dataSourceTransactionalDtoMap = connectionThreadLocal.get();
+        if (dataSourceTransactionalDtoMap != null) {
+            TransactionalDto transactionalDto = dataSourceTransactionalDtoMap.get(dataSource);
+            if (transactionalDto != null) {
+                Connection connection = transactionalDto.getConnection();
                 try {
-                    connection.rollback();
+                    connection.setAutoCommit(autoCommit);
+                    transactionalDto.setConnection(connection);
+                    transactionalDto.setIstransaction(autoCommit);
+                    connectionThreadLocal.set(dataSourceTransactionalDtoMap);
                 } catch (SQLException e) {
                     e.printStackTrace();
-                }finally {
+                }
+            } else {
+                throw new RuntimeException("不存在该连接");
+            }
+        }
+    }
+
+
+    public static void endtransaction(DataSource dataSource) {
+        Map<DataSource, TransactionalDto> dataSourceConnectionMap = connectionThreadLocal.get();
+        if (dataSourceConnectionMap != null) {
+            TransactionalDto transactionalDto = dataSourceConnectionMap.get(dataSource);
+            if (transactionalDto != null) {
+                Connection connection = transactionalDto.getConnection();
+                try {
+                    try {
+                        connection.commit();
+                    } catch (SQLException e) {
+                        log.error("事务提交失败", e);
+                        try {
+                            connection.rollback();
+                        } catch (SQLException ex) {
+                            log.error("回滚失败", ex);
+                        }
+                    }
+                    connectionThreadLocal.set(dataSourceConnectionMap);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
                     releaseConnection(dataSource);
                 }
             }
+        } else {
+            throw new RuntimeException("不存在该链接");
         }
     }
+
+    public static void rollback(DataSource dataSource) {
+        Map<DataSource, TransactionalDto> dataSourceConnectionMap = connectionThreadLocal.get();
+        if (dataSourceConnectionMap != null) {
+            TransactionalDto transactionalDto = dataSourceConnectionMap.get(dataSource);
+            if (transactionalDto != null) {
+                Connection connection = transactionalDto.getConnection();
+                if (connection != null) {
+                    try {
+                        connection.rollback();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    } finally {
+                        releaseConnection(dataSource);
+                    }
+                }
+            } else {
+                throw new RuntimeException("不存在该链接");
+            }
+        }
+    }
+
 }

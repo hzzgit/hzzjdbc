@@ -24,7 +24,7 @@ public class HzzjdbcApplicationTests {
         List<ConverMap> query = mysqlDao.getMysqlUtil().query(sql);
         Iterator<ConverMap> iterator = query.iterator();
         ConverMap next = iterator.next();
-        System.out.println(1);
+
 
     }
 
