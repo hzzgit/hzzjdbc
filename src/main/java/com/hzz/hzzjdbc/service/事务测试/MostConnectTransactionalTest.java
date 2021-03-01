@@ -6,7 +6,6 @@ import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author ：hzz
@@ -30,7 +29,7 @@ public class MostConnectTransactionalTest {
 
 
     /*注释这边还不能支持多数据源的事务，仅能用封装的方法进行*/
-    @Transactional(rollbackFor = Exception.class)
+    //@Transactional(rollbackFor = Exception.class)
     @TransactionalMostConnect(DataSourcesNames ={"mysqldata2","mysqldata","mysqldata3"},rollbackFor = Exception.class)
     public void testrollback() {
         MysqlUtil devmysqlUtil = mysqldata2.getMysqlUtil();
@@ -40,7 +39,7 @@ public class MostConnectTransactionalTest {
 
         MysqlUtil dev45mysqlUtil = mysqldata3.getMysqlUtil();
         dev45mysqlUtil.excutesql("update department set name ='测试11' where depId='117445961' ");
-      //  throw  new RuntimeException("");
+        throw  new RuntimeException("");
     }
 
 
