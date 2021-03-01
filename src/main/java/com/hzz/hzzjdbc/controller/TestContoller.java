@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestContoller {
 
-    @Autowired
-    private com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest starttest;
 
     @Autowired
     private test test;

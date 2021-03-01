@@ -1,4 +1,4 @@
-package com.hzz.hzzjdbc.jdbcutil.test;
+package com.hzz.hzzjdbc.jdbcutil.jdktest;
 
 import lombok.Data;
 

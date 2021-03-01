@@ -1,23 +1,23 @@
-package com.hzz.hzzjdbc.jdbcutil.test;
+package com.hzz.hzzjdbc.jdbcutil.jdktest;
 
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.jdkjdbc.JdkDataSource;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 
-import java.util.List;
-
 /**
  * @author ：hzz
  * @description：TODO
- * @date ：2021/1/20 9:25
+ * @date ：2020/9/29 15:21
  */
-public class searchVehicle {
+public class 查询建表语句 {
     public static void main(String[] args) {
 
         JdkDataSource.jdkmysql();
         MysqlDao mysqlDao=  JdkDataSource.mysqldb;
+        String sql="show create table gps_hisdata.alarm_summary ";
+        ConverMap converMap = mysqlDao.getMysqlUtil().queryFirst(sql);
+        String createSql=converMap.getString("Create Table");
+        System.out.println(createSql);
 
-        String sql="select * from vehicle ";
-        List<ConverMap> query = mysqlDao.query(sql);
     }
 }

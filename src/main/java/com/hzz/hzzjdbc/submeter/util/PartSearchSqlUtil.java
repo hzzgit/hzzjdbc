@@ -413,10 +413,10 @@ public class PartSearchSqlUtil extends AbstractPartGetSqlUtil {
 //        partSearchSqlUtil.append(" and plateno like '%?%' ", "param");
 //        System.out.println(1);
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("test");
+        stringBuilder.append("jdktest");
         Map params = new HashMap();
         params.put("test", stringBuilder);
-        Object test = params.get("test");
+        Object test = params.get("jdktest");
         if (test instanceof StringBuilder) {
             StringBuilder builder = (StringBuilder) test;
         }

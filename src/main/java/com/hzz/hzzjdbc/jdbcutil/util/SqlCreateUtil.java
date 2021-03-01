@@ -146,15 +146,16 @@ public class SqlCreateUtil {
                 String fielNames = "";
                 String valueNames = "";
                 for (Field declaredField : declaredFields) {
-                    if (Modifier.isFinal(declaredField.getModifiers())) {
+                    if (Modifier.isFinal(declaredField.getModifiers())||Modifier.isStatic(declaredField.getModifiers())) {
                         continue;
                     }
                     String fieldName = declaredField.getName().toLowerCase();
 
                     DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
-                    if (dbColNUll == null) {
+                    declaredField.setAccessible(true);
+                    if (dbColNUll == null&&declaredField.get(object)!=null) {
                         Class<?> type = declaredField.getType();
-                        declaredField.setAccessible(true);
+
                         fielNames += fieldName + ",";
                         DbTableId annotation1 = declaredField.getAnnotation(DbTableId.class);
                         valueNames += "?,";
@@ -210,8 +211,8 @@ public class SqlCreateUtil {
                     String fieldName = declaredField.getName().toLowerCase();
                     // if (colMap != null && colMap.containsKey(fieldName)) {
                     DbColNUll dbColNUll = declaredField.getAnnotation(DbColNUll.class);
-                    if (dbColNUll == null) {
-                        declaredField.setAccessible(true);
+                    declaredField.setAccessible(true);
+                    if (dbColNUll == null&&declaredField.get(object)!=null) {
                         Class<?> type = declaredField.getType();
                         DbTableId annotation1 = declaredField.getAnnotation(DbTableId.class);
                         if (annotation1 != null) {//如果是主键

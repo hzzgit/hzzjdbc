@@ -705,7 +705,7 @@ org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no suc
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.searchFirstVal(SearchExecuter.java:79) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.queryFirstValToString(MysqlUtiilRealize.java:194) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.queryFirstValToString(Mysqldb.java:210) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
 2021-01-20 16:15:55,778 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select sysdate() from dual;参数为:[]
 2021-01-20 16:19:10,282 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select sysdate() from dual
 org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: dual)
@@ -726,7 +726,7 @@ org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no suc
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.searchFirstVal(SearchExecuter.java:79) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.queryFirstValToString(MysqlUtiilRealize.java:194) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.queryFirstValToString(Mysqldb.java:210) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
 2021-01-20 16:19:10,312 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select sysdate() from dual;参数为:[]
 2021-01-20 16:19:38,909 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select sysdate() from dual
 org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: dual)
@@ -747,7 +747,7 @@ org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no suc
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.searchFirstVal(SearchExecuter.java:79) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.queryFirstValToString(MysqlUtiilRealize.java:194) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.queryFirstValToString(Mysqldb.java:210) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
 2021-01-20 16:19:42,258 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select sysdate() from dual;参数为:[]
 2021-01-20 16:20:40,194 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select sysdate() from dual
 org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: dual)
@@ -768,7 +768,7 @@ org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no suc
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.searchFirstVal(SearchExecuter.java:79) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.queryFirstValToString(MysqlUtiilRealize.java:194) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.queryFirstValToString(Mysqldb.java:210) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:15) ~[classes/:?]
 2021-01-20 16:20:40,208 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select sysdate() from dual;参数为:[]
 2021-01-20 16:20:49,499 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select * from vehicle 
 org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: vehicle)
@@ -788,14 +788,14 @@ org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no suc
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:136) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:131) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:68) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
 2021-01-20 16:20:49,512 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from vehicle ;参数为:[]
 2021-01-20 16:20:49,512 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select * from vehicle 
 java.lang.NullPointerException: null
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:139) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:131) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:68) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
 2021-01-20 16:23:25,827 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select * from main.vehicle 
 org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: main.vehicle)
 	at org.sqlite.core.DB.newSQLException(DB.java:1010) ~[sqlite-jdbc-3.31.1.jar:?]
@@ -814,7 +814,7 @@ org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no suc
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:136) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:131) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:68) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
 2021-01-20 16:25:00,712 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select * from main.vehicle 
 org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: main.vehicle)
 	at org.sqlite.core.DB.newSQLException(DB.java:1010) ~[sqlite-jdbc-3.31.1.jar:?]
@@ -833,14 +833,14 @@ org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no suc
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:136) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:131) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:68) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
 2021-01-20 16:25:00,724 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from main.vehicle ;参数为:[]
 2021-01-20 16:25:00,724 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:115) - 执行sql出错,sql=select * from main.vehicle 
 java.lang.NullPointerException: null
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:139) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:131) ~[classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:68) ~[classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.test.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.SqlLiteTest.main(SqlLiteTest.java:18) ~[classes/:?]
 2021-01-20 16:27:45,376 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:select * from vehicle ;参数为:[]
 2021-01-20 16:31:18,413 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:insert into vehicle(id,plateNo) values(?,?);参数为:[11,ce11,]
 2021-01-20 16:31:18,432 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:67) - 当前执行的sql:insert into vehicle(id,plateNo) values(?,?);参数为:[12,ce12,]
@@ -15343,3 +15343,1727 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'id' i
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_181]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2021-03-01 14:18:28,388 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:68) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:22:39,396  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:22:39,712 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:68) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:23:41,490  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:23:41,754 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:68) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:28:31,749  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:28:32,237 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:68) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:35:30,818 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,819 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,823 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,824 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,828 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,829 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,831 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,832 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,832 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,832 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,833 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,834 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,834 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,835 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,835 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,835 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,837 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,837 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,838 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,838 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,838 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,841 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,841 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,841 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,841 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,841 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,842 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,842 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,842 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,844 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,844 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,846 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,846 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,846 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,847 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,847 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,847 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,847 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,848 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,848 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,849 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,849 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,849 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,849 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,849 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,850 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,850 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,851 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,851 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,851 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,851 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,851 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,856 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,856 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,857 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,858 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,858 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,858 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,860 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,860 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,860 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,860 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,860 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,861 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,861 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,861 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,861 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,862 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,900 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,901 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,904 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,904 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,906 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,907 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,907 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,908 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,908 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,908 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,908 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,908 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,910 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,910 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,910 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,911 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,911 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,911 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,911 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,911 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,912 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,912 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,912 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,912 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,912 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,913 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,913 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,914 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,914 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,914 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,915 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,915 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,915 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,915 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,916 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,917 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,917 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,918 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,918 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,918 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,919 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,919 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,919 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,919 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,919 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,920 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,920 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,920 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,920 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,920 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,921 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,921 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,921 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,921 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,922 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,922 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Videodatatype,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,922 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Channelid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor48.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,922 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Updatestaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,923 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Createstaff,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:35:30,923 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter:rstoObj:301) - sql查询赋值异常,name:Operatorid,val:null
+java.lang.IllegalArgumentException: null
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:299) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeQuery(SearchExecuter.java:145) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.query(MysqlUtiilRealize.java:92) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.query(Mysqldb.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:20) ~[classes/:?]
+2021-03-01 14:36:10,822  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:36:11,109 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:68) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:48:52,480  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:48:52,761 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:55:59,185  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:55:59,454 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:58:00,959  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:58:01,247 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 14:59:30,461  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 14:59:31,086 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql: select a.id,
+                    a.startTime,
+                    a.endTime,
+                    a.duration,
+                    a.type,
+                    a.vehicleId,
+                    a.createDate,
+                    a.mileage,
+                    a.deptId,
+                    a.sCity,
+                    a.eCity,
+                    a.nationalHighway,
+                    a.expressway,
+                    a.primaryway,
+		
+                    a.timeType from gps_hisdata.car_duration a
+										where 1=1 
+							and type in(0,1,3,4,5,7)
+        and a.createdate >='2020-12-01' and a.createdate <='2020-12-01 23:59:59';参数为:[]
+2021-03-01 14:59:31,290 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:130) - 执行sql出错,sql= select a.id,
+                    a.startTime,
+                    a.endTime,
+                    a.duration,
+                    a.type,
+                    a.vehicleId,
+                    a.createDate,
+                    a.mileage,
+                    a.deptId,
+                    a.sCity,
+                    a.eCity,
+                    a.nationalHighway,
+                    a.expressway,
+                    a.primaryway,
+		
+                    a.timeType from gps_hisdata.car_duration a
+										where 1=1 
+							and type in(0,1,3,4,5,7)
+        and a.createdate >='2020-12-01' and a.createdate <='2020-12-01 23:59:59'
+java.lang.InstantiationException: org.springframework.core.convert.converter.Converter
+	at java.lang.Class.newInstance(Class.java:427) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:258) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.ConsumeQuery(SearchExecuter.java:172) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.ConsumeQuery(MysqlUtiilRealize.java:40) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.ConsumeQuery(Mysqldb.java:114) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:37) ~[classes/:?]
+Caused by: java.lang.NoSuchMethodException: org.springframework.core.convert.converter.Converter.<init>()
+	at java.lang.Class.getConstructor0(Class.java:3082) ~[?:1.8.0_181]
+	at java.lang.Class.newInstance(Class.java:412) ~[?:1.8.0_181]
+	... 5 more
+2021-03-01 15:00:00,381  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:00:01,021 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql: select a.id,
+                    a.startTime,
+                    a.endTime,
+                    a.duration,
+                    a.type,
+                    a.vehicleId,
+                    a.createDate,
+                    a.mileage,
+                    a.deptId,
+                    a.sCity,
+                    a.eCity,
+                    a.nationalHighway,
+                    a.expressway,
+                    a.primaryway,
+		
+                    a.timeType from gps_hisdata.car_duration a
+										where 1=1 
+							and type in(0,1,3,4,5,7)
+        and a.createdate >='2020-12-01' and a.createdate <='2020-12-01 23:59:59';参数为:[]
+2021-03-01 15:00:01,218 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:130) - 执行sql出错,sql= select a.id,
+                    a.startTime,
+                    a.endTime,
+                    a.duration,
+                    a.type,
+                    a.vehicleId,
+                    a.createDate,
+                    a.mileage,
+                    a.deptId,
+                    a.sCity,
+                    a.eCity,
+                    a.nationalHighway,
+                    a.expressway,
+                    a.primaryway,
+		
+                    a.timeType from gps_hisdata.car_duration a
+										where 1=1 
+							and type in(0,1,3,4,5,7)
+        and a.createdate >='2020-12-01' and a.createdate <='2020-12-01 23:59:59'
+java.lang.InstantiationException: org.springframework.core.convert.converter.Converter
+	at java.lang.Class.newInstance(Class.java:427) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rstoObj(SearchExecuter.java:258) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.ConsumeQuery(SearchExecuter.java:172) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.ConsumeQuery(MysqlUtiilRealize.java:40) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.ConsumeQuery(Mysqldb.java:114) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.searchVehicle.main(searchVehicle.java:37) ~[classes/:?]
+Caused by: java.lang.NoSuchMethodException: org.springframework.core.convert.converter.Converter.<init>()
+	at java.lang.Class.getConstructor0(Class.java:3082) ~[?:1.8.0_181]
+	at java.lang.Class.newInstance(Class.java:412) ~[?:1.8.0_181]
+	... 5 more
+2021-03-01 15:00:27,471  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:00:28,390 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql: select a.id,
+                    a.startTime,
+                    a.endTime,
+                    a.duration,
+                    a.type,
+                    a.vehicleId,
+                    a.createDate,
+                    a.mileage,
+                    a.deptId,
+                    a.sCity,
+                    a.eCity,
+                    a.nationalHighway,
+                    a.expressway,
+                    a.primaryway,
+		
+                    a.timeType from gps_hisdata.car_duration a
+										where 1=1 
+							and type in(0,1,3,4,5,7)
+        and a.createdate >='2020-12-01' and a.createdate <='2020-12-01 23:59:59';参数为:[]
+2021-03-01 15:01:17,250  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:01:17,831 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql: select a.id,
+                    a.startTime,
+                    a.endTime,
+                    a.duration,
+                    a.type,
+                    a.vehicleId,
+                    a.createDate,
+                    a.mileage,
+                    a.deptId,
+                    a.sCity,
+                    a.eCity,
+                    a.nationalHighway,
+                    a.expressway,
+                    a.primaryway,
+		
+                    a.timeType from gps_hisdata.car_duration a
+										where 1=1 
+							and type in(0,1,3,4,5,7)
+        and a.createdate >='2020-12-01' and a.createdate <='2020-12-01 23:59:59';参数为:[]
+2021-03-01 15:01:46,000 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 15:03:17,095 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 15:04:34,666  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:04:34,921 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle ;参数为:[]
+2021-03-01 15:10:56,577  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:10:56,892 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:10:56,935 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[12019,2019-11-27 15:45:57,12019,0,null,null,117440558,null,null,null,null,21,2018-06-12 18:39:29,null,5,null,null,null,null,null,null,2,hzz,340100,null,Normal,013200000008,null,12032,null,90,null,null,null,null,0.0,null,null,null,null,null,null,0,4,null,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,null,1,2019-11-27 15:45:58,1,0,other,null,null,0,]
+2021-03-01 15:10:56,946 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:130) - 执行sql出错,sql=insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) 
+java.sql.SQLException: Data truncated for column 'mileageAdjustment' at row 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1094) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2334) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2262) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2246) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253) ~[druid-1.0.29.jar:1.0.29]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeUpdate(SearchExecuter.java:229) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executesql(SearchExecuter.java:66) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.insert(MysqlUtiilRealize.java:275) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.InsertTest.main(InsertTest.java:22) ~[classes/:?]
+2021-03-01 15:12:47,575  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:12:47,830 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:12:59,191 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,null,null,117440558,null,null,null,null,21,2018-06-12 18:39:29,null,5,null,null,null,null,null,null,2,hzz,340100,null,Normal,013200000008,null,12032,null,90,null,null,null,null,0.0,null,null,null,null,null,null,0,4,null,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,null,1,2019-11-27 15:45:58,1,0,other,null,null,0,]
+2021-03-01 15:13:28,197  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:13:28,455 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:13:50,803 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,null,null,117440558,null,null,null,null,21,2018-06-12 18:39:29,null,5,null,null,null,null,null,null,2,hzz,340100,null,Normal,013200000008,null,12032,null,90,null,null,null,null,0.0,null,null,null,null,null,null,0,4,null,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,null,1,2019-11-27 15:45:58,1,0,other,null,null,0,]
+2021-03-01 15:14:19,016  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:14:19,269 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:14:23,680 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,null,null,117440558,null,null,null,null,21,2018-06-12 18:39:29,null,5,null,null,null,null,null,null,2,hzz,340100,null,Normal,013200000008,null,12032,null,90,null,null,null,null,0.0,null,null,null,null,null,null,0,4,null,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,null,1,2019-11-27 15:45:58,1,0,other,null,null,0,]
+2021-03-01 15:15:28,107  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:15:28,378 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:16:13,634 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,null,null,117440558,null,null,null,null,21,2018-06-12 18:39:29,null,5,null,null,null,null,null,null,2,hzz,340100,null,Normal,013200000008,null,12032,null,90,null,null,null,null,0.0,null,null,null,null,null,null,0,4,null,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,null,1,2019-11-27 15:45:58,1,0,other,null,null,0,]
+2021-03-01 15:16:30,647  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:16:30,905 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:16:43,163 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,null,null,117440558,null,null,null,null,21,2018-06-12 18:39:29,null,5,null,null,null,null,null,null,2,hzz,340100,null,Normal,013200000008,null,12032,null,90,null,null,null,null,0.0,null,null,null,null,null,null,0,4,null,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,null,1,2019-11-27 15:45:58,1,0,other,null,null,0,]
+2021-03-01 15:16:47,832  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:16:48,091 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:19:53,121 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,lastchecktime,memberid,monitor,monitormobile,motorid,offlinetime,onlinetime,operpermit,platecolor,plateno,region,routes,runstatus,simno,status,termid,usetype,vehicletype,vendor,videodeviceid,enddate,startdate,workhour,buydate,engineno,frameno,manufacture,modelno,photo,companyid,videochannelnum,username,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,mileageadjustment,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,inlinedate,synchronizeddate,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,null,null,117440558,null,null,null,null,21,2018-06-12 18:39:29,null,5,null,null,null,null,null,null,2,hzz,340100,null,Normal,013200000008,null,12032,null,90,null,null,null,null,0.0,null,null,null,null,null,null,0,4,null,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,null,1,2019-11-27 15:45:58,1,0,other,null,null,0,]
+2021-03-01 15:19:57,680  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:19:57,946 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:19:59,388 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.util.SqlCreateUtil:getinsertsql:183) - 插入错误,insert into subiaodb.vehicle ( 
+java.lang.IllegalAccessException: Class com.hzz.hzzjdbc.jdbcutil.util.SqlCreateUtil can not access a member of class com.hzz.hzzjdbc.jdbcutil.jdktest.Vehicle with modifiers "private"
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:102) ~[?:1.8.0_181]
+	at java.lang.reflect.AccessibleObject.slowCheckMemberAccess(AccessibleObject.java:296) ~[?:1.8.0_181]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:288) ~[?:1.8.0_181]
+	at java.lang.reflect.Field.get(Field.java:390) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.util.SqlCreateUtil.getinsertsql(SqlCreateUtil.java:155) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.getinsertsql(MysqlUtiilRealize.java:319) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.insert(MysqlUtiilRealize.java:273) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.InsertTest.main(InsertTest.java:23) ~[classes/:?]
+2021-03-01 15:20:15,069 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( ;参数为:[]
+2021-03-01 15:20:15,088 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:130) - 执行sql出错,sql=insert into subiaodb.vehicle ( 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.Util.getInstance(Util.java:383) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2334) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2262) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2246) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253) ~[druid-1.0.29.jar:1.0.29]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeUpdate(SearchExecuter.java:229) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executesql(SearchExecuter.java:66) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.insert(MysqlUtiilRealize.java:275) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.InsertTest.main(InsertTest.java:23) ~[classes/:?]
+2021-03-01 15:20:17,846  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:20:18,130 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:21:34,434 ERROR [main] (com.hzz.hzzjdbc.jdbcutil.util.SqlCreateUtil:getinsertsql:183) - 插入错误,insert into subiaodb.vehicle ( 
+java.lang.IllegalAccessException: Class com.hzz.hzzjdbc.jdbcutil.util.SqlCreateUtil can not access a member of class com.hzz.hzzjdbc.jdbcutil.jdktest.Vehicle with modifiers "private"
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:102) ~[?:1.8.0_181]
+	at java.lang.reflect.AccessibleObject.slowCheckMemberAccess(AccessibleObject.java:296) ~[?:1.8.0_181]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:288) ~[?:1.8.0_181]
+	at java.lang.reflect.Field.get(Field.java:390) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.util.SqlCreateUtil.getinsertsql(SqlCreateUtil.java:155) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.getinsertsql(MysqlUtiilRealize.java:319) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.insert(MysqlUtiilRealize.java:273) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.jdktest.InsertTest.main(InsertTest.java:23) ~[classes/:?]
+2021-03-01 15:21:41,529  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:21:41,773 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:29:52,814 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,depid,industry,installdate,memberid,platecolor,plateno,region,runstatus,simno,termid,vehicletype,workhour,companyid,videochannelnum,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,117440558,21,2018-06-12 18:39:29,5,2,hzz,340100,Normal,013200000008,12032,90,0.0,0,4,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,1,2019-11-27 15:45:58,1,0,other,0,]
+2021-03-01 15:31:56,380  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:31:56,635 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:31:59,455 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,depid,industry,installdate,memberid,platecolor,plateno,region,runstatus,simno,termid,vehicletype,workhour,companyid,videochannelnum,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,117440558,21,2018-06-12 18:39:29,5,2,hzz,340100,Normal,111111222222,12032,90,0.0,0,4,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,1,2019-11-27 15:45:58,1,0,other,0,]
+2021-03-01 15:33:35,392  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:33:35,718 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:35:00,996 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,depid,industry,installdate,memberid,platecolor,plateno,region,runstatus,simno,termid,vehicletype,workhour,companyid,videochannelnum,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,117440558,21,2018-06-12 18:39:29,5,2,hzz,340100,Normal,111111222222,12032,90,0.0,0,4,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,1,2019-11-27 15:45:58,1,0,other,0,]
+2021-03-01 15:35:07,985  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:35:08,231 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:35:08,259 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,memberid,monitor,monitormobile,motorid,platecolor,plateno,region,runstatus,simno,termid,vehicletype,workhour,buydate,companyid,videochannelnum,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,备注,117440558,1111,drive,123431,1111,21,2018-06-12 18:39:29,5,monitor,123321,12332,2,hzz,340100,Normal,111111222222,12032,90,0.0,2021-03-01 15:35:08,0,4,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,1,2019-11-27 15:45:58,1,0,other,0,]
+2021-03-01 15:35:39,985  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:35:40,237 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:35:40,266 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,memberid,monitor,monitormobile,motorid,platecolor,plateno,region,runstatus,simno,termid,vehicletype,workhour,buydate,companyid,videochannelnum,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,备注,117440558,1111,drive,123431,1111,21,2018-06-12 18:39:29,5,monitor,123321,12332,2,hzz,340100,Normal,111111222222,12032,90,0.0,2021-03-01 15:35:40,0,4,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,1,2019-11-27 15:45:58,1,0,other,0,]
+2021-03-01 15:36:10,762  INFO [main] (com.alibaba.druid.pool.DruidDataSource::) - {dataSource-1} inited
+2021-03-01 15:36:11,013 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 1;参数为:[]
+2021-03-01 15:36:11,046 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:insert into subiaodb.vehicle ( vehicleid,createdate,deleted,owner,remark,buytime,depid,depname,driver,drivermobile,gpsterminaltype,industry,installdate,memberid,monitor,monitormobile,motorid,platecolor,plateno,region,runstatus,simno,termid,vehicletype,workhour,buydate,companyid,videochannelnum,videodatatype,channelid,videodisk,videochannelnames,flowrateno,vehiclepassword,supertranstype,seatingcapacity,transserialno,routename,servicestartdate,serviceenddate,fuelconsumption,updatedate,updatestaff,createstaff,vehiclemanufacturer,operatorid ) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;参数为:[0,2019-11-27 15:45:57,12019,0,备注,2021-03-01 15:36:11,117440558,1111,drive,123431,1111,21,2018-06-12 18:39:29,5,monitor,123321,12332,2,hzz,340100,Normal,111111222222,12032,90,0.0,2021-03-01 15:36:11,0,4,0,0,0,1,12,13,,12019,tgu12019,99,4,1111,2222,2019-07-12 00:00:00,2020-07-12 00:00:00,1,2019-11-27 15:45:58,1,0,other,0,]
+2021-03-01 15:41:54,875  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 8096 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-01 15:41:54,881 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-03-01 15:41:54,881  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-01 15:41:56,111  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-01 15:41:56,134  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-01 15:41:56,146  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-01 15:41:56,146  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-01 15:41:56,270  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-01 15:41:56,271  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1351 ms
+2021-03-01 15:41:56,372  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-01 15:41:56,383  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-01 15:41:56,391  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-01 15:41:56,400  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-01 15:41:56,595  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-01 15:41:56,720 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from student;参数为:[]
+2021-03-01 15:41:56,729  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-01 15:41:56,756  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-01 15:41:56,756 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-03-01 15:41:56,779  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-01 15:41:56,803  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-01 15:41:56,803 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-03-01 15:41:57,037  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 15:41:57,252  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-01 15:41:57,275  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-01 15:41:57,280  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 2.881 seconds (JVM running for 5.529)
+2021-03-01 15:41:57,292 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:90) - 动态代理自定义多数据源事务成功
+2021-03-01 15:42:04,516  INFO [http-nio-8924-exec-1] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-01 15:42:04,516  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Initializing Servlet 'dispatcherServlet'
+2021-03-01 15:42:04,523  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Completed initialization in 7 ms
+2021-03-01 15:42:04,565  WARN [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2021-03-01 15:42:04,565  WARN [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - idleTimeout is less than 10000ms, setting to default 600000ms.
+2021-03-01 15:42:04,566  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Starting...
+2021-03-01 15:42:04,588  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Start completed.
+2021-03-01 15:42:04,596 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-03-01 15:42:04,598 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
+2021-03-01 15:42:04,602 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-03-01 15:45:54,337  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 10452 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-01 15:45:54,343 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-03-01 15:45:54,343  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-01 15:45:55,503  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-01 15:45:55,521  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-01 15:45:55,535  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-01 15:45:55,536  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-01 15:45:55,678  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-01 15:45:55,678  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1301 ms
+2021-03-01 15:45:55,802  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-01 15:45:55,815  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-01 15:45:55,821  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-01 15:45:55,829  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-01 15:45:56,010  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-01 15:45:56,024 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from student;参数为:[]
+2021-03-01 15:45:56,037  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-01 15:45:56,054  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-01 15:45:56,054 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-03-01 15:45:56,195  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-01 15:45:56,217  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-01 15:45:56,217 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-03-01 15:45:56,469  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 15:45:56,692  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-01 15:45:56,719  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-01 15:45:56,722  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 2.679 seconds (JVM running for 5.004)
+2021-03-01 15:45:56,734 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:90) - 动态代理自定义多数据源事务成功
+2021-03-01 15:46:31,724  INFO [http-nio-8924-exec-1] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-01 15:46:31,724  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Initializing Servlet 'dispatcherServlet'
+2021-03-01 15:46:31,735  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Completed initialization in 11 ms
+2021-03-01 15:46:31,773  WARN [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2021-03-01 15:46:31,773  WARN [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - idleTimeout is less than 10000ms, setting to default 600000ms.
+2021-03-01 15:46:31,773  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Starting...
+2021-03-01 15:46:31,786  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Start completed.
+2021-03-01 15:46:31,792 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-03-01 15:46:31,796 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
+2021-03-01 15:46:31,799 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-03-01 15:47:13,859  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 9168 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-01 15:47:13,866 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-03-01 15:47:13,866  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-01 15:47:15,581  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-01 15:47:15,604  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-01 15:47:15,617  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-01 15:47:15,619  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-01 15:47:15,939  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-01 15:47:15,940  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1996 ms
+2021-03-01 15:47:16,089  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-01 15:47:16,104  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-01 15:47:16,141  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-01 15:47:16,155  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-01 15:47:16,462  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-01 15:47:16,597 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from student;参数为:[]
+2021-03-01 15:47:16,607  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-01 15:47:16,631  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-01 15:47:16,631 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-03-01 15:47:16,662  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-01 15:47:16,695  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-01 15:47:16,695 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select * from vehicle limit 10;参数为:[]
+2021-03-01 15:47:16,974  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 15:47:17,246  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-01 15:47:17,285  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-01 15:47:17,290  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 3.863 seconds (JVM running for 7.413)
+2021-03-01 15:47:17,303 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:90) - 动态代理自定义多数据源事务成功
+2021-03-01 15:47:38,434  INFO [http-nio-8924-exec-1] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-01 15:47:38,434  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Initializing Servlet 'dispatcherServlet'
+2021-03-01 15:47:38,442  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Completed initialization in 8 ms
+2021-03-01 15:47:38,484  WARN [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2021-03-01 15:47:38,485  WARN [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - idleTimeout is less than 10000ms, setting to default 600000ms.
+2021-03-01 15:47:38,485  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Starting...
+2021-03-01 15:47:38,496  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Start completed.
+2021-03-01 15:47:38,504 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-03-01 15:47:38,508 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
+2021-03-01 15:47:38,510 DEBUG [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]

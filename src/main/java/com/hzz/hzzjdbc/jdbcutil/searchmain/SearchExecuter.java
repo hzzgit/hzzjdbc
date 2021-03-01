@@ -3,6 +3,7 @@ package com.hzz.hzzjdbc.jdbcutil.searchmain;
 
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
+import com.hzz.hzzjdbc.jdbcutil.emumconfig.StreamResultEmum;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverterUtils;
 import com.hzz.hzzjdbc.jdbcutil.util.FieldUtil;
@@ -11,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -81,7 +83,7 @@ public class SearchExecuter extends ConnectExecuter {
 
     //查询每一行第一列的数据
     public <T> List<T> searchfirstcol() {
-        excuteSql();
+        excuteSql(StreamResultEmum.DEFAULT);
         List<T> result = new ArrayList<>();
         try {
             rs = ps.executeQuery();
@@ -98,7 +100,7 @@ public class SearchExecuter extends ConnectExecuter {
 
     //查询第一行第一列的数据
     public Object searchfirstval(DataTypeEmum dataTypeEmum) {
-        excuteSql();
+        excuteSql(StreamResultEmum.DEFAULT);
         Object result = null;
         try {
             rs = ps.executeQuery();
@@ -112,7 +114,10 @@ public class SearchExecuter extends ConnectExecuter {
                 } else if (dataTypeEmum == DataTypeEmum.STRING) {
                     result = rs.getString(1);
                 } else if (dataTypeEmum == DataTypeEmum.DATE) {
-                    result = rs.getDate(1);
+                    Object dataObject = rs.getObject(1);
+                    if (dataObject != null) {
+                        result = ConverterUtils.toDate(dataObject);
+                    }
                 } else if (dataTypeEmum == DataTypeEmum.SHORT) {
                     result = rs.getShort(1);
                 } else if (dataTypeEmum == DataTypeEmum.BYTE) {
@@ -132,7 +137,7 @@ public class SearchExecuter extends ConnectExecuter {
 
     //执行查询sql之后的操作
     public List executeQuery() {
-        excuteSql();
+        excuteSql(StreamResultEmum.DEFAULT);
         List jsonArray = new ArrayList();
         try {
             rs = ps.executeQuery();
@@ -156,7 +161,7 @@ public class SearchExecuter extends ConnectExecuter {
 
     //一条一条执行
     public <T> void ConsumeQuery(Consumer<T> consumer) {
-        excuteSql();
+        excuteSql(StreamResultEmum.长连接批量读取);
         try {
             rs = ps.executeQuery();
             while (rs.next()) {
@@ -218,7 +223,7 @@ public class SearchExecuter extends ConnectExecuter {
 
     //执行查询sql之后的操作
     public void executeUpdate() {
-        excuteSql();
+        excuteSql(StreamResultEmum.DEFAULT);
         boolean arg = false;
         try {
             arg = ps.executeUpdate() > 0 ? true : false;
@@ -254,6 +259,10 @@ public class SearchExecuter extends ConnectExecuter {
         Field[] declaredFields = FieldUtil.getFieldbycla(rowCls);// 获取所有的变量名
         for (int i = 0; i < declaredFields.length; i++) {
             Field field = declaredFields[i];
+            boolean isStatic = Modifier.isStatic(field.getModifiers());
+            if (isStatic) {//如果是静态变量，那么久跳过
+                continue;
+            }
             String filename = field.getName();// 获取变量名
             //获取到这个属性的值
             Object colval = null;
@@ -261,7 +270,10 @@ public class SearchExecuter extends ConnectExecuter {
                 if (field.getType() == String.class) {
                     colval = rs.getString(filename);
                 } else if (field.getType() == Date.class) {
-                    colval = rs.getDate(filename);
+                    Object dataObject = rs.getObject(filename);
+                    if (dataObject != null) {
+                        colval = ConverterUtils.toDate(dataObject);
+                    }
                 } else if (field.getType() == Integer.class) {
                     colval = rs.getInt(filename);
                 } else if (field.getType() == Long.class) {
@@ -290,7 +302,11 @@ public class SearchExecuter extends ConnectExecuter {
                 }
                 colval = arg;
             }
-            methods2.invoke(object, colval);// 通过对象，调用有参数的方法
+            try {
+                methods2.invoke(object, colval);// 通过对象，调用有参数的方法
+            } catch (Exception e) {
+                log.error("sql查询赋值异常,name:" + filename + ",val:" + colval, e);
+            }
             // 如果这个地方需要持久保存，那么就是object类放进去。不然就是加上c.newInstance()
         }
         return object;

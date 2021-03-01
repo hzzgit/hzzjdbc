@@ -1,4 +1,4 @@
-package com.hzz.hzzjdbc.jdbcutil.test;
+package com.hzz.hzzjdbc.jdbcutil.jdktest;
 
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.jdkjdbc.JdkDataSource;

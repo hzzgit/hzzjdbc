@@ -2,6 +2,7 @@ package com.hzz.hzzjdbc.jdbcutil.searchmain;
 
 import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils;
+import com.hzz.hzzjdbc.jdbcutil.emumconfig.StreamResultEmum;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.*;
@@ -49,9 +50,22 @@ public abstract class ConnectExecuter {
 
 
     //执行sql,这种是单条执行
-    public void excuteSql() {
+    public void excuteSql(StreamResultEmum resultEmum) {
         try {
-            ps = con.prepareStatement(sql);
+            if(resultEmum==null){
+                ps = con.prepareStatement(sql);
+            }
+           else if(resultEmum==StreamResultEmum.长连接批量读取){
+                ps = (PreparedStatement) con.prepareStatement(sql,ResultSet.TYPE_FORWARD_ONLY,
+                        ResultSet.CONCUR_READ_ONLY);
+                ps.setFetchSize(Integer.MIN_VALUE);
+                ps.setFetchDirection(ResultSet.FETCH_REVERSE);
+            }else if(resultEmum==StreamResultEmum.DEFAULT){
+                ps = con.prepareStatement(sql);
+            }else{
+                ps = con.prepareStatement(sql);
+            }
+
         } catch (SQLException e) {
             errsql(e);
         }
