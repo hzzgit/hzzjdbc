@@ -1,8 +1,6 @@
 package com.hzz.hzzjdbc.controller;
 
-import com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser;
 import com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest;
-import com.hzz.hzzjdbc.service.事务测试.test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,17 +15,14 @@ public class TestContoller {
 
 
     @Autowired
-    private test test;
+    private MostConnectTransactionalTest mostConnectTransactionalTest;
 
-    @Autowired
-    private TransactionalProcesser transactionalProcesser;
 
 
     @RequestMapping("/testroll")
     public void testroll() {
         try {
-            MostConnectTransactionalTest start事务 = (MostConnectTransactionalTest) transactionalProcesser.getBean(MostConnectTransactionalTest.class);
-            start事务.testrollback();
+            mostConnectTransactionalTest.testrollback();
         } catch (Exception e) {
             e.printStackTrace();
         }

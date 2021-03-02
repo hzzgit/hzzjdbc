@@ -1,4 +1,4 @@
-package com.hzz.hzzjdbc.jdbcutil.config;
+package com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.vo;
 
 /**
  * @author ：hzz

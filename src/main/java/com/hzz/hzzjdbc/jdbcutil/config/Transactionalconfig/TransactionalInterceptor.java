@@ -1,10 +1,10 @@
 package com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig;
 
+import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcessInter;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
-import org.springframework.context.ApplicationContext;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -23,12 +23,12 @@ public class TransactionalInterceptor implements MethodInterceptor {
 
     private Map<String, Byte> methodName = new HashMap<>();
 
-    private ApplicationContext applicationContext;
+    private MostDataSourceProcessInter mostDataSourceProcessInter;
 
-    public TransactionalInterceptor(Object finalBean, Map<String, Byte> methodName, ApplicationContext applicationContext) {
+    public TransactionalInterceptor(Object finalBean, Map<String, Byte> methodName, MostDataSourceProcessInter mostDataSourceProcessInter) {
         this.finalBean = finalBean;
         this.methodName = methodName;
-        this.applicationContext = applicationContext;
+        this.mostDataSourceProcessInter = mostDataSourceProcessInter;
     }
 
     @Override
@@ -41,22 +41,15 @@ public class TransactionalInterceptor implements MethodInterceptor {
             TransactionalMostConnect annotation = method.getAnnotation(TransactionalMostConnect.class);
             if (annotation != null) {
                 List<MysqlDao> mysqlDaoList = new ArrayList<>();
-                String[] beanNamesForAnnotation = applicationContext.getBeanNamesForType(MysqlDao.class);
-                System.out.println("动态代理注解上面的内容为:");
                 String[] strings = annotation.DataSourcesNames();
-
                 if (strings != null && strings.length > 0) {
                     for (String MysqlDaoName : strings) {
-                        if(applicationContext.containsBean(MysqlDaoName)){
-                            mysqlDaoList.add((MysqlDao) applicationContext.getBean(MysqlDaoName));
+                        if(mostDataSourceProcessInter.getMysqlDao(MysqlDaoName)!=null){
+                            mysqlDaoList.add(mostDataSourceProcessInter.getMysqlDao(MysqlDaoName));
                         }
                     }
                 } else {
-                    for (String MysqlDaoName : beanNamesForAnnotation) {
-                        if(applicationContext.containsBean(MysqlDaoName)){
-                            mysqlDaoList.add((MysqlDao) applicationContext.getBean(MysqlDaoName));
-                        }
-                    }
+                    mysqlDaoList=   mostDataSourceProcessInter.getMysqlDaoList();
                 }
                 try {
                     openCon(mysqlDaoList);

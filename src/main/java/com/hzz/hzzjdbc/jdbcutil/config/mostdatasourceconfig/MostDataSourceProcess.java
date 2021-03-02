@@ -1,12 +1,13 @@
 package com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig;
 
-import com.hzz.hzzjdbc.jdbcutil.config.DataSourceVo;
-import com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.vo.DataSourceVo;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.env.OriginTrackedMapPropertySource;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -19,10 +20,7 @@ import org.springframework.core.env.PropertySource;
 import org.springframework.web.context.support.StandardServletEnvironment;
 
 import javax.sql.DataSource;
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author ：hzz
@@ -38,20 +36,40 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
 
     private Map<String, MysqlDao> dataSourceVoMap;
 
+    @Autowired
+    private DataSourceVo dataSourceVo;
+
+    //主要数据库的名字
+    private final String mainMysqlName="mysqlDao";
 
 
+    @Override
     public  MysqlDao getMysqlDao(String sqlName){
         MysqlDao mysqlDao=null;
         if(dataSourceVoMap.containsKey(sqlName)){
             mysqlDao=dataSourceVoMap.get(sqlName);
+        }else{
+            mysqlDao=dataSourceVoMap.get(mainMysqlName);
         }
         return mysqlDao;
+    }
+
+    @Override
+    public List<MysqlDao> getMysqlDaoList() {
+      List<MysqlDao> mysqlDaoList=new ArrayList<>();
+      if(dataSourceVoMap!=null&&dataSourceVoMap.size()>0){
+            dataSourceVoMap.forEach((p,v)->{
+                mysqlDaoList.add(v);
+            });
+      }
+      return  mysqlDaoList;
+
     }
 
     private void init() {
         MostDataSourceVo mostDataSourceVo = getMostDataSourceVo();
         dataSourceVoMap = mostDataSourceVo.getDataSourceVoMap();
-       // inject(Service.class);
+
     }
 
     /**
@@ -77,7 +95,7 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
                                 DataSourceVo dataSourceVo = new DataSourceVo();
                                 String value = (String) next.getProperty(propertyName);
                                 String colName = split[2];
-                                String SourceName = "mysqlDao";
+                                String SourceName = mainMysqlName;
                                 SourceName = split[2];
                                 colName = split[3];
                                 if (dataSourceVoMap.containsKey(SourceName)) {
@@ -99,6 +117,9 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
                 }
             }
         }
+        if(dataSourceVo!=null){
+            dataSourceVoMap.put(mainMysqlName,dataSourceVo);
+        }
         MostDataSourceVo mostDataSourceVo = new MostDataSourceVo();
         Map<String, MysqlDao> mysqlDaoHashMap = new HashMap<>();
         dataSourceVoMap.forEach((p, v) -> {
@@ -109,6 +130,7 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
             MysqlDao ju = new Mysqldb(build, new SpringConnectionhzzSource(build, p), jdbcUrl);
             mysqlDaoHashMap.put(p, ju);
         });
+
         mostDataSourceVo.setDataSourceVoMap(mysqlDaoHashMap);
         return mostDataSourceVo;
     }
@@ -125,69 +147,12 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
     }
 
 
-    private void inject(Class c) {
-        String[] beanNamesForAnnotation2 = applicationContext.getBeanNamesForAnnotation(c);
-        try {
-            dongtaizhuru(beanNamesForAnnotation2);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 对已有的注释的接口类进行注入带有动态代理改造之后的类
-     */
-    private void dongtaizhuru(String[] beanNamesForAnnotation) throws ClassNotFoundException {
-        if (beanNamesForAnnotation != null && beanNamesForAnnotation.length > 0) {
-            for (String beannames : beanNamesForAnnotation) {
-                Object bean = applicationContext.getBean(beannames);
-                Class<?> aClass = bean.getClass();
-                Field[] fields = aClass.getDeclaredFields();
-                for (Field field : fields) {
-
-                    String fieldName = field.getName();
-                    if (!"mysqldata2".equalsIgnoreCase(fieldName)) {
-                        continue;
-                    }
-//                    if (dataSourceVoMap.containsKey(value)) {
-//                        Object o = dataSourceVoMap.get("datasource2");
-//                        log.debug("注入多数据源:" + bean + ",参数名:" + fieldName + "注入了" + o.getClass());
-//                        try {
-//                            ReflectionUtil.setValue(bean, fieldName, o);
-//                            log.debug("注入多数据源:" + bean + ",参数名:" + fieldName + "注入了" + o.getClass());
-//                        } catch (NoSuchFieldException e) {
-//                            e.printStackTrace();
-//                        } catch (IllegalAccessException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-
-                }
-            }
-        }
-    }
 
     @Override
     public void run(String... args) throws Exception {
         init();
     }
 
-//    @Override
-//    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-//        MostDataSourceVo mostDataSourceVo = getMostDataSourceVo();
-//        DefaultListableBeanFactory listableBeanFactory = (DefaultListableBeanFactory) beanFactory;
-//        Map<String, DataSourceVo> dataSourceVoMap = mostDataSourceVo.getDataSourceVoMap();
-//        if (dataSourceVoMap.size() > 0) {
-//            dataSourceVoMap.forEach((p, v) -> {
-//                DataSourceVo dataSourceDefaultVo = v;
-//                DataSource build = DataSourceBuilder.create().url(dataSourceDefaultVo.getUrl()).driverClassName(dataSourceDefaultVo.getDriverClassName())
-//                        .password(dataSourceDefaultVo.getPassword()).username(dataSourceDefaultVo.getUsername()).build();
-//                String jdbcUrl = ((HikariDataSource) build).getJdbcUrl();
-//                MysqlDao ju = new Mysqldb(build, new SpringConnectionhzzSource(build, p), jdbcUrl);
-//                listableBeanFactory.registerSingleton(p, ju);
-//            });
-//        }
-//    }
 
 
 }

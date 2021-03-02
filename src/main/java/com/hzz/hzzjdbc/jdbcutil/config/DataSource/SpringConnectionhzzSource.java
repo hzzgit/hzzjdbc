@@ -1,4 +1,4 @@
-package com.hzz.hzzjdbc.jdbcutil.config;
+package com.hzz.hzzjdbc.jdbcutil.config.DataSource;
 
 
 import com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils;

@@ -1,6 +1,6 @@
 package com.hzz.hzzjdbc.jdbcutil.searchmain;
 
-import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils;
 import com.hzz.hzzjdbc.jdbcutil.emumconfig.StreamResultEmum;
 import lombok.extern.slf4j.Slf4j;

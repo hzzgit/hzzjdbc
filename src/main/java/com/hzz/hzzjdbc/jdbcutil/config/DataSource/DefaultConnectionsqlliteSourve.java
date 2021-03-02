@@ -1,4 +1,4 @@
-package com.hzz.hzzjdbc.jdbcutil.config;
+package com.hzz.hzzjdbc.jdbcutil.config.DataSource;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,7 +14,7 @@ import java.sql.Statement;
  * @date ：2021/1/20 16:02
  */
 @Slf4j
-public class DefaultConnectionsqlliteSourve implements  ConnectionhzzSource {
+public class DefaultConnectionsqlliteSourve implements ConnectionhzzSource {
 
     private String dbFilePath;
     private Connection connection;

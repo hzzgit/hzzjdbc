@@ -1,7 +1,7 @@
 package com.hzz.hzzjdbc.jdbcutil.dbmain;
 
 
-import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.ConnectionhzzSource;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;

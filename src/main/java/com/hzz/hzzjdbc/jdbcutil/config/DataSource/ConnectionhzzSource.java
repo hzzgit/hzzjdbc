@@ -1,4 +1,4 @@
-package com.hzz.hzzjdbc.jdbcutil.config;
+package com.hzz.hzzjdbc.jdbcutil.config.DataSource;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

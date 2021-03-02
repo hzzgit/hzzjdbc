@@ -3,8 +3,8 @@ package com.hzz.hzzjdbc.jdbcutil.jdkjdbc;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.hzz.hzzjdbc.jdbcutil.config.DefaultConnectionsqlliteSourve;
-import com.hzz.hzzjdbc.jdbcutil.config.DefaultConntionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.DefaultConnectionsqlliteSourve;
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.DefaultConntionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb;
 

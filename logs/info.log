@@ -44,7 +44,7 @@
 2020-11-23 11:36:20,860  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'mostDataProcessConfig' of type [com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:36:20,880  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:36:21,092  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration' of type [com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-11-23 11:36:21,113  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'getDataSourcedefault' of type [com.hzz.hzzjdbc.jdbcutil.config.DataSourceVo] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-23 11:36:21,113  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'getDataSourcedefault' of type [com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.vo.DataSourceVo] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:36:21,119  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil:39) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
 2020-11-23 11:36:21,126  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'createhzzSpringJdbcUtil' of type [com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:36:21,131  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'mostConnectTransactionalTest' of type [com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
@@ -66,7 +66,7 @@
 2020-11-23 11:39:23,009  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'mostDataProcessConfig' of type [com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig$$EnhancerBySpringCGLIB$$f4b2bc73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:39:23,024  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8a1d87b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:39:30,117  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration' of type [com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration$$EnhancerBySpringCGLIB$$34ee4908] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-11-23 11:39:30,266  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'getDataSourcedefault' of type [com.hzz.hzzjdbc.jdbcutil.config.DataSourceVo] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-23 11:39:30,266  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'getDataSourcedefault' of type [com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.vo.DataSourceVo] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:39:30,303  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil:39) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
 2020-11-23 11:39:30,312  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'createhzzSpringJdbcUtil' of type [com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:39:30,352  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'mostConnectTransactionalTest' of type [com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
@@ -88,7 +88,7 @@
 2020-11-23 11:43:53,568  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'mostDataProcessConfig' of type [com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig$$EnhancerBySpringCGLIB$$3e71ebc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:43:53,583  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d3dcb705] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:43:53,712  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration' of type [com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration$$EnhancerBySpringCGLIB$$7ead7858] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-11-23 11:43:53,744  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'getDataSourcedefault' of type [com.hzz.hzzjdbc.jdbcutil.config.DataSourceVo] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-23 11:43:53,744  INFO [main] (org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker::) - Bean 'getDataSourcedefault' of type [com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.vo.DataSourceVo] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-11-23 11:43:53,760  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil:39) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
 2020-11-23 11:50:37,526  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 12860 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
 2020-11-23 11:50:37,533  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
@@ -987,7 +987,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Can't call
 	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:370) [HikariCP-3.2.0.jar:?]
 	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) [HikariCP-3.2.0.jar:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils.rollback(DataSoureMostConnectUtils.java:152) [classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rollback(SearchExecuter.java:209) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.rollback(TransactionalInterceptor.java:100) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:71) [classes/:?]
@@ -1064,7 +1064,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Can't call
 	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:370) [HikariCP-3.2.0.jar:?]
 	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) [HikariCP-3.2.0.jar:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils.rollback(DataSoureMostConnectUtils.java:152) [classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rollback(SearchExecuter.java:209) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.rollback(TransactionalInterceptor.java:100) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:71) [classes/:?]
@@ -1380,7 +1380,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Can't call
 	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:370) [HikariCP-3.2.0.jar:?]
 	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) [HikariCP-3.2.0.jar:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils.rollback(DataSoureMostConnectUtils.java:155) [classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rollback(SearchExecuter.java:209) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.rollback(TransactionalInterceptor.java:104) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:72) [classes/:?]
@@ -1457,7 +1457,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Can't call
 	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:370) [HikariCP-3.2.0.jar:?]
 	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) [HikariCP-3.2.0.jar:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils.rollback(DataSoureMostConnectUtils.java:155) [classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rollback(SearchExecuter.java:209) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.rollback(TransactionalInterceptor.java:104) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:72) [classes/:?]
@@ -1657,7 +1657,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Can't call
 	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:370) [HikariCP-3.2.0.jar:?]
 	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) [HikariCP-3.2.0.jar:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils.rollback(DataSoureMostConnectUtils.java:155) [classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rollback(SearchExecuter.java:209) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.rollback(TransactionalInterceptor.java:104) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:72) [classes/:?]
@@ -2172,7 +2172,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Can't call
 	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:370) [HikariCP-3.2.0.jar:?]
 	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) [HikariCP-3.2.0.jar:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils.rollback(DataSoureMostConnectUtils.java:155) [classes/:?]
-	at com.hzz.hzzjdbc.jdbcutil.config.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rollback(SearchExecuter.java:209) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.rollback(TransactionalInterceptor.java:104) [classes/:?]
 	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:72) [classes/:?]
@@ -4092,3 +4092,421 @@ java.lang.IllegalAccessException: Class com.hzz.hzzjdbc.jdbcutil.util.SqlCreateU
 2021-03-01 15:47:17,246  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
 2021-03-01 15:47:17,285  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
 2021-03-01 15:47:17,290  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 3.863 seconds (JVM running for 7.413)
+2021-03-02 17:09:02,422  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 16944 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:09:02,429  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:09:03,616  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:09:03,630  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:09:03,644  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:09:03,644  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:09:03,751  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:09:03,751  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1279 ms
+2021-03-02 17:09:03,863  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-02 17:09:03,875  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:09:03,881  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:09:03,897  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-02 17:09:04,228  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-02 17:09:04,423  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-02 17:09:04,459  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-02 17:09:04,479  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-02 17:09:04,509  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-02 17:09:04,699  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:09:04,989  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:09:05,030  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:09:05,035  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 3.031 seconds (JVM running for 5.612)
+2021-03-02 17:23:58,031  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 888 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:23:58,037  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:23:59,276  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:23:59,297  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:23:59,309  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:23:59,309  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:23:59,428  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:23:59,429  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1353 ms
+2021-03-02 17:23:59,525  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-02 17:23:59,538  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:23:59,547  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:23:59,563  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-02 17:23:59,725  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-02 17:23:59,837  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-02 17:23:59,864  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-02 17:23:59,891  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-02 17:23:59,914  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-02 17:24:00,133  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:24:00,452  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:24:00,476  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:24:00,479  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 2.872 seconds (JVM running for 5.567)
+2021-03-02 17:24:56,047  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 12456 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:24:56,053  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:24:58,374  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:24:58,396  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:24:58,404  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:24:58,405  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:24:58,559  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:24:58,560  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 2458 ms
+2021-03-02 17:24:58,686  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-02 17:24:58,696  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:24:58,704  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:24:58,718  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-02 17:24:58,887  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-02 17:24:58,987  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-02 17:24:59,010  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-02 17:24:59,034  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-02 17:24:59,060  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-02 17:24:59,306  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:24:59,581  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:24:59,619  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:24:59,628  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 4.637 seconds (JVM running for 7.932)
+2021-03-02 17:26:19,474  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 11180 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:26:19,480  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:26:20,884  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:26:20,907  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:26:20,920  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:26:20,921  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:26:21,045  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:26:21,045  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1528 ms
+2021-03-02 17:26:21,133  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-02 17:26:21,144  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:26:21,150  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:26:21,163  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-02 17:26:21,326  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-02 17:26:21,347  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-02 17:26:21,376  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-02 17:26:21,399  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-02 17:26:21,415  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-02 17:26:21,722  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:26:21,949  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:26:21,980  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:26:21,985  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 2.957 seconds (JVM running for 5.964)
+2021-03-02 17:28:01,611  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 9996 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:28:01,617  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:28:02,770  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:28:02,785  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:28:02,799  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:28:02,800  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:28:02,919  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:28:02,919  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1147 ms
+2021-03-02 17:28:03,014  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-02 17:28:03,027  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil2:69) - jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.8.96:3306/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:28:03,035  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.DaoAutoConfiguration:createhzzSpringJdbcUtil3:87) - jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false数据库成功,url=jdbc:mysql://172.16.15.95:61502/subiaodb?autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&useSSL=false
+2021-03-02 17:28:03,049  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-02 17:28:03,215  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-02 17:28:03,349  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-02 17:28:03,367  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-02 17:28:03,390  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-02 17:28:03,405  INFO [main] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-02 17:28:03,602  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:28:03,833  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:28:03,859  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:28:03,862  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 2.63 seconds (JVM running for 5.267)
+2021-03-02 17:31:25,108  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 15464 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:31:25,115  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:33:31,137  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 3392 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:33:31,143  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:35:04,558  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 17584 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:35:04,567  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:37:18,051  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 2140 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:37:18,061  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:38:43,818  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 18052 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:38:43,828  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:46:25,408  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 3596 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:46:25,414  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:46:56,642  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 3332 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:46:56,651  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:46:57,871  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:46:57,896  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:46:57,906  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:46:57,906  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:46:58,002  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:46:58,003  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1309 ms
+2021-03-02 17:47:15,520  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:47:24,739  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:47:24,764  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:47:24,768  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 28.792 seconds (JVM running for 31.772)
+2021-03-02 17:49:16,267  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 17972 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:49:16,275  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:49:17,546  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:49:17,578  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:49:17,588  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:49:17,590  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:49:17,708  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:49:17,708  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1389 ms
+2021-03-02 17:49:22,666  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:49:24,392  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:49:24,428  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:49:24,433  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 8.571 seconds (JVM running for 11.036)
+2021-03-02 17:49:38,838  INFO [http-nio-8924-exec-1] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-02 17:49:38,839  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Initializing Servlet 'dispatcherServlet'
+2021-03-02 17:49:38,852  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Completed initialization in 13 ms
+2021-03-02 17:49:38,898  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-02 17:49:39,102  INFO [http-nio-8924-exec-1] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-02 17:50:18,197  WARN [http-nio-8924-exec-1] (com.zaxxer.hikari.pool.ProxyConnection::) - HikariPool-1 - Connection com.mysql.jdbc.JDBC4Connection@387425af marked as broken because of SQLSTATE(08003), ErrorCode(0)
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Can't call rollback when autocommit=true
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.Util.getInstance(Util.java:383) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1023) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:997) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:983) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:928) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:5078) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.zaxxer.hikari.pool.ProxyConnection.rollback(ProxyConnection.java:370) [HikariCP-3.2.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.rollback(HikariProxyConnection.java) [HikariCP-3.2.0.jar:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.datasourceconfig.DataSoureMostConnectUtils.rollback(DataSoureMostConnectUtils.java:157) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource.rollback(SpringConnectionhzzSource.java:43) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.rollback(SearchExecuter.java:214) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.rollback(TransactionalInterceptor.java:99) [classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:67) [classes/:?]
+	at com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest$$EnhancerByCGLIB$$16eea134.testrollback(<generated>) [classes/:?]
+	at com.hzz.hzzjdbc.controller.TestContoller.testroll(TestContoller.java:30) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2021-03-02 17:50:18,191 ERROR [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:130) - 执行sql出错,sql=update department set name ='测试22'  where depId ='117440629'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'hzzdata.department' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.Util.getInstance(Util.java:383) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2334) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2262) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2246) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.2.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.2.0.jar:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeUpdate(SearchExecuter.java:229) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executesql(SearchExecuter.java:66) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.excutesql(MysqlUtiilRealize.java:297) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.excutesql(Mysqldb.java:261) ~[classes/:?]
+	at com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest.testrollback(MostConnectTransactionalTest.java:29) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest$$EnhancerByCGLIB$$16eea134.testrollback(<generated>) ~[classes/:?]
+	at com.hzz.hzzjdbc.controller.TestContoller.testroll(TestContoller.java:30) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[?:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2021-03-02 17:50:18,193 ERROR [http-nio-8924-exec-1] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:errsql:130) - 执行sql出错,sql=update department set name ='测试11' where depId='117445961' 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'hzzdata.department' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.Util.getInstance(Util.java:383) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2334) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2262) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2246) ~[mysql-connector-java-5.1.31.jar:?]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.2.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.2.0.jar:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executeUpdate(SearchExecuter.java:229) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.SearchExecuter.executesql(SearchExecuter.java:66) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize.excutesql(MysqlUtiilRealize.java:297) ~[classes/:?]
+	at com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb.excutesql(Mysqldb.java:261) ~[classes/:?]
+	at com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest.testrollback(MostConnectTransactionalTest.java:32) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalInterceptor.intercept(TransactionalInterceptor.java:56) ~[classes/:?]
+	at com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest$$EnhancerByCGLIB$$16eea134.testrollback(<generated>) ~[classes/:?]
+	at com.hzz.hzzjdbc.controller.TestContoller.testroll(TestContoller.java:30) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.11.RELEASE.jar:5.1.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[?:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2021-03-02 17:50:28,957  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 7260 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:50:28,966  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:50:30,313  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:50:30,345  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:50:30,356  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:50:30,357  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:50:30,471  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:50:30,471  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1446 ms
+2021-03-02 17:50:46,325  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:50:47,892  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:50:47,921  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:50:47,926  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 19.434 seconds (JVM running for 23.184)
+2021-03-02 17:53:33,364  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 132 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-02 17:53:33,371  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-02 17:53:34,590  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-02 17:53:34,626  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:53:34,637  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-02 17:53:34,638  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-02 17:53:34,756  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-02 17:53:34,756  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1333 ms
+2021-03-02 17:53:35,006  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-02 17:53:37,875  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-02 17:53:37,902  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-02 17:53:37,905  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 4.924 seconds (JVM running for 7.588)

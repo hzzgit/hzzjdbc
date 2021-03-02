@@ -15,17 +15,5 @@ import java.util.List;
 @SpringBootTest(classes = HzzjdbcApplication.class)
 public class HzzjdbcApplicationTests {
 
-    @Autowired
-    private MysqlDao mysqlDao;
-
-    @Test
-    public void contextLoads1() {
-        String sql="select * from student";
-        List<ConverMap> query = mysqlDao.getMysqlUtil().query(sql);
-        Iterator<ConverMap> iterator = query.iterator();
-        ConverMap next = iterator.next();
-
-
-    }
 
 }

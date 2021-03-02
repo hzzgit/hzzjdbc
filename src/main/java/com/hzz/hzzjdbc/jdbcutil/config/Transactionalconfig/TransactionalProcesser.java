@@ -1,5 +1,6 @@
 package com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig;
 
+import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcessInter;
 import com.hzz.hzzjdbc.jdbcutil.util.ReflectionUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
@@ -32,10 +33,15 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
     /*用来存放类名和动态代理之后的类*/
     private ConcurrentMap<Class, Object> beansFactory = new ConcurrentHashMap<>();
 
+    private MostDataSourceProcessInter mostDataSourceProcessInter;
+
     public Object getBean(Class cla) {
         return beansFactory.get(cla);
     }
 
+    public TransactionalProcesser(MostDataSourceProcessInter mostDataSourceProcessInter) {
+        this.mostDataSourceProcessInter = mostDataSourceProcessInter;
+    }
 
     private ApplicationContext applicationContext;
     private Environment environment;
@@ -74,7 +80,7 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
                         en.setSuperclass(aClass);
                         //这边定义回调
                         Object finalBean = bean;
-                        en.setCallback(new TransactionalInterceptor(finalBean,methodName,applicationContext));
+                        en.setCallback(new TransactionalInterceptor(finalBean,methodName,mostDataSourceProcessInter));
                         Object o = en.create();
                         //这边是动态代理之后的类的存放，这时候已经可以对这个类进行动态代理了，
                         beansFactory.put(aClass, o);
@@ -86,7 +92,7 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
         /*将匹配到的类进行注入*/
         inject(Controller.class);
         inject(RestController.class);
-        inject(Service.class);
+       // inject(Service.class);
         log.debug("动态代理自定义多数据源事务成功");
 
 

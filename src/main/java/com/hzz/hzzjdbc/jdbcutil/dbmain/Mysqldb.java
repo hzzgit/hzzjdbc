@@ -1,7 +1,7 @@
 package com.hzz.hzzjdbc.jdbcutil.dbmain;
 
 
-import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;

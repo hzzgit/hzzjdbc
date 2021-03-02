@@ -1,7 +1,7 @@
 package com.hzz.hzzjdbc.jdbcutil.searchmain;
 
 
-import com.hzz.hzzjdbc.jdbcutil.config.ConnectionhzzSource;
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.emumconfig.DataTypeEmum;
 import com.hzz.hzzjdbc.jdbcutil.emumconfig.StreamResultEmum;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
