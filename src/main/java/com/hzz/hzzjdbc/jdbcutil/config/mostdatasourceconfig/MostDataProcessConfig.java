@@ -1,12 +1,11 @@
 package com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig;
 
-import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.vo.DataSourceVo;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+
+import javax.sql.DataSource;
 
 /**
  * @author ：hzz
@@ -17,15 +16,16 @@ import org.springframework.context.annotation.Primary;
 @AutoConfigureAfter({DataSourceAutoConfiguration.class})
 public class MostDataProcessConfig {
 
-    @Primary
-    @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSourceVo getDataSourcedefault() {
-        return new DataSourceVo();
-    }
+//    @Primary
+//    @Bean
+//    @ConfigurationProperties(prefix = "spring.datasource")
+//    public DataSourceVo getDataSourcedefault() {
+//        return new DataSourceVo();
+//    }
 
     @Bean
-    public MostDataSourceProcess getMostDataSourceProcess(){
+    public MostDataSourceProcess getMostDataSourceProcess( ){
+
         return  new MostDataSourceProcess();
     }
 }

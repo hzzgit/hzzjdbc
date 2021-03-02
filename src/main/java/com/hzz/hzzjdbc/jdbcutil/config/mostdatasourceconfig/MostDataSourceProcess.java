@@ -36,8 +36,11 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
 
     private Map<String, MysqlDao> dataSourceVoMap;
 
+//    @Autowired
+//    private DataSourceVo dataSourceVo;
+
     @Autowired
-    private DataSourceVo dataSourceVo;
+    private DataSource dataSource;
 
     //主要数据库的名字
     private final String mainMysqlName="mysqlDao";
@@ -122,9 +125,7 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
                 }
             }
         }
-        if(dataSourceVo!=null){
-            dataSourceVoMap.put(mainMysqlName,dataSourceVo);
-        }
+
         MostDataSourceVo mostDataSourceVo = new MostDataSourceVo();
         Map<String, MysqlDao> mysqlDaoHashMap = new HashMap<>();
         dataSourceVoMap.forEach((p, v) -> {
@@ -135,7 +136,11 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
             MysqlDao ju = new Mysqldb(build, new SpringConnectionhzzSource(build, p), jdbcUrl);
             mysqlDaoHashMap.put(p, ju);
         });
-
+        if (dataSource!=null) {
+            String jdbcUrl = ((HikariDataSource) dataSource).getJdbcUrl();
+            MysqlDao ju = new Mysqldb(dataSource, new SpringConnectionhzzSource(dataSource, mainMysqlName), jdbcUrl);
+            mysqlDaoHashMap.put(mainMysqlName, ju);
+        }
         mostDataSourceVo.setDataSourceVoMap(mysqlDaoHashMap);
         return mostDataSourceVo;
     }
