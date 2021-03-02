@@ -44,6 +44,11 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
 
 
     @Override
+    public MysqlDao getMainMysqlDao(){
+        return  getMysqlDao(mainMysqlName);
+    }
+
+    @Override
     public  MysqlDao getMysqlDao(String sqlName){
         MysqlDao mysqlDao=null;
         if(dataSourceVoMap.containsKey(sqlName)){
