@@ -16,7 +16,6 @@ import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertySource;
-import org.springframework.stereotype.Service;
 import org.springframework.web.context.support.StandardServletEnvironment;
 
 import javax.sql.DataSource;
@@ -31,7 +30,7 @@ import java.util.Map;
  * @date ：2020/11/20 11:33
  */
 @Slf4j
-public class MostDataSourceProcess implements CommandLineRunner, ApplicationContextAware, EnvironmentAware {
+public class MostDataSourceProcess implements CommandLineRunner, ApplicationContextAware, EnvironmentAware,MostDataSourceProcessInter {
 
     private Environment environment;
 
@@ -40,10 +39,19 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
     private Map<String, MysqlDao> dataSourceVoMap;
 
 
-    public void init() {
+
+    public  MysqlDao getMysqlDao(String sqlName){
+        MysqlDao mysqlDao=null;
+        if(dataSourceVoMap.containsKey(sqlName)){
+            mysqlDao=dataSourceVoMap.get(sqlName);
+        }
+        return mysqlDao;
+    }
+
+    private void init() {
         MostDataSourceVo mostDataSourceVo = getMostDataSourceVo();
         dataSourceVoMap = mostDataSourceVo.getDataSourceVoMap();
-        inject(Service.class);
+       // inject(Service.class);
     }
 
     /**
@@ -51,7 +59,7 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
      *
      * @return
      */
-    public MostDataSourceVo getMostDataSourceVo() {
+    private MostDataSourceVo getMostDataSourceVo() {
         MutablePropertySources propertySources = ((StandardServletEnvironment) environment).getPropertySources();
         Iterator<PropertySource<?>> iterator = propertySources.iterator();
         Map<String, DataSourceVo> dataSourceVoMap = new HashMap<>();
