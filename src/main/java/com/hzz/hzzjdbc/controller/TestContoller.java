@@ -28,18 +28,10 @@ public class TestContoller {
     }
 
 
-    @RequestMapping("/thread")
-    public String thread() throws Exception {
-        System.out.println("先");
-        Thread.sleep(100000);
-
-        return "111";
-    }
-
 
     @RequestMapping("/findname")
     public String findname() throws Exception {
-        String test = mostConnectTransactionalTest.test("账号");
+        String test = mostConnectTransactionalTest.findname("账号");
         return test;
     }
 

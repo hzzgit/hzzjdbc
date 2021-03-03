@@ -8,9 +8,7 @@ import java.lang.reflect.Method;
 import java.sql.Connection;
 
 /**
- * @author ：hzz
- * @description：TODO
- * @date ：2020/11/3 11:09
+ * 多数据源事务注解
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
