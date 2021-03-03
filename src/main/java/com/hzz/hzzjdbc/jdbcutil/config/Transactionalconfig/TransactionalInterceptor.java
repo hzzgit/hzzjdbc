@@ -1,8 +1,9 @@
 package com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig;
 
+import com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.Thread.TransactionallCallBack;
 import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcessInter;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
-import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
@@ -11,12 +12,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 /**
  * @author ：hzz
  * @description：TODO
  * @date ：2020/11/4 17:31
  */
+@Slf4j
 public class TransactionalInterceptor implements MethodInterceptor {
 
     private Object finalBean;
@@ -35,68 +40,55 @@ public class TransactionalInterceptor implements MethodInterceptor {
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         String name1 = method.getName();
         System.out.println("方法名:" + name1);
-
         if (methodName.containsKey(name1)) {
             System.out.println("动态代理前");
             TransactionalMostConnect annotation = method.getAnnotation(TransactionalMostConnect.class);
-            if (annotation != null) {
-                List<MysqlDao> mysqlDaoList = new ArrayList<>();
-                String[] strings = annotation.DataSourcesNames();
-                if (strings != null && strings.length > 0) {
-                    for (String MysqlDaoName : strings) {
-                        if(mostDataSourceProcessInter.getMysqlDao(MysqlDaoName)!=null){
-                            mysqlDaoList.add(mostDataSourceProcessInter.getMysqlDao(MysqlDaoName));
-                        }
+            List<MysqlDao> mysqlDaoList = new ArrayList<>();
+            String[] strings = annotation.DataSourcesNames();
+            if (strings != null && strings.length > 0) {
+                for (String MysqlDaoName : strings) {
+                    if (mostDataSourceProcessInter.getMysqlDao(MysqlDaoName) != null) {
+                        mysqlDaoList.add(mostDataSourceProcessInter.getMysqlDao(MysqlDaoName));
                     }
-                } else {
-                    mysqlDaoList=   mostDataSourceProcessInter.getMysqlDaoList();
                 }
-                try {
-                    openCon(mysqlDaoList);
-                    Object o1 = method.invoke(finalBean, objects);
-                    System.out.println("动态代理后");
-                    commitCon(mysqlDaoList);
-                    return o1;
-                } catch (Exception e) {
-                    System.out.println("动态代理执行方法异常，进行事务回滚操作");
-                    Class<? extends Throwable>[] classes = annotation.rollbackFor();
-                    if(e.equals(classes)){
-                        System.out.println("事务捕获到的异常相同");
-                    }
-                    try {
-                        rollback(mysqlDaoList);
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
-
-                }
+            } else {
+                mysqlDaoList = mostDataSourceProcessInter.getMysqlDaoList();
             }
-
+            int timeout = annotation.timeout();
+            Object o1 = null;
+            TransactionallCallBack transactionallCallBack = new TransactionallCallBack(method, objects, finalBean, mysqlDaoList, annotation);
+            FutureTask futureTask = new FutureTask(transactionallCallBack);
+            Thread thread = new Thread(futureTask);
+            thread.start();
+            if (timeout > 0) {
+                try {
+                    o1 = futureTask.get(timeout, TimeUnit.SECONDS);
+                } catch (TimeoutException e) {
+                    //这边试图去结束运行的线程，避免运行结束提交
+                    transactionallCallBack.setNotcommit();
+                    futureTask.cancel(true);
+                    rollback(mysqlDaoList);
+                    throw new Exception("事务执行超时，进行回滚", new RuntimeException("事务执行超时，进行回滚"));
+                }
+            } else {
+                o1 = futureTask.get();
+            }
+            return o1;
+        } else {
+            Object o1 = null;
+            try {
+                o1 = method.invoke(finalBean, objects);
+            } catch (Exception e) {
+                throw e.getCause();
+            }
+            return o1;
         }
-        return null;
+
     }
 
-    private void openCon(List<MysqlDao> mysqlDaoList) {
+    private void rollback(List<MysqlDao>  mysqlDaoList) {
         for (MysqlDao mysqlDao : mysqlDaoList) {
-            MysqlUtil mysqlUtil = mysqlDao.getMysqlUtil();
-            //这边打开事务
-            mysqlUtil.begintransaction(false);
-        }
-    }
-
-    private void commitCon(List<MysqlDao> mysqlDaoList) {
-        for (MysqlDao mysqlDao : mysqlDaoList) {
-            MysqlUtil mysqlUtil = mysqlDao.getMysqlUtil();
-            //这边结束整个sql，并最后提交或者回滚
-            mysqlUtil.endtransaction();
-        }
-    }
-
-    private void rollback(List<MysqlDao> mysqlDaoList) {
-        for (MysqlDao mysqlDao : mysqlDaoList) {
-            MysqlUtil mysqlUtil = mysqlDao.getMysqlUtil();
-            //这边结束整个sql，并最后提交或者回滚
-            mysqlUtil.rollback();
+            mysqlDao.rollback();
         }
     }
 }

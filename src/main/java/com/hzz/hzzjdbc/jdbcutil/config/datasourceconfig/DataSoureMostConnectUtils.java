@@ -96,13 +96,18 @@ public class DataSoureMostConnectUtils {
         }
     }
 
-    public static void begintransaction(DataSource dataSource, boolean autoCommit) {
+    public static Connection begintransaction(DataSource dataSource, boolean autoCommit,Integer tranlevel) {
         Map<DataSource, TransactionalDto> dataSourceTransactionalDtoMap = connectionThreadLocal.get();
+        Connection connection=null;
         if (dataSourceTransactionalDtoMap != null) {
             TransactionalDto transactionalDto = dataSourceTransactionalDtoMap.get(dataSource);
             if (transactionalDto != null) {
-                Connection connection = transactionalDto.getConnection();
+                 connection = transactionalDto.getConnection();
                 try {
+                    if(tranlevel!=null){
+                        //加入事务的传播级别
+                        connection.setTransactionIsolation(tranlevel);
+                    }
                     connection.setAutoCommit(autoCommit);
                     transactionalDto.setConnection(connection);
                     transactionalDto.setIstransaction(autoCommit);
@@ -114,6 +119,7 @@ public class DataSoureMostConnectUtils {
                 throw new RuntimeException("不存在该连接");
             }
         }
+        return connection;
     }
 
 

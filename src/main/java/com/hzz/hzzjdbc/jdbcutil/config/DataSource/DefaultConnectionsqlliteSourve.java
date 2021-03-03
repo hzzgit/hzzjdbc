@@ -72,7 +72,7 @@ public class DefaultConnectionsqlliteSourve implements ConnectionhzzSource {
     }
 
     @Override
-    public void setAutoCommit(Connection conn, boolean autoCommit) {
+    public Connection setAutoCommit(Connection conn, boolean autoCommit) {
         try {
             if (conn != null) {
                 conn.setAutoCommit(autoCommit);
@@ -80,8 +80,22 @@ public class DefaultConnectionsqlliteSourve implements ConnectionhzzSource {
         } catch (SQLException var4) {
             log.error("conn.commit出错！autoCommit=" + autoCommit, var4);
         }
-
+        return conn;
     }
+
+    @Override
+    public Connection setAutoCommit(Connection conn, boolean autoCommit, Integer level) {
+        try {
+            if (conn != null) {
+                conn.setAutoCommit(autoCommit);
+                conn.setTransactionIsolation(level);
+            }
+        } catch (SQLException var4) {
+            log.error("conn.commit出错！autoCommit=" + autoCommit, var4);
+        }
+        return conn;
+    }
+
 
     @Override
     public DataSource getDataSource() {

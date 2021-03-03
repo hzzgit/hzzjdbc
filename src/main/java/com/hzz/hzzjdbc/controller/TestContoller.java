@@ -1,6 +1,6 @@
 package com.hzz.hzzjdbc.controller;
 
-import com.hzz.hzzjdbc.service.事务测试.MostConnectTransactionalTest;
+import com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +18,6 @@ public class TestContoller {
     private MostConnectTransactionalTest mostConnectTransactionalTest;
 
 
-
     @RequestMapping("/testroll")
     public void testroll() {
         try {
@@ -28,5 +27,20 @@ public class TestContoller {
         }
     }
 
+
+    @RequestMapping("/thread")
+    public String thread() throws Exception {
+        System.out.println("先");
+        Thread.sleep(100000);
+
+        return "111";
+    }
+
+
+    @RequestMapping("/findname")
+    public String findname() throws Exception {
+        String test = mostConnectTransactionalTest.test("账号");
+        return test;
+    }
 
 }

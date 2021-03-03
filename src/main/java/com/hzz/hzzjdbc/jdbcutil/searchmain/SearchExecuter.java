@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -192,22 +193,13 @@ public class SearchExecuter extends ConnectExecuter {
      *              (Note that <code>Connection.TRANSACTION_NONE</code> cannot be used
      *              because it specifies that transactions are not supported.)
      */
-    public void begintransaction(int level, boolean autocommit) {
-        begintransaction(autocommit);
-        try {
-            con.setTransactionIsolation(level);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public Connection begintransaction(int level, boolean autocommit) {
+        return connectionhzzSource.setAutoCommit(con, autocommit, level);
     }
 
-    public void begintransaction(boolean autocommit) {
-        try {
-            istransaction = true;
-            connectionhzzSource.setAutoCommit(con, autocommit);
-        } catch (Exception e) {
-            log.error("事务开启失败", e);
-        }
+    public Connection begintransaction(boolean autocommit) {
+        istransaction = true;
+        return connectionhzzSource.setAutoCommit(con, autocommit);
     }
 
     public void rollback() {

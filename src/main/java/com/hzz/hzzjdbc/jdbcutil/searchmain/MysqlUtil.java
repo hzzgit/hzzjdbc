@@ -5,6 +5,7 @@ import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.vo.FieldVo;
 import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
 
+import java.sql.Connection;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -170,8 +171,8 @@ public interface MysqlUtil {
      */
     public void excutesqlList(List<FieldVo> vos);
 
-
-    public void begintransaction(boolean autocommit);
+    public Connection begintransaction(int level, boolean autocommit);
+    public Connection begintransaction(boolean autocommit);
 
     public void endtransaction();
 

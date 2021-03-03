@@ -34,9 +34,15 @@ public class SpringConnectionhzzSource implements ConnectionhzzSource {
     }
 
     @Override
-    public void setAutoCommit(Connection conn, boolean autoCommit) {
-        DataSoureMostConnectUtils.begintransaction(dataSource,autoCommit);
+    public Connection setAutoCommit(Connection conn, boolean autoCommit) {
+      return   DataSoureMostConnectUtils.begintransaction(dataSource,autoCommit,null);
     }
+
+    @Override
+    public Connection setAutoCommit(Connection conn, boolean autoCommit,Integer level) {
+       return DataSoureMostConnectUtils.begintransaction(dataSource,autoCommit,level);
+    }
+
 
     @Override
     public void rollback(Connection connection) {

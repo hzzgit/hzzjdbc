@@ -8,7 +8,9 @@ import java.sql.Statement;
 public interface ConnectionhzzSource {
     Connection getConnection() throws SQLException;
 
-    void setAutoCommit(Connection conn, boolean autoCommit);
+    Connection setAutoCommit(Connection conn, boolean autoCommit);
+
+    public Connection setAutoCommit(Connection conn, boolean autoCommit,Integer level);
 
     public DataSource getDataSource();
 

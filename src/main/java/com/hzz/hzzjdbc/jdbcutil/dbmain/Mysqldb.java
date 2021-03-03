@@ -11,6 +11,8 @@ import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -24,6 +26,28 @@ import java.util.function.Consumer;
 @Slf4j
 public class Mysqldb extends SqlExecuter implements MysqlDao {
 
+    private Connection con;
+
+    @Override
+    public void rollback() {
+        try {
+            con.rollback();
+        } catch (SQLException e) {
+            log.error("回滚失败",e);
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    @Override
+    public void setCon(Connection con) {
+        this.con = con;
+    }
 
     public Mysqldb(DataSource dataSource, ConnectionhzzSource connSource, String url) {
         super(dataSource, connSource);

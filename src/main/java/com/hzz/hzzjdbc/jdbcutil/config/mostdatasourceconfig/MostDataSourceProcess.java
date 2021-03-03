@@ -28,7 +28,7 @@ import java.util.*;
  * @date ：2020/11/20 11:33
  */
 @Slf4j
-public class MostDataSourceProcess implements CommandLineRunner, ApplicationContextAware, EnvironmentAware,MostDataSourceProcessInter {
+public class MostDataSourceProcess implements CommandLineRunner, ApplicationContextAware, EnvironmentAware, MostDataSourceProcessInter {
 
     private Environment environment;
 
@@ -36,41 +36,39 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
 
     private Map<String, MysqlDao> dataSourceVoMap;
 
-//    @Autowired
-//    private DataSourceVo dataSourceVo;
-
     @Autowired
-    private DataSource dataSource;
+    private MysqlDao mysqlDao;
+
 
     //主要数据库的名字
-    private final String mainMysqlName="mysqlDao";
+    private final String mainMysqlName = "mysqlDao";
+
+
 
 
     @Override
-    public MysqlDao getMainMysqlDao(){
-        return  getMysqlDao(mainMysqlName);
+    public MysqlDao getMainMysqlDao() {
+        return getMysqlDao(mainMysqlName);
     }
 
     @Override
-    public  MysqlDao getMysqlDao(String sqlName){
-        MysqlDao mysqlDao=null;
-        if(dataSourceVoMap.containsKey(sqlName)){
-            mysqlDao=dataSourceVoMap.get(sqlName);
-        }else{
-            mysqlDao=dataSourceVoMap.get(mainMysqlName);
+    public MysqlDao getMysqlDao(String sqlName) {
+        MysqlDao mysqlDao = null;
+        if (dataSourceVoMap.containsKey(sqlName)) {
+            mysqlDao = dataSourceVoMap.get(sqlName);
         }
         return mysqlDao;
     }
 
     @Override
     public List<MysqlDao> getMysqlDaoList() {
-      List<MysqlDao> mysqlDaoList=new ArrayList<>();
-      if(dataSourceVoMap!=null&&dataSourceVoMap.size()>0){
-            dataSourceVoMap.forEach((p,v)->{
+        List<MysqlDao> mysqlDaoList = new ArrayList<>();
+        if (dataSourceVoMap != null && dataSourceVoMap.size() > 0) {
+            dataSourceVoMap.forEach((p, v) -> {
                 mysqlDaoList.add(v);
             });
-      }
-      return  mysqlDaoList;
+        }
+        return mysqlDaoList;
 
     }
 
@@ -136,11 +134,10 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
             MysqlDao ju = new Mysqldb(build, new SpringConnectionhzzSource(build, p), jdbcUrl);
             mysqlDaoHashMap.put(p, ju);
         });
-        if (dataSource!=null) {
-            String jdbcUrl = ((HikariDataSource) dataSource).getJdbcUrl();
-            MysqlDao ju = new Mysqldb(dataSource, new SpringConnectionhzzSource(dataSource, mainMysqlName), jdbcUrl);
-            mysqlDaoHashMap.put(mainMysqlName, ju);
+        if(mysqlDao!=null){
+            mysqlDaoHashMap.put(mainMysqlName,mysqlDao);
         }
+
         mostDataSourceVo.setDataSourceVoMap(mysqlDaoHashMap);
         return mostDataSourceVo;
     }
@@ -157,12 +154,10 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
     }
 
 
-
     @Override
     public void run(String... args) throws Exception {
         init();
     }
-
 
 
 }

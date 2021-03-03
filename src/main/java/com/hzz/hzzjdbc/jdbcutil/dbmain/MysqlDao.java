@@ -6,6 +6,7 @@ import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.vo.FieldVo;
 import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
 
+import java.sql.Connection;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -19,7 +20,9 @@ public interface MysqlDao {
      */
     public MysqlUtil getMysqlUtil();
 
+    public void setCon(Connection con);
 
+    public void rollback()  ;
     /**
      * 根据类进行不分页查询
      *
