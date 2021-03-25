@@ -19112,3 +19112,84 @@ java.sql.SQLException: Connection is closed
 2021-03-03 14:52:07,668 DEBUG [Thread-33] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
 2021-03-03 14:52:07,673 DEBUG [Thread-33] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
 2021-03-03 14:52:07,682 DEBUG [Thread-33] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-03-03 15:53:52,652  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 11072 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-03 15:53:52,661 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-03-03 15:53:52,662  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-03 15:53:54,892  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-03 15:53:54,944  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-03 15:53:54,967  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-03 15:53:54,968  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-03 15:53:55,327  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-03 15:53:55,328  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 2548 ms
+2021-03-03 15:53:55,750  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:49) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-03 15:53:56,026  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-03 15:53:56,360  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-03 15:53:56,394  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-03 15:53:56,399  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 4.444 seconds (JVM running for 14.308)
+2021-03-03 15:53:56,435 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@4e5d5ac1,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$1
+2021-03-03 15:53:56,438 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@4e5d5ac1,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$1
+2021-03-03 15:53:56,438 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:96) - 动态代理自定义多数据源事务成功
+2021-03-03 15:54:03,330  INFO [http-nio-8924-exec-1] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-03 15:54:03,330  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Initializing Servlet 'dispatcherServlet'
+2021-03-03 15:54:03,344  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Completed initialization in 14 ms
+2021-03-03 15:54:03,421  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-03-03 15:54:03,653  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-03-03 15:54:03,661  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-03-03 15:54:03,838  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-03-03 15:54:03,858  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-03-03 15:54:03,881  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-03-03 15:54:03,882  WARN [Thread-19] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2021-03-03 15:54:03,883  WARN [Thread-19] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - idleTimeout is less than 10000ms, setting to default 600000ms.
+2021-03-03 15:54:03,883  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Starting...
+2021-03-03 15:54:03,914  INFO [Thread-19] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Start completed.
+2021-03-03 15:54:03,926 DEBUG [Thread-19] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
+2021-03-03 15:54:03,927 DEBUG [Thread-19] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-03-03 15:54:03,929 DEBUG [Thread-19] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-03-03 15:54:03,933 DEBUG [Thread-19] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='7';参数为:[]
+2021-03-03 15:54:03,986 DEBUG [http-nio-8924-exec-2] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:select name from student limit 1 ;参数为:[]
+2021-03-03 15:55:13,149 DEBUG [Thread-20] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
+2021-03-03 15:55:13,150 DEBUG [Thread-20] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-03-03 15:55:13,152 DEBUG [Thread-20] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-03-03 15:55:13,156 DEBUG [Thread-20] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='7';参数为:[]
+2021-03-03 16:09:00,826 DEBUG [Thread-21] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
+2021-03-03 16:09:00,828 DEBUG [Thread-21] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-03-03 16:09:00,831 DEBUG [Thread-21] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-03-03 16:09:00,836 DEBUG [Thread-21] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='7';参数为:[]
+2021-03-03 16:35:12,806 DEBUG [Thread-22] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update student set name ='测试11' where id='1263264001' ;参数为:[]
+2021-03-03 16:35:12,811 DEBUG [Thread-22] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-03-03 16:35:12,814 DEBUG [Thread-22] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-03-03 16:35:12,818 DEBUG [Thread-22] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='7';参数为:[]
+2021-03-04 16:36:59,105  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 19700 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-04 16:36:59,127 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-03-04 16:36:59,127  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-04 16:37:01,601  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-04 16:37:01,630  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-04 16:37:01,642  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-04 16:37:01,643  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-04 16:37:01,801  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-04 16:37:01,801  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 2474 ms
+2021-03-04 16:37:02,280  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:49) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-04 16:37:02,607  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-04 16:37:02,998  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-04 16:37:03,046  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-04 16:37:03,052  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 5.11 seconds (JVM running for 13.296)
+2021-03-04 16:37:03,094 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@5d93ff21,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$1
+2021-03-04 16:37:03,097 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@5d93ff21,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$1
+2021-03-04 16:37:03,097 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:96) - 动态代理自定义多数据源事务成功
+2021-03-05 10:53:30,618  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 16568 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-03-05 10:53:30,624 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-03-05 10:53:30,625  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-03-05 10:53:33,168  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-03-05 10:53:33,185  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-03-05 10:53:33,194  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-03-05 10:53:33,195  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-05 10:53:33,297  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-03-05 10:53:33,298  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 2603 ms
+2021-03-05 10:53:33,433  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:49) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-03-05 10:53:33,617  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-05 10:53:33,948  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-03-05 10:53:33,974  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-03-05 10:53:33,978  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 3.825 seconds (JVM running for 7.213)
+2021-03-05 13:51:52,508 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@1b01a0d,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
+2021-03-05 13:51:52,511 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@1b01a0d,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
+2021-03-05 13:51:52,512 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:96) - 动态代理自定义多数据源事务成功
