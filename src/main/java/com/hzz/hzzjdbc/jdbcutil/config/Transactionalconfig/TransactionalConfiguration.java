@@ -1,8 +1,6 @@
 package com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig;
 
 import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig;
-import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcessInter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,9 +17,9 @@ public class TransactionalConfiguration {
     @Bean(
             destroyMethod = "destroy"
     )
-    public TransactionalProcesser createAutoRefreshConfigManager(@Autowired MostDataSourceProcessInter mostDataSourceProcessInter) {
+    public TransactionalProcesser createAutoRefreshConfigManager() {
 
-        return new TransactionalProcesser(mostDataSourceProcessInter);
+        return new TransactionalProcesser();
     }
 
 }

@@ -1,6 +1,5 @@
 package com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig;
 
-import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcessInter;
 import com.hzz.hzzjdbc.jdbcutil.util.ReflectionUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
@@ -9,8 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.EnvironmentAware;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,23 +25,18 @@ import java.util.concurrent.ConcurrentMap;
  * @date ：2020/11/3 11:13
  */
 @Slf4j
-public class TransactionalProcesser implements CommandLineRunner, ApplicationContextAware, EnvironmentAware {
+public class TransactionalProcesser implements CommandLineRunner, ApplicationContextAware {
 
     /*用来存放类名和动态代理之后的类*/
     private ConcurrentMap<Class, Object> beansFactory = new ConcurrentHashMap<>();
 
-    private MostDataSourceProcessInter mostDataSourceProcessInter;
 
-    public Object getBean(Class cla) {
-        return beansFactory.get(cla);
-    }
+    public TransactionalProcesser() {
 
-    public TransactionalProcesser(MostDataSourceProcessInter mostDataSourceProcessInter) {
-        this.mostDataSourceProcessInter = mostDataSourceProcessInter;
     }
 
     private ApplicationContext applicationContext;
-    private Environment environment;
+
 
 
     @Override
@@ -80,7 +72,7 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
                         en.setSuperclass(aClass);
                         //这边定义回调
                         Object finalBean = bean;
-                        en.setCallback(new TransactionalInterceptor(finalBean,methodName,mostDataSourceProcessInter));
+                        en.setCallback(new TransactionalInterceptor(finalBean,methodName,applicationContext));
                         Object o = en.create();
                         //这边是动态代理之后的类的存放，这时候已经可以对这个类进行动态代理了，
                         beansFactory.put(aClass, o);
@@ -93,7 +85,7 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
         inject(Controller.class);
         inject(RestController.class);
        // inject(Service.class);
-        log.debug("动态代理自定义多数据源事务成功");
+        log.info("动态代理自定义多数据源事务成功");
 
 
     }
@@ -142,10 +134,6 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
         this.applicationContext = applicationContext;
     }
 
-    @Override
-    public void setEnvironment(Environment environment) {
-        this.environment = environment;
-    }
 
     /**
      * 注入到spring的bean销毁的时候进行的方法

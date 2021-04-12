@@ -1,11 +1,13 @@
 package com.hzz.hzzjdbc.jdbcutil.dbmain;
 
 
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
 import com.hzz.hzzjdbc.jdbcutil.vo.FieldVo;
 import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.util.Collection;
 import java.util.Date;
@@ -16,13 +18,15 @@ public interface MysqlDao {
 
     /**
      * 当要进行多数据源处理的时候，可能要用到事务，所以用这种方式
+     *
      * @return
      */
     public MysqlUtil getMysqlUtil();
 
     public void setCon(Connection con);
 
-    public void rollback()  ;
+    public void rollback();
+
     /**
      * 根据类进行不分页查询
      *
@@ -82,7 +86,8 @@ public interface MysqlDao {
 
     /**
      * 根据传入的类型,封装成集合返回
-     *  返回每一行第一列的数据
+     * 返回每一行第一列的数据
+     *
      * @param sql
      * @param wdata
      * @return
@@ -118,26 +123,26 @@ public interface MysqlDao {
     public <T> T queryFirstVal(String sql, Object... wdata);
 
 
-    public Integer queryFirstValToInt(String sql, Object... wdata) ;
+    public Integer queryFirstValToInt(String sql, Object... wdata);
 
 
-    public Long queryFirstValToLong(String sql, Object... wdata) ;
+    public Long queryFirstValToLong(String sql, Object... wdata);
 
 
-    public Double queryFirstValToDouble(String sql, Object... wdata) ;
+    public Double queryFirstValToDouble(String sql, Object... wdata);
 
 
     public short queryFirstValToShort(String sql, Object... wdata);
 
 
-    public Date queryFirstValToDate(String sql, Object... wdata) ;
-
+    public Date queryFirstValToDate(String sql, Object... wdata);
 
 
     public Byte queryFirstValToByte(String sql, Object... wdata);
 
 
     public String queryFirstValToString(String sql, Object... wdata);
+
     /**
      * 单条插入,单次提交
      *
@@ -195,4 +200,10 @@ public interface MysqlDao {
 
     //根据实体类进行修改,这个只能根据主键
     public FieldVo getupdatesql(Object object);
+
+    public void setDataSource(DataSource dataSource);
+
+    public void setConnSource(ConnectionhzzSource connSource);
+
+    public void setTable_schema(String table_schema);
 }

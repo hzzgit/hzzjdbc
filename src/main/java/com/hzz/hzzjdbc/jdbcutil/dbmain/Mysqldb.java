@@ -1,16 +1,13 @@
 package com.hzz.hzzjdbc.jdbcutil.dbmain;
 
 
-import com.hzz.hzzjdbc.jdbcutil.config.DataSource.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtiilRealize;
 import com.hzz.hzzjdbc.jdbcutil.searchmain.MysqlUtil;
 import com.hzz.hzzjdbc.jdbcutil.util.ConverMap;
-import com.hzz.hzzjdbc.jdbcutil.util.SplitUtil;
 import com.hzz.hzzjdbc.jdbcutil.vo.FieldVo;
 import com.hzz.hzzjdbc.jdbcutil.vo.PaginateResult;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Collection;
@@ -44,16 +41,19 @@ public class Mysqldb extends SqlExecuter implements MysqlDao {
 
     }
 
+    public Mysqldb() {
+    }
+
     @Override
     public void setCon(Connection con) {
         this.con = con;
     }
 
-    public Mysqldb(DataSource dataSource, ConnectionhzzSource connSource, String url) {
-        super(dataSource, connSource);
-        table_schema = SplitUtil.gettableschme(url);
-        //  searchtablecolMap();//缓存库表及字段
-    }
+//    public Mysqldb(DataSource dataSource, ConnectionhzzSource connSource, String url) {
+//        super(dataSource, connSource);
+//        table_schema = SplitUtil.gettableschme(url);
+//        //  searchtablecolMap();//缓存库表及字段
+//    }
 
     /**
      * 当要进行多数据源处理的时候，可能要用到事务，所以用这种方式

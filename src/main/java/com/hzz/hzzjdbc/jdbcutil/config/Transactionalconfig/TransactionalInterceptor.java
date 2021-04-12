@@ -1,11 +1,11 @@
 package com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig;
 
 import com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.Thread.TransactionallCallBack;
-import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcessInter;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
+import org.springframework.context.ApplicationContext;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -28,12 +28,15 @@ public class TransactionalInterceptor implements MethodInterceptor {
 
     private Map<String, Byte> methodName = new HashMap<>();
 
-    private MostDataSourceProcessInter mostDataSourceProcessInter;
+    private ApplicationContext applicationContext;
 
-    public TransactionalInterceptor(Object finalBean, Map<String, Byte> methodName, MostDataSourceProcessInter mostDataSourceProcessInter) {
+    public TransactionalInterceptor(Object finalBean, Map<String, Byte> methodName,
+                                    ApplicationContext applicationContext
+
+                                    ) {
         this.finalBean = finalBean;
         this.methodName = methodName;
-        this.mostDataSourceProcessInter = mostDataSourceProcessInter;
+        this.applicationContext = applicationContext;
     }
 
     @Override
@@ -47,12 +50,17 @@ public class TransactionalInterceptor implements MethodInterceptor {
             String[] strings = annotation.DataSourcesNames();
             if (strings != null && strings.length > 0) {
                 for (String MysqlDaoName : strings) {
-                    if (mostDataSourceProcessInter.getMysqlDao(MysqlDaoName) != null) {
-                        mysqlDaoList.add(mostDataSourceProcessInter.getMysqlDao(MysqlDaoName));
+                    if (applicationContext.getBean(MysqlDaoName) != null) {
+                        mysqlDaoList.add((MysqlDao) applicationContext.getBean(MysqlDaoName));
                     }
                 }
             } else {
-                mysqlDaoList = mostDataSourceProcessInter.getMysqlDaoList();
+                String[] beanNamesForType = applicationContext.getBeanNamesForType(MysqlDao.class);
+                for (String s : beanNamesForType) {
+                    mysqlDaoList.add((MysqlDao) applicationContext.getBean(s));
+                }
+
+
             }
             int timeout = annotation.timeout();
             Object o1 = null;

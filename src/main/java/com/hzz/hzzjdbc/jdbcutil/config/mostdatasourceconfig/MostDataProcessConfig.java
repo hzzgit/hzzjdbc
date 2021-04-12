@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
 
 import javax.sql.DataSource;
@@ -24,6 +25,7 @@ import javax.sql.DataSource;
 @Slf4j
 @Configuration
 @AutoConfigureAfter({DataSourceAutoConfiguration.class})
+@Import(MostDataSourceProcess.class)
 public class MostDataProcessConfig {
 
 //    @Primary
@@ -45,7 +47,11 @@ public class MostDataProcessConfig {
     ) {
         if (dataSource != null) {
             String jdbcUrl = ((HikariDataSource) dataSource).getJdbcUrl();
-            MysqlDao ju = new Mysqldb(dataSource, new SpringConnectionhzzSource(dataSource, "springjdbc1"), jdbcUrl);
+            Mysqldb ju = new Mysqldb();
+            //MysqlDao ju = new Mysqldb(dataSource, new SpringConnectionhzzSource(dataSource, "springjdbc1"), jdbcUrl);
+            ju.setDataSource(dataSource);
+            ju.setConnSource(new SpringConnectionhzzSource(dataSource, "springjdbc1"));
+            ju.setTable_schema(jdbcUrl);
             log.info(jdbcUrl + "主数据库成功,url=" + jdbcUrl);
             return ju;
         } else {
@@ -54,9 +60,5 @@ public class MostDataProcessConfig {
 
     }
 
-    @Bean
-    public MostDataSourceProcess getMostDataSourceProcess() {
 
-        return new MostDataSourceProcess();
-    }
 }

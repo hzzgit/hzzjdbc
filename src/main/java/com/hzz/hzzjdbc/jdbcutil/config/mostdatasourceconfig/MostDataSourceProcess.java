@@ -1,89 +1,55 @@
 package com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig;
 
+import com.hzz.hzzjdbc.jdbcutil.config.DataSource.ConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.config.DataSource.SpringConnectionhzzSource;
 import com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.vo.DataSourceVo;
-import com.hzz.hzzjdbc.jdbcutil.dbmain.MysqlDao;
 import com.hzz.hzzjdbc.jdbcutil.dbmain.Mysqldb;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.boot.env.OriginTrackedMapPropertySource;
 import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.EnvironmentAware;
+import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertySource;
+import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.web.context.support.StandardServletEnvironment;
 
 import javax.sql.DataSource;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * @author ：hzz
- * @description：TODO
+ * @description：这边是继承了注册接口和配置文件读取接口
  * @date ：2020/11/20 11:33
  */
 @Slf4j
-public class MostDataSourceProcess implements CommandLineRunner, ApplicationContextAware, EnvironmentAware, MostDataSourceProcessInter {
+public class MostDataSourceProcess implements  EnvironmentAware, ImportBeanDefinitionRegistrar  {
 
     private Environment environment;
 
-    private ApplicationContext applicationContext;
-
-    private Map<String, MysqlDao> dataSourceVoMap;
-
-    @Autowired
-    private MysqlDao mysqlDao;
-
-
-    //主要数据库的名字
-    private final String mainMysqlName = "mysqlDao";
-
-
-
+    private String mainMysqlName="mainMysql";
 
     @Override
-    public MysqlDao getMainMysqlDao() {
-        return getMysqlDao(mainMysqlName);
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 
-    @Override
-    public MysqlDao getMysqlDao(String sqlName) {
-        MysqlDao mysqlDao = null;
-        if (dataSourceVoMap.containsKey(sqlName)) {
-            mysqlDao = dataSourceVoMap.get(sqlName);
-        }
-        return mysqlDao;
-    }
 
-    @Override
-    public List<MysqlDao> getMysqlDaoList() {
-        List<MysqlDao> mysqlDaoList = new ArrayList<>();
-        if (dataSourceVoMap != null && dataSourceVoMap.size() > 0) {
-            dataSourceVoMap.forEach((p, v) -> {
-                mysqlDaoList.add(v);
-            });
-        }
-        return mysqlDaoList;
-
-    }
-
-    private void init() {
-        MostDataSourceVo mostDataSourceVo = getMostDataSourceVo();
-        dataSourceVoMap = mostDataSourceVo.getDataSourceVoMap();
-
-    }
 
     /**
-     * 获取到所有数据源
-     *
-     * @return
+     * 这边主要是为了将多数据源加入到spring 工厂中
+     * @param importingClassMetadata
+     * @param registry
      */
-    private MostDataSourceVo getMostDataSourceVo() {
+    @Override
+    public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
         MutablePropertySources propertySources = ((StandardServletEnvironment) environment).getPropertySources();
         Iterator<PropertySource<?>> iterator = propertySources.iterator();
         Map<String, DataSourceVo> dataSourceVoMap = new HashMap<>();
@@ -123,41 +89,38 @@ public class MostDataSourceProcess implements CommandLineRunner, ApplicationCont
                 }
             }
         }
-
-        MostDataSourceVo mostDataSourceVo = new MostDataSourceVo();
-        Map<String, MysqlDao> mysqlDaoHashMap = new HashMap<>();
         dataSourceVoMap.forEach((p, v) -> {
             DataSourceVo dataSourceDefaultVo = v;
             DataSource build = DataSourceBuilder.create().url(dataSourceDefaultVo.getUrl()).driverClassName(dataSourceDefaultVo.getDriverClassName())
                     .password(dataSourceDefaultVo.getPassword()).username(dataSourceDefaultVo.getUsername()).build();
             String jdbcUrl = ((HikariDataSource) build).getJdbcUrl();
-            MysqlDao ju = new Mysqldb(build, new SpringConnectionhzzSource(build, p), jdbcUrl);
-            mysqlDaoHashMap.put(p, ju);
+            SpringConnectionhzzSource springConnectionhzzSource = new SpringConnectionhzzSource(build, p);
+            //MysqlDao ju = new Mysqldb(build, new SpringConnectionhzzSource(build, p), jdbcUrl);
+
+            //这边是将所有的多数据源连接工具注入到spring中
+            registryToBeanFactory(p, registry,build,springConnectionhzzSource,jdbcUrl);
         });
-        if(mysqlDao!=null){
-            mysqlDaoHashMap.put(mainMysqlName,mysqlDao);
-        }
 
-        mostDataSourceVo.setDataSourceVoMap(mysqlDaoHashMap);
-        return mostDataSourceVo;
+        log.info("多数据源工具类注入成功");
     }
 
+    /**
+     * 注册到bean工厂
+     */
+    private <T>void registryToBeanFactory(String beanName,
+                                          BeanDefinitionRegistry registry, DataSource dataSource,
+                                          ConnectionhzzSource connSource, String url){
 
-    @Override
-    public void setEnvironment(Environment environment) {
-        this.environment = environment;
+        GenericBeanDefinition gbd = new GenericBeanDefinition();
+        gbd.setBeanClass(Mysqldb.class);
+        MutablePropertyValues mpv = new MutablePropertyValues();
+
+        mpv.add("dataSource", dataSource);
+        mpv.add("connSource", connSource);
+        mpv.add("table_schema", url);
+        gbd.setPropertyValues(mpv);
+        //这边等于是将Mysqldb用45的名字注入到了bean工厂
+        registry.registerBeanDefinition(beanName,gbd);
     }
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
-
-
-    @Override
-    public void run(String... args) throws Exception {
-        init();
-    }
-
 
 }

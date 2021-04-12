@@ -22,14 +22,16 @@ public abstract class SqlExecuter {
     protected String table_schema = "";//记录当前jdbc连接的数据库
 
 
-    public SqlExecuter(DataSource dataSource, ConnectionhzzSource connSource) {
-        this.dataSource = dataSource;
-        this.connSource = connSource;
-    }
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
+    public void setConnSource(ConnectionhzzSource connSource) {
+        this.connSource = connSource;
+    }
 
+    public void setTable_schema(String table_schema) {
+        this.table_schema = table_schema;
+    }
 }

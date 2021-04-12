@@ -19193,3 +19193,110 @@ java.sql.SQLException: Connection is closed
 2021-03-05 13:51:52,508 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@1b01a0d,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
 2021-03-05 13:51:52,511 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:123) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@1b01a0d,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
 2021-03-05 13:51:52,512 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:96) - 动态代理自定义多数据源事务成功
+2021-04-12 14:47:13,237  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 17136 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-04-12 14:47:13,243 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-04-12 14:47:13,243  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-04-12 14:47:45,998  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-04-12 14:47:46,018  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-04-12 14:47:46,027  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-04-12 14:47:46,028  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-12 14:47:46,128  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-04-12 14:47:46,129  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 32787 ms
+2021-04-12 14:47:46,222  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:51) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-04-12 14:53:59,904  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 12996 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-04-12 14:53:59,910 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-04-12 14:53:59,911  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-04-12 14:54:04,893  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-04-12 14:54:04,912  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-04-12 14:54:04,923  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-04-12 14:54:04,923  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-12 14:54:05,059  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-04-12 14:54:05,059  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 5107 ms
+2021-04-12 14:54:05,152  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:55) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-04-12 14:55:00,096  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 15872 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-04-12 14:55:00,104 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-04-12 14:55:00,105  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-04-12 14:55:01,411  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-04-12 14:55:01,430  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-04-12 14:55:01,440  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-04-12 14:55:01,441  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-12 14:55:01,562  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-04-12 14:55:01,563  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1410 ms
+2021-04-12 14:55:01,653  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:55) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-04-12 15:01:40,212  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 15368 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-04-12 15:01:40,219 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-04-12 15:01:40,220  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-04-12 15:01:41,718  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-04-12 15:01:41,734  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-04-12 15:01:41,743  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-04-12 15:01:41,744  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-12 15:01:41,863  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-04-12 15:01:41,863  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1534 ms
+2021-04-12 15:01:41,953  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:55) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-04-12 15:03:14,090  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 14360 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-04-12 15:03:14,097 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-04-12 15:03:14,097  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-04-12 15:03:18,226  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-04-12 15:03:18,245  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-04-12 15:03:18,253  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-04-12 15:03:18,254  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-12 15:03:18,354  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-04-12 15:03:18,355  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 4208 ms
+2021-04-12 15:03:18,443  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:55) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-04-12 15:03:18,606  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-12 15:03:31,057  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-04-12 15:03:31,170  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-04-12 15:03:31,174  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 17.456 seconds (JVM running for 20.215)
+2021-04-12 15:03:47,253 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:88) - 动态代理自定义多数据源事务成功
+2021-04-12 15:12:34,427  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 11816 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-04-12 15:12:34,434 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-04-12 15:12:34,436  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-04-12 15:12:35,225  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcess:registerBeanDefinitions:104) - 多数据源工具类注入成功
+2021-04-12 15:12:35,810  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-04-12 15:12:35,828  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-04-12 15:12:35,837  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-04-12 15:12:35,838  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-12 15:12:35,962  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-04-12 15:12:35,962  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1478 ms
+2021-04-12 15:12:36,073  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:55) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-04-12 15:12:36,310  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-12 15:12:36,857  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-04-12 15:12:36,896  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-04-12 15:12:36,902  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 2.875 seconds (JVM running for 5.459)
+2021-04-12 15:12:36,913 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:115) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@36f7d7b,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
+2021-04-12 15:12:36,915 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:115) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@36f7d7b,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
+2021-04-12 15:12:36,915  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:88) - 动态代理自定义多数据源事务成功
+2021-04-12 15:13:13,199  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:50) - Starting HzzjdbcApplication on DESKTOP-I0L1KHS with PID 9716 (D:\hzzmysoft\myspace\hzzjdbc\target\classes started by fxft in D:\hzzmysoft\myspace\hzzjdbc)
+2021-04-12 15:13:13,245 DEBUG [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarting:53) - Running with Spring Boot v2.1.10.RELEASE, Spring v5.1.11.RELEASE
+2021-04-12 15:13:13,247  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStartupProfileInfo:648) - No active profile set, falling back to default profiles: default
+2021-04-12 15:13:14,090  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataSourceProcess:registerBeanDefinitions:104) - 多数据源工具类注入成功
+2021-04-12 15:13:15,125  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat initialized with port(s): 8924 (http)
+2021-04-12 15:13:15,172  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Initializing ProtocolHandler ["http-nio-8924"]
+2021-04-12 15:13:15,185  INFO [main] (org.apache.catalina.core.StandardService::) - Starting service [Tomcat]
+2021-04-12 15:13:15,187  INFO [main] (org.apache.catalina.core.StandardEngine::) - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-12 15:13:15,364  INFO [main] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring embedded WebApplicationContext
+2021-04-12 15:13:15,364  INFO [main] (org.springframework.web.context.ContextLoader::) - Root WebApplicationContext: initialization completed in 1958 ms
+2021-04-12 15:13:15,504  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.mostdatasourceconfig.MostDataProcessConfig:mysqldata:55) - jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8主数据库成功,url=jdbc:mysql://127.0.0.1:3306/hzzdata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+2021-04-12 15:13:15,856  INFO [main] (org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor::) - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-12 15:13:16,596  INFO [main] (org.apache.coyote.http11.Http11NioProtocol::) - Starting ProtocolHandler ["http-nio-8924"]
+2021-04-12 15:13:16,658  INFO [main] (org.springframework.boot.web.embedded.tomcat.TomcatWebServer::) - Tomcat started on port(s): 8924 (http) with context path ''
+2021-04-12 15:13:16,663  INFO [main] (com.hzz.hzzjdbc.HzzjdbcApplication:logStarted:59) - Started HzzjdbcApplication in 4.078 seconds (JVM running for 7.341)
+2021-04-12 15:13:16,723 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:115) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@3513c84c,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
+2021-04-12 15:13:16,731 DEBUG [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:dongtaizhuru:115) - 动态代理对bean:com.hzz.hzzjdbc.controller.TestContoller@3513c84c,参数名:mostConnectTransactionalTest注入了class com.hzz.hzzjdbc.controller.多数据源注释注入测试.service.MostConnectTransactionalTest$$EnhancerByCGLIB$$53c454e5
+2021-04-12 15:13:16,731  INFO [main] (com.hzz.hzzjdbc.jdbcutil.config.Transactionalconfig.TransactionalProcesser:run:88) - 动态代理自定义多数据源事务成功
+2021-04-12 15:14:51,229  INFO [http-nio-8924-exec-1] (org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]::) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-12 15:14:51,229  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Initializing Servlet 'dispatcherServlet'
+2021-04-12 15:14:51,240  INFO [http-nio-8924-exec-1] (org.springframework.web.servlet.DispatcherServlet::) - Completed initialization in 10 ms
+2021-04-12 15:14:51,275  WARN [Thread-9] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2021-04-12 15:14:51,276  WARN [Thread-9] (com.zaxxer.hikari.HikariConfig::) - DatebookHikariCP - idleTimeout is less than 10000ms, setting to default 600000ms.
+2021-04-12 15:14:51,276  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Starting...
+2021-04-12 15:14:51,531  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - DatebookHikariCP - Start completed.
+2021-04-12 15:14:51,545  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Starting...
+2021-04-12 15:14:51,644  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-1 - Start completed.
+2021-04-12 15:14:51,646  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Starting...
+2021-04-12 15:14:51,717  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-2 - Start completed.
+2021-04-12 15:14:51,721  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Starting...
+2021-04-12 15:14:51,741  INFO [Thread-9] (com.zaxxer.hikari.HikariDataSource::) - HikariPool-3 - Start completed.
+2021-04-12 15:14:51,767 DEBUG [Thread-9] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试22'  where depId ='117440629';参数为:[]
+2021-04-12 15:14:51,770 DEBUG [Thread-9] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='117445961' ;参数为:[]
+2021-04-12 15:14:51,772 DEBUG [Thread-9] (com.hzz.hzzjdbc.jdbcutil.searchmain.ConnectExecuter:excuteSql:82) - 当前执行的sql:update department set name ='测试11' where depId='7';参数为:[]
