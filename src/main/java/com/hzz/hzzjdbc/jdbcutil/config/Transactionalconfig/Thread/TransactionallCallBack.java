@@ -59,7 +59,7 @@ public class TransactionallCallBack implements Callable<Object> {
         } catch (Exception e) {
             System.out.println("动态代理执行方法异常，进行事务回滚操作,异常为" + e.getCause());
             //如果是运行时异常，直接回滚并抛出
-            if (e.getCause().getClass().equals(RuntimeException.class)) {
+            if (e!=null&&e.getCause()!=null&&e.getCause().getClass().equals(RuntimeException.class)) {
                 rollback();
                 throw e.getCause();
             }

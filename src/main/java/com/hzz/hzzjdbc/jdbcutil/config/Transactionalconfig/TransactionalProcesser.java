@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -66,16 +67,31 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
                     }
 
                     if (arg) {
-                        //如果是有事务管理的注解的话，那么就执行反向代理,这边是另一种带有注解的动态代理方式
-//                        //根据对象的类获取类加载器
-                        Enhancer en = new Enhancer();
-                        en.setSuperclass(aClass);
-                        //这边定义回调
+                        Class<?>[] interfaces = aClass.getInterfaces();
                         Object finalBean = bean;
-                        en.setCallback(new TransactionalInterceptor(finalBean,methodName,applicationContext));
-                        Object o = en.create();
-                        //这边是动态代理之后的类的存放，这时候已经可以对这个类进行动态代理了，
-                        beansFactory.put(aClass, o);
+                        TransactionalInterceptor transactionalInterceptor = new TransactionalInterceptor(finalBean, methodName, applicationContext);
+                        if(true){
+                       // if(interfaces.length==0){
+                            //如果是没有实现接口，那么就使用字节流的方式反向代理
+                            //如果是有事务管理的注解的话，那么就执行反向代理,这边是另一种带有注解的动态代理方式
+//                        //根据对象的类获取类加载器
+                            Enhancer en = new Enhancer();
+                            en.setSuperclass(aClass);
+                            //这边定义回调
+                            en.setCallback(transactionalInterceptor);
+                            Object o = en.create();
+                            //这边是动态代理之后的类的存放，这时候已经可以对这个类进行动态代理了，
+                            beansFactory.put(aClass, o);
+                        }else if(interfaces.length>0){
+
+                            //这边代码逻辑有问题，应该先扫描注入的是接口还是类再使用
+                            //如果有接口那么就是用Jdk自带的Proxy动态代理
+                            TransactionalHandler transactionalHandler = new TransactionalHandler();
+                            transactionalHandler.setTransactionalInterceptor(transactionalInterceptor);
+                            Object o = Proxy.newProxyInstance(this.getClass().getClassLoader(), interfaces, transactionalHandler);
+                            beansFactory.put(aClass, o);
+                        }
+
                     }
                 }
             }
@@ -108,6 +124,7 @@ public class TransactionalProcesser implements CommandLineRunner, ApplicationCon
                     if(annotation!=null){
                         String name = field.getName();
                         Class<?> type = field.getType();
+                        //这边其实只是根据类类型来判断 ，真正应该是根据注解来判断类的注入名，之后才会判断类的类型
                         if(beansFactory.containsKey(type)){
                             Object o = beansFactory.get(type);
                             try {

@@ -26,6 +26,12 @@ public class TestContoller {
             e.printStackTrace();
         }
     }
+    @RequestMapping("/testselectroll")
+    public String testselectroll() {
+
+         return   mostConnectTransactionalTest.selectrollback();
+
+    }
 
 
 

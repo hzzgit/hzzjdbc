@@ -5,27 +5,21 @@ import java.lang.reflect.Method;
 
 /**
  * @author ：hzz
- * @description：事务管理的配置类
+ * @description：事务管理的配置类,这边如果是有实现接口的调用方式
  * @date ：2020/11/3 11:13
  */
 public class TransactionalHandler implements InvocationHandler {
 
-    //通过构造方法接受一个没有被代理的原来的对象
-    //通过下面的方法名的反射找到这个对象对应方法
-    private Object target;
+    //这边直接使用适配器模式以组合的形式加入进来
+    private TransactionalInterceptor transactionalInterceptor;
 
-    public TransactionalHandler(Object target) {
-        this.target = target;
+    public void setTransactionalInterceptor(TransactionalInterceptor transactionalInterceptor) {
+        this.transactionalInterceptor = transactionalInterceptor;
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        String classname = target.getClass().getName();
-        String methodName = method.getName();
-        System.out.println(classname + "." + methodName + "方法开始执行");
-        //这里实际是Method类通过方法名反射调用了原方法(addone)
-        Object value = method.invoke(target, args);
-        System.out.println(classname + "." + methodName + "方法执行完毕");
-        return value;
+        Object intercept = transactionalInterceptor.intercept(proxy, method, args, null);
+        return intercept;
     }
 }

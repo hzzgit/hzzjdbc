@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * 业务逻辑处理类
  */
 @Service
-public class MostConnectTransactionalTest {
+public class MostConnectTransactionalTest  {
 
 
 
@@ -33,14 +33,23 @@ public class MostConnectTransactionalTest {
 //    @TransactionalMostConnect(DataSourcesNames ={"mysqlDao","mysql96","mysql45"},
 //            rollbackFor = {Exception.class,RuntimeException.class, SQLException.class},
 //            TransactionIsolation = Connection.TRANSACTION_REPEATABLE_READ,timeout = 10)
-    @TransactionalMostConnect
+    @TransactionalMostConnect(DataSourcesNames = {"mysql96"})
     public void testrollback() throws SQLException {
         //mysqlDao.excutesql("update student set name ='测试11' where id='1263264001' ");
-        mysql96.excutesql("update department set name ='测试22'  where depId ='117440629'");
-        mysql45.excutesql("update department set name ='测试11' where depId='117445961' ");
-        mysql80w.excutesql("update department set name ='测试11' where depId='7'");
+        mysql96.excutesql("update department set name ='修改事务'  where depId ='117440629'");
+       // mysql45.excutesql("update department set name ='测试11' where depId='117445961' ");
+      //  mysql80w.excutesql("update department set name ='测试11' where depId='7'");
+        try {
+            Thread.sleep(30000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //throw new SQLException("异常");
+    }
+    @TransactionalMostConnect(DataSourcesNames = {"mysql96"})
+    public String selectrollback(){
+        return mysql96.queryFirstValToString("select name from department where depId ='117440629'");
 
-        throw new SQLException("异常");
     }
 
 
