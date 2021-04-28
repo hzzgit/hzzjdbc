@@ -40,11 +40,10 @@ public class MostConnectTransactionalTest  {
        // mysql45.excutesql("update department set name ='测试11' where depId='117445961' ");
       //  mysql80w.excutesql("update department set name ='测试11' where depId='7'");
         try {
-            Thread.sleep(30000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        //throw new SQLException("异常");
     }
     @TransactionalMostConnect(DataSourcesNames = {"mysql96"})
     public String selectrollback(){
